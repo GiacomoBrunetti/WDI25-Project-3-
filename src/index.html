@@ -2,6 +2,7 @@
 <html ng-app="hrApp">
 <head>
   <base href="/">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMBRc7S-fUkCbXazZbh-E06kbFfZFk-MQ"></script>
   <title>Project 3</title>
   <!-- inject:js -->
   <!-- endinject -->
@@ -10,8 +11,33 @@
 
 
 </head>
-<body ng-controller="LoginCtrl as login">
+<body ng-controller="MainCtrl as main">
+  <div class="menu" ng-click="main.menuIsOpen = !main.menuIsOpen" ng-class="{ 'open': main.menuIsOpen }">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav ng-class="{ 'open': main.menuIsOpen }">
+    <div class="right">
+      <div class="links">
+        <ul>
+          <li ng-if="main.isAuthenticated()"><a ui-sref="infoNew" ui-sref-active="active">Home</a></li>
+          <li ng-if="main.isAuthenticated()"><a ui-sref="infoIndex" ui-sref-active="active">Info</a></li>
+          <li ng-if="main.isAuthenticated()"><a ui-sref="userShow" ui-sref-active="active">Profile</a></li>
+          <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
+          <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
+          <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <h1>Project 3</h1>
+  <div class="message" ng-if="main.message">
+    <p>{{ main.message }}</p>
+  </div>
   <main ui-view></main>
 </body>
 </html>

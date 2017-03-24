@@ -1,11 +1,10 @@
 angular
   .module('hrApp')
-  .controller('UserCtrl', UserCtrl);
+  .controller('MainCtrl', MainCtrl);
 
-UserCtrl.$inject = ['$rootScope', '$state', '$auth', 'User'];
-function UserCtrl($rootScope, $state, $auth, User) {
+MainCtrl.$inject = ['$rootScope', '$state', '$auth'];
+function MainCtrl($rootScope, $state, $auth) {
   const vm = this;
-  const { userId } = $auth.getPayload();
   vm.navIsOpen = false;
 
   vm.isAuthenticated = $auth.isAuthenticated;
@@ -22,8 +21,6 @@ function UserCtrl($rootScope, $state, $auth, User) {
     vm.navIsOpen = false;
     if($auth.getPayload()) vm.currentUserId = $auth.getPayload().userId;
   });
-
-  if(userId) vm.user= User.get({ id: userId });
 
   function logout() {
     $auth.logout();

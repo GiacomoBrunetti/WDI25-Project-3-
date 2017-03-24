@@ -22,7 +22,7 @@ router.route('/users/:id')
 router.route('/register')
   .post(auth.register);
 
-router.route('/')
+router.route('/login')
   .post(auth.login);
 
 router.all('/*', (req, res) => res.notFound());

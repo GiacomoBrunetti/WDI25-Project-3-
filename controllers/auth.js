@@ -11,12 +11,12 @@ function register(req, res, next) {
 
 function login(req, res, next) {
   User
-    .findOne({ email: req.body.email })
+    .findOne({ username: req.body.username })
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) return res.unauthorized();
 
       // generate a JWT and send it to the client
-      const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1hr' }); //after an hour token becomes invalid and user has to log back in again
+      const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '24hr' }); //after an hour token becomes invalid and user has to log back in again
       res.json({ token, message: `Welcome back ${user.username}` });
     })
     .catch(next);
