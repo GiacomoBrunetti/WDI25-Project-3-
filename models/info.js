@@ -2,9 +2,16 @@ const mongoose = require('mongoose');
 const s3 = require('../lib/s3');
 
 const infoSchema = new mongoose.Schema({
-  number: { type: number, required: true },
-  caption: { type: String, required: true },
+  number: { type: Number, required: true },
+  children: { type: Boolean, required: true },
+  pets: { type: Boolean, required: true },
+  image: { type: String },
+  otherInfo: { type: String },
+  lat: { type: String, required: true },
+  lng: { type: String, required: true },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+},{
+  timestamps: true
 });
 
 infoSchema
@@ -33,4 +40,4 @@ infoSchema.pre('remove', function removeImage(next) {
   next();
 });
 
-module.exports = mongoose.model('Post', infoSchema);
+module.exports = mongoose.model('Info', infoSchema);

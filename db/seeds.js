@@ -320,7 +320,7 @@ Service
     type: 'Accommodation',
     website: 'http://www.homeless.org.uk/homeless-england/service/sapphire-independent-housing-bethany-house',
     telephone: '020 7837 3420',
-    postcode: ''
+    postcode: 'N1 1XR'
   }, {
     name: 'SHP - Arundel Project',
     type: 'Accommodation',
