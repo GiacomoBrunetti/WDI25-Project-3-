@@ -1,2 +1,2 @@
 angular
-  .module('hrApp', []);
+  .module('hrApp', ['ui.router', 'ngResource', 'satellizer', 'ngMessages']);

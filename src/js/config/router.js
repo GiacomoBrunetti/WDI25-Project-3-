@@ -8,7 +8,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('infoIndex', {
-      url: '/',
+      url: '/info',
       templateUrl: 'js/views/info/index.html',
       controller: 'InfoIndexCtrl as infoIndex'
     })
