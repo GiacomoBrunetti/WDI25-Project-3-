@@ -1,1 +1,28 @@
-<google-map></google-map>
+<form action="/info" method="GET" class="search-form">
+  <div class="form-group">
+    <select name="category" required class="category">
+      <option selected value="All">All</option>
+      <option value="Density">Density</option>
+      <option value="Resources">Resources</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <input type="submit" value="Filter" class="btn submit">
+  </div>
+</form>
+
+<form action="/info" method="GET" class="search-form">
+  <div class="form-group">
+    <select name="category" required class="category">
+      <option selected value="All">All</option>
+      <option value="Accommodation">Accommodation</option>
+      <option value="Day Centre">Day Centre</option>
+      <option value="Health Service">Health Service</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <input type="submit" value="Filter" class="btn submit">
+  </div>
+</form>
+
+<google-map resources="infoIndex.allResources" ng-if="infoIndex.allResources.$resolved"></google-map>

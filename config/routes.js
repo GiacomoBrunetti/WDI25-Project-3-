@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const info = require('../controllers/info');
 const users = require('../controllers/users');
+const resources = require('../controllers/resources');
 const auth = require('../controllers/auth');
 const oauth = require('../controllers/oauth');
 const imageUpload = require('../lib/imageUpload');
@@ -14,6 +15,9 @@ router.route('/info/:id')
   .get(info.show)
   .delete(secureRoute, info.delete)
   .put(secureRoute, info.update);
+
+router.route('/resources')
+  .get(resources.index);
 
 router.route('/users/:id')
   .get(users.show)

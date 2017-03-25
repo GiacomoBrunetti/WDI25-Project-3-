@@ -1,3 +1,5 @@
+/* global google:ignore */
+
 angular
   .module('hrApp')
   .directive('googleMap', googleMap);
@@ -9,19 +11,61 @@ function googleMap($window) {
     replace: true,
     template: '<div class="google-map"></div>', //Better for small bits of html rather than creating a new file
     scope: {
-      center: '='
+      center: '=',
+      resources: '='
     },
     link($scope, element) {
+
       const map = new $window.google.maps.Map(element[0], {
         zoom: 14,
         center: {lat: 51.515559, lng: -0.071746}
       });
 
-      new $window.google.maps.Marker({
-        position: {lat: 51.515559, lng: -0.071746},
-        map: map,
-        animation: $window.google.maps.Animation.DROP
-      });
+      function getLocation() {
+        const infoWindow = new $window.google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP
+        });
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition((position) => {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+        // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+          infoWindow.setPosition(pos);
+        }
+      }
+
+      getLocation();
+
+      const markers = [];
+
+      function addMarkers() {
+        $scope.resources.forEach((resource) => {
+          console.log(resource.location.lat);
+          const marker = new $window.google.maps.Marker({
+            position: { lat: parseFloat(resource.location.lat), lng: parseFloat(resource.location.lng) },
+            map: map,
+            animation: google.maps.Animation.DROP
+          });
+          console.log('in here');
+          markers.push(marker);
+        });
+      }
+      addMarkers();
     }
   };
   return directive;

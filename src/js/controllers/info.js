@@ -5,11 +5,12 @@ angular
   .controller('InfoShowCtrl', InfoShowCtrl)
   .controller('InfoEditCtrl', InfoEditCtrl);
 
-InfoIndexCtrl.$inject = ['Info'];
-function InfoIndexCtrl(Info) {
+InfoIndexCtrl.$inject = ['Info', 'Resource'];
+function InfoIndexCtrl(Info, Resource) {
   const vm = this;
 
   vm.all = Info.query();
+  vm.allResources = Resource.query();
 }
 
 InfoNewCtrl.$inject = ['Info', '$state'];
