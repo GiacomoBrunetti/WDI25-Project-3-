@@ -1,0 +1,32 @@
+<div ng-app="myApp">
+
+    <form name="saveTemplateData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
+
+
+        <p>Number of people</p>
+        <input type="radio" ng-model="form.number" value="female" />One
+        <input type="radio" ng-model="form.number" value="male" />Two
+        <input type="radio" ng-model="form.number" value="male" />Three
+        <input type="radio" ng-model="form.number" value="male" />Four
+        <input type="radio" ng-model="form.number" value="male" />Five +
+
+            <br/>
+
+
+         <p>Children</p>
+        <input type="checkbox" ng-model="form.children" value="true"/> YES
+        <input type="checkbox" ng-model="form.children" value="false"/> No
+
+            <br/>
+
+            <p>Pets</p>
+           <input type="checkbox" ng-model="form.pets" value="true"/> YES
+           <input type="checkbox" ng-model="form.pets" value="false"/> No
+
+            <br/><br/>
+
+        <input type="submit">
+
+    </form>
+
+</div>
