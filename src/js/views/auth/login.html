@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 form">
     <h2>Log in</h2>
     <form name="login.loginForm" ng-submit="login.submit()" novalidate>
       <div>
@@ -17,7 +17,14 @@
         </div>
       </div>
 
-      <button class="button">Login</button>
+      <button class="btn">Login</button>
     </form>
+    <p>OR</p>
+
+    <span class="loginButtons">
+      <a href="#" target="_blank" class="btn">Facebook Login</a>
+    </span>
+
+    <p>Don't have an account with us? <a ui-sref="register">Register Here</a></p>
   </div>
 </div>
