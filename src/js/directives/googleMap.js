@@ -12,13 +12,15 @@ function googleMap($window) {
     template: '<div class="google-map"></div>', //Better for small bits of html rather than creating a new file
     scope: {
       center: '=',
-      resources: '='
+      resources: '=',
+      category: '='
     },
     link($scope, element) {
 
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 14,
-        center: {lat: 51.515559, lng: -0.071746}
+        zoom: 12,
+        center: {lat: 51.515559, lng: -0.071746},
+        scrollwheel: false
       });
 
       function getLocation() {
@@ -65,8 +67,33 @@ function googleMap($window) {
           markers.push(marker);
         });
       }
-      addMarkers();
+
+      function filterMarkers () {
+        console.log('inside filter');
+        event.preventDefault();
+
+        var body = angular.element(document).find('body');
+        var category = (body[0].querySelector('.categoryResource'));
+        // var categoryVal = category.val();
+        console.log(category);
+
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+        }
+
+        if (categoryVal === 'All') {
+          return addMarkers($scope.resources);
+        }
+
+        var filteredResources = $scope.resources.filter(function (resource) {
+          return resource.categoryVal === categoryVal;
+        });
+
+        addMarkers(filteredResources);
+      }
+      filterMarkers();
     }
   };
+
   return directive;
 }
