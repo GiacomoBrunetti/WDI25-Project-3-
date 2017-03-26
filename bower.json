@@ -22,7 +22,8 @@
     "angular-resource": "^1.6.3",
     "angular-ui-router": "^0.4.2",
     "satellizer": "^0.15.5",
-    "angular-messages": "^1.6.3"
+    "angular-messages": "^1.6.3",
+    "normalize-css": "^5.0.0"
   },
   "resolutions": {
     "angular": "^1.6.3"
