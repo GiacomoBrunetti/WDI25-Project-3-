@@ -765,6 +765,126 @@ Resource
   //   website: 'http://www.prha.net',
   //   telephone: '020 7364 7151',
   //   address: 'E2 0PG'
+  // }, {
+  //   name: 'LB Tower Hamlets - Housing Options Service',
+  //   type: 'Accommodation',
+  //   website: 'http://www.towerhamlets.gov.uk',
+  //   telephone: '020 7364 7474',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Look Ahead - Hackney Road Hostel & Flats',
+  //   type: 'Accommodation',
+  //   website: 'http://www.lookahead.org.uk',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Peter Bedford Housing Association - Hackney',
+  //   type: 'Accommodation',
+  //   website: 'http://www.peterbedford.org.uk',
+  //   telephone: '020 3815 4100',
+  //   address: 'E8 4DG'
+  // }, {
+  //   name: 'Dunloe Centre',
+  //   type: 'Day Centre',
+  //   website: 'ssmpriory@aol.com',
+  //   telephone: '020 7739 9976',
+  //   address: 'E2 8NS'
+  // }, {
+  //   name: 'Caritas Anchor House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.caritasanchorhouse.org.uk',
+  //   telephone: '020 7476 6062',
+  //   address: 'E16 4HB'
+  // }, {
+  //   name: 'Spitalfields Crypt Trust - Acorn House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.sct.org.uk',
+  //   telephone: '020 7613 3055',
+  //   address: 'E1 6JN'
+  // }, {
+  //   name: 'Spitalfields Crypt Trust - Shoreditch Community Project',
+  //   type: 'Day Centre',
+  //   website: 'http://www.sct.org.uk',
+  //   telephone: '020 7613 3232',
+  //   address: 'E1 6JN'
+  // }, {
+  //   name: 'Queen Victoria Seamen's Rest',
+  //   type: 'Accommodation',
+  //   website: 'http://www.qvsr.org.uk',
+  //   telephone: '020 7987 5466',
+  //   address: 'E14 6DF'
+  // }, {
+  //   name: 'Just Homes',
+  //   type: 'Accommodation',
+  //   website: 'http://www.justhomes.org.uk',
+  //   telephone: '020 7987 5466',
+  //   address: 'E16 1QU'
+  // }, {
+  //   name: 'Just Homes - 1 Cumberland Road',
+  //   type: 'Accommodation',
+  //   website: 'http://www.justhomes.org.uk',
+  //   telephone: '020 7473 5286',
+  //   address: 'E16 1QU'
+  // }, {
+  //   name: 'LB Newham - Homeless Persons Unit',
+  //   type: 'Accommodation',
+  //   website: 'http://www.newham.gov.uk',
+  //   telephone: '020 8430 2000',
+  //   address: 'E6 2RT'
+  // }, {
+  //   name: 'Dogs Trust - Hope Project',
+  //   type: 'Advice',
+  //   website: 'http://www.dogstrusthopeproject.org.uk',
+  //   telephone: '020 8430 2000',
+  //   address: 'EC1V 7RQ'
+  // }, {
+  //   name: 'Catch22 - London Housing Service',
+  //   type: 'Accommodation',
+  //   website: 'http://www.catch-22.org.uk',
+  //   telephone: '020 7336 4800',
+  //   address: 'EC1V 3AG'
+  // }, {
+  //   name: 'City of London - Homelessness Team',
+  //   type: 'Accommodation',
+  //   website: 'http://www.cityoflondon.gov.uk',
+  //   telephone: '020 7332 1804/3791',
+  //   address: 'EC1V 3AG'
+  // }, {
+  //   name: 'LB Greenwich - Housing Aid Centre',
+  //   type: 'Accommodation',
+  //   website: 'http://www.greenwich.gov.uk',
+  //   telephone: '020 8921 2863',
+  //   address: 'SE18 6HQ'
+  // }, {
+  //   name: 'LB Greenwich - Housing Options and Support',
+  //   type: 'Accommodation',
+  //   website: 'http://www.greenwich.gov.uk',
+  //   telephone: '020 8921 2863',
+  //   address: 'SE18 6HQ'
+  // }, {
+  //   name: 'Greenwich Housing Rights',
+  //   type: 'Accommodation',
+  //   website: 'http://www.grhr.co.uk',
+  //   telephone: '020 8854 8848',
+  //   address: 'SE18 6PF'
+  // }, {
+  //   name: 'Twentyfifth Avenue Housing',
+  //   type: 'Accommodation',
+  //   website: 'http://www.twentyfifthavenue.co.uk',
+  //   telephone: '020 8854 8854',
+  //   address: 'SE18 6PF'
+  // }, {
+  //   name: 'Depaul UK - Creekside Foyer',
+  //   type: 'Accommodation',
+  //   website: 'http://www.depauluk.org',
+  //   telephone: '020 8921 2863',
+  //   address: 'SE18 6NL'
+  // }, {
+  //   name: 'Emmaus Greenwich',
+  //   type: 'Accommodation',
+  //   website: 'http://www.emmaus.org.uk',
+  //   telephone: '0208 316 5398',
+  //   address: 'SE18 7NN'
 
 
 
