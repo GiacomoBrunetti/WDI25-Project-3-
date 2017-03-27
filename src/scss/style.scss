@@ -1,5 +1,5 @@
 body {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Catamaran', sans-serif;
 }
 
 .google-map {
@@ -26,18 +26,6 @@ body {
   }
 }
 
-#q1, #q2, #q3, #q4, #q5, #q6{
-  font-size: 55px;
-  padding-bottom: 100%;
-  padding-top: 50%;
-
-}
-
-span {
-  font-size: 80px;
-}
-
-
 .btn, a {
   color: black;
   text-decoration: none;
@@ -52,12 +40,12 @@ span {
 
 .btn, .flash {
   background-color: white;
-  width: 230px;
+  width: 200px;
   margin: 12px;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 10px;
   letter-spacing: 3px;
-  border-radius: 0;
-  padding: 20px;
+  padding: 15px;
   &:hover {
     border-color: red;
   }
@@ -74,4 +62,54 @@ select.category, .categoryResource {
   margin: 12px;
   letter-spacing: 3px;
   margin-top: 30px;
+}
+
+.q1, .q2 {
+  list-style-type:none;
+  margin:25px 0 0 0;
+  padding:0;
+}
+
+.q1 li {
+  float:left;
+  margin:0 5px 0 0;
+  width:40px;
+  height:40px;
+  position:relative;
+}
+
+.q2 li {
+  float:left;
+  margin:0 5px 0 0;
+  width:85px;
+  height:40px;
+  position:relative;
+}
+
+.q1 label, .q1 input .q2 label, .q2 input {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align: centre;
+}
+
+.q1 input[type="radio"], .q2 input[type="radio"] {
+  opacity:0.011;
+  z-index:100;
+}
+
+.q1 input[type="radio"]:checked + label {
+  background:yellow;
+}
+
+.q1 label, .q2 label {
+  padding-left: 16px;
+  padding-top: 6px;
+  border:1px solid black;
+  cursor:pointer;
+  z-index:90;
+  width: 90px;
 }

@@ -12,8 +12,7 @@ function googleMap($window) {
     template: '<div class="google-map"></div>', //Better for small bits of html rather than creating a new file
     scope: {
       center: '=',
-      resources: '=',
-      category: '='
+      resources: '='
     },
     link($scope, element) {
 
@@ -53,9 +52,18 @@ function googleMap($window) {
 
       getLocation();
 
-      const markers = [];
+      let markers = [];
+
+      function removeMarkers() {
+        markers.forEach((marker) => {
+          marker.setMap(null);
+        });
+
+        markers = [];
+      }
 
       function addMarkers() {
+        removeMarkers();
         $scope.resources.forEach((resource) => {
           console.log(resource.location.lat);
           const marker = new $window.google.maps.Marker({
@@ -63,35 +71,11 @@ function googleMap($window) {
             map: map,
             animation: google.maps.Animation.DROP
           });
-          console.log('in here');
           markers.push(marker);
         });
       }
 
-      function filterMarkers () {
-        console.log('inside filter');
-        event.preventDefault();
-
-        var body = angular.element(document).find('body');
-        var category = (body[0].querySelector('.categoryResource'));
-        // var categoryVal = category.val();
-        console.log(category);
-
-        for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(null);
-        }
-
-        if (categoryVal === 'All') {
-          return addMarkers($scope.resources);
-        }
-
-        var filteredResources = $scope.resources.filter(function (resource) {
-          return resource.categoryVal === categoryVal;
-        });
-
-        addMarkers(filteredResources);
-      }
-      filterMarkers();
+      $scope.$watch('resources', addMarkers);
     }
   };
 

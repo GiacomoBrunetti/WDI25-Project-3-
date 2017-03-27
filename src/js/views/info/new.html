@@ -1,45 +1,80 @@
+<google-map></google-map>
+
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-2">
 
-    <form name="infoNew.newForm" ng-submit="infoNew.create()" class="form-control" novalidate>
-      <p>The new info will look like this: {{ infoNew.info }}</p>
+    <form name="infoNew.newForm" ng-submit="infoNew.create()" novalidate>
+      <!-- <p>The new info will look like this: {{ infoNew.info }}</p> -->
 
-      <div id="q1">
-        <h4><span>Number of people?</span></h4>
-        <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="1">1
-          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="2">2
-          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="3">3
-          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="4">4
-          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="5">5
-        <div ng-messages="infoNew.newForm.number.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.number.$touched) && infoNew.newForm.number.$invalid" class="error">
-          <div ng-message="required">Please enter a value for this field.</div>
+        <div class="question">
+          <h4>Number of people?</h4>
+          <ul class="q1">
+            <li>
+              <label for="1">1</label>
+              <input type="radio" id ="1" name="number" ng-model="infoNew.info.number" ng-value="1">
+            </li>
+            <li>
+              <label for="2">2</label>
+              <input type="radio" id ="2" name="number" ng-model="infoNew.info.number" ng-value="2">
+            </li>
+            <li>
+              <label for="3">3</label>
+              <input type="radio" id ="3" name="number" ng-model="infoNew.info.number" ng-value="3">
+            </li>
+            <li>
+              <label for="4">4</label>
+              <input type="radio" id ="4" name="number" ng-model="infoNew.info.number" ng-value="4">
+            </li>
+            <li>
+              <label for="5">5</label>
+              <input type="radio" id ="5" name="number" ng-model="infoNew.info.number" ng-value="5">
+            </li>
+          </ul>
+          <div ng-messages="infoNew.newForm.number.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.number.$touched) && infoNew.newForm.number.$invalid" class="error">
+            <div ng-message="required">Please enter a value for this field.</div>
+          </div>
         </div>
-      </div>
 
-      <div id="q2">
-        <h4><span>Are there children?</span></h4>
-        <input type="radio" name="children" ng-model="infoNew.info.children" value="true">YES
-          <input type="radio" name="children" ng-model="infoNew.info.children" value="false">N
+      <div class="question">
+        <h4>Are there children?</h4>
+        <ul class="q2">
+          <li>
+            <label for="childTrue">Yes</label>
+            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" ng-value="true">
+          </li>
+          <li>
+            <label for="childFalse">No</label>
+            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="false">
+          </li>
+        </ul>
         <div ng-messages="infoNew.newForm.children.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.children.$touched) && infoNew.newForm.children.$invalid" class="error">
           <div ng-message="required">Please enter a value for this field.</div>
         </div>
       </div>
 
-      <div id="q3">
-         <h4><span>Are there pets?</span></h4>
-         <input ng-click="" name="pets" type="radio" ng-model="infoNew.info.pets" value="true">Yes
-           <input ng-click="" type="radio" ng-model="infoNew.info.pets" value="false">No
+      <div class="question">
+        <h4>Are there pets?</h4>
+         <ul class="q2">
+          <li>
+             <label for="petTrue">Yes</label>
+             <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="true">
+           </li>
+           <li>
+             <label for="petFalse">No</label>
+             <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="false">
+           </li>
+         </ul>
          <div ng-messages="infoNew.newForm.pets.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.pets.$touched) && infoNew.newForm.pets.$invalid" class="error">
            <div ng-message="required">Please enter a value for this field.</div>
          </div>
       </div>
 
-      <div id="q4">
+      <div class="question">
         <label for="image"><span>Please add an image if useful.</span></label>
         <input base64 type="file" name="base64" id="image" ng-model="infoNew.info.base64">
       </div>
 
-      <div id="q5">
+      <div class="question">
         <label for="comment"><h4><span>Comment</span></h4></label>
         <textarea name="comment" id="comment" ng-model="infoNew.info.comment"></textarea>
       </div>
