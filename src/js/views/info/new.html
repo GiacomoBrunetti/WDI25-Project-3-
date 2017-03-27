@@ -1,59 +1,58 @@
-<div ng-app="hrApp">
+<div class="row">
+  <div class="col-md-4">
 
-    <form name="infoNew.newForm" action="#" ng-submit="infoNew.infoCreate()">
-        <p>The new info will look like this: {{ infoNew.info }}</p>
+    <form name="infoNew.newForm" action="#" ng-submit="infoNew.create()" class="form-control" novalidate>
+      <p>The new info will look like this: {{ infoNew.info }}</p>
 
+      <div id="q1">
+        <h4><span>Number of people?</span></h4>
+        <a href="#q2"><input type="radio" name="number" ng-model="infoNew.info.number" ng-value="1">1
+          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="2">2
+          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="3">3
+          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="4">4
+          <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="5">5</a>
+        <div ng-messages="infoNew.newForm.number.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.number.$touched) && infoNew.newForm.number.$invalid" class="error">
+          <div ng-message="required">Please enter a value for this field.</div>
+        </div>
+      </div>
 
-        <div id="q1">
-          <h4><span>Number of people</span></h4>
-          <a href="#q2"><input type="radio" name="number" ng-model="infoNew.info.number" ng-value="1" />1
-            <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="2" />2
-            <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="3" />3
-            <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="4" />4
-            <input type="radio" name="number" ng-model="infoNew.info.number" ng-value="5" />5 +</a>
-              <br/>
-          </div>
+      <div id="q2">
+        <h4><span>Are there children?</span></h4>
+        <a href="#q3"><input type="radio" name="children" ng-model="infoNew.info.children" value="true">YES
+          <input type="radio" name="children" ng-model="infoNew.info.children" value="false">No</a>
+        <div ng-messages="infoNew.newForm.children.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.children.$touched) && infoNew.newForm.children.$invalid" class="error">
+          <div ng-message="required">Please enter a value for this field.</div>
+        </div>
+      </div>
 
+      <div id="q3">
+         <h4><span>Are there pets?</span></h4>
+         <a href="#q4"><input ng-click="" name="pets" type="radio" ng-model="infoNew.info.pets" value="true">Yes
+           <input ng-click="" type="radio" ng-model="infoNew.info.pets" value="false">No</a>
+         <div ng-messages="infoNew.newForm.pets.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.pets.$touched) && infoNew.newForm.pets.$invalid" class="error">
+           <div ng-message="required">Please enter a value for this field.</div>
+         </div>
+      </div>
 
-          <div id="q2">
-            <h4><span>Children</span></h4>
-            <a href="#q3"><input type="radio" name="children" ng-model="infoNew.info.children" value="true"/> YES
-              <input type="radio" name="children" ng-model="infoNew.info.children" value="false"/> No</a>
-          </div>
-            <br/>
+      <div id="q4">
+        <a href="#q5"><label for="image"><span>Please add an image if useful.</span></label>
+        <input base64 type="file" name="base64" id="image" ng-model="infoNew.info.base64"></a>
+      </div>
 
+      <div id="q5">
+        <a href="#q6"><label for="comment"><h4><span>Comment</span></h4></label>
+        <textarea name="comment" id="comment" ng-model="infoNew.info.comment"></textarea></a>
+      </div>
 
-          <div id="q3">
-             <h4><span>Pets</span></h4>
-             <a href="#q4"><input ng-click="" type="radio" ng-model="infoNew.info.pets" value="true"/> YES
-               <input ng-click="" type="radio" ng-model="infoNew.info.pets" value="false"/> No</a>
-              <br/>
-          </div>
+      <button class="btn">Submit</button>
 
+      <div id="q6">
+        <h4><span>Would you like to donate to a service in London?</span></h4>
+        <a href="#q7"><input type="radio" name="donate" ng-model="infoNew.info.donate" value="yes"><span>Yes</span>
+        <input type="radio" name="donate" ng-model="infoNew.info.donate" value="no"><span>No</span></a>
+      </div>
 
-          <div id="q4">
-              <a href="#q5"><label for="image"><span>Image</span></label>
-                <input base64 type="file" name="base64" id="image" ng-model="infoNew.info.base64" required></a>
-          </div>
-          <br>
-
-
-          <div id="q5">
-              <a href="#q6"><label for="comment"><h4><span>Comment</span></h4></label>
-                <input type="text" name="comment" id="comment" ng-model="infoNew.info.comment" required></a>
-          </div>
-           <br>
-
-
-           <div id="q6">
-              <h4><span>Would you like to donate to a service in London?</span></h4>
-              <a href="#q7"><input type="radio" name="donate" ng-model="infoNew.info.donate" value="yes" /><span>Yes</span>
-               <input type="radio" name="donate" ng-model="infoNew.info.donate" value="no" /><span>No</span></a>
-             <br/>
-           </div>
-
-       <button class="btn btn-primary">Submit</button>
-        <br>
     </form>
 
+  </div>
 </div>

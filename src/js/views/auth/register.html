@@ -1,24 +1,24 @@
 <div class="row">
   <div class="col-md-4 form">
     <h2>Register</h2>
-    <form name="register.registerForm" ng-submit="register.submit()" novalidate>
+    <form name="register.registerForm" ng-submit="register.submit()" novalidate class="form-control">
       <div>
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" ng-model="register.user.username" required>
+        <input type="text" name="username" id="username" ng-model="register.user.username" required class="form-control">
         <div ng-messages="register.registerForm.username.$error" role="alert" ng-show="(register.registerForm.$submitted || register.registerForm.username.$touched) && register.registerForm.username.$invalid" class="error">
           <div ng-message="required">Please enter a value for this field.</div>
         </div>
       </div>
       <div>
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" ng-model="register.user.password" required>
+        <input type="password" name="password" id="password" ng-model="register.user.password" required class="form-control">
         <div ng-messages="register.registerForm.password.$error" role="alert" ng-show="(register.registerForm.$submitted || register.registerForm.password.$touched) && register.registerForm.password.$invalid" class="error">
           <div ng-message="required">Please enter a value for this field.</div>
         </div>
       </div>
       <div>
         <label for="passwordConfirmation">Password Confirmation</label>
-        <input type="password" name="passwordConfirmation" id="passwordConfirmation" ng-model="register.user.passwordConfirmation" required>
+        <input type="password" name="passwordConfirmation" id="passwordConfirmation" ng-model="register.user.passwordConfirmation" required class="form-control">
         <div ng-messages="register.registerForm.passwordConfirmation.$error" role="alert" ng-show="(register.registerForm.$submitted || register.registerForm.passwordConfirmation.$touched) && register.registerForm.passwordConfirmation.$invalid" class="error">
           <div ng-message="required">Please enter a value for this field.</div>
         </div>
