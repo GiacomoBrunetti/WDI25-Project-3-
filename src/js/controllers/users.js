@@ -14,7 +14,6 @@ function UserCtrl($rootScope, $state, $auth, User) {
 UserShowCtrl.$inject = ['User', 'Info', '$stateParams', '$state'];
 function UserShowCtrl(User, Info, $stateParams, $state) {
   const vm = this;
-  vm.newComment = {};
 
   User.get($stateParams, (user) => {
     vm.user = user;
@@ -22,11 +21,22 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
   });
 
   function userDelete() {
-    console.log('clicked');
     vm.user
       .$remove()
       .then(() => $state.go('login'));
   }
 
   vm.delete = userDelete;
+
+  function deleteInfo(info) {
+    Info
+    .delete({id: info.id})
+    .$promise
+    .then(() => {
+      const index = vm.userInfos.indexOf(info);
+      vm.userInfos.splice(index, 1);
+    });
+  }
+
+  vm.deleteInfo = deleteInfo;
 }

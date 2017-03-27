@@ -57,13 +57,12 @@ function InfoNewCtrl(Info, $state, $auth) {
 InfoShowCtrl.$inject = ['Info', '$stateParams', '$state'];
 function InfoShowCtrl(Info, $stateParams, $state) {
   const vm = this;
-  vm.newComment = {};
   vm.info = Info.get($stateParams);
 
   function infoDelete() {
     vm.info
       .$remove()
-      .then(() => $state.go('infoIndex'));
+      .then(() => $state.go('userShow'));
   }
 
   vm.delete = infoDelete;
