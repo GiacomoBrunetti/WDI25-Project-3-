@@ -1,21 +1,18 @@
-Length: {{ usersShow.userInfos.length }}
-
 <div class="row post" ng-repeat="info in usersShow.userInfos">
-  <div class="col-md-6">
-    <h3>{{ info.createdBy.username }}</h3>
-    TimeStamp
+  <div class="col-md-4">
+    <h3>{{ info.createdBy }}</h3>
     <img ng-src="{{ info.imageSRC }}">
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
 
     <p>Number? {{ info.number }}</p>
     <p>Are there children? {{ info.children }}</p>
     <p>Are there pets? {{ info.pets }}</p>
     <p>Comment: {{ info.comment }}</p>
-
-    <button ng-click="postsShow.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === info.createdBy.id">Delete</button>
-    <button ng-click="postsShow.edit()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === info.createdBy.id">Edit</button>
-    <button class="button" ng-if="main.isAuthenticated() && main.currentUserId === info.createdBy.id">Donate</button>
-
+  </div>
+  <div class="col-md-3">
+    <button ng-click="postsShow.delete()" class="btn">Delete</button>
+    <button ng-click="postsShow.edit()" class="btn">Edit</button>
+    <button class="btn">Donate</button>
   </div>
 </div>

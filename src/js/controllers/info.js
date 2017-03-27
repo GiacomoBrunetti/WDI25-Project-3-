@@ -11,15 +11,16 @@ function InfoIndexCtrl(Info, Resource, filterFilter, $scope) {
 
   vm.all = Info.query();
   vm.allResources = Resource.query();
+  vm.categoryResource = '';
 
   function filterInfo() {
-    const params = vm.q;
-
-    vm.filtered = filterFilter(vm.all, params);
+    vm.filtered = filterFilter(vm.allResources, { type: vm.categoryResource });
+    console.log(vm.filtered);
   }
 
   $scope.$watchGroup([
-    () => vm.q
+    () => vm.allResources.$resolved,
+    () => vm.categoryResource
   ], filterInfo);
 }
 
