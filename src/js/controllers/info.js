@@ -9,18 +9,30 @@ InfoIndexCtrl.$inject = ['Info', 'Resource', 'filterFilter', '$scope'];
 function InfoIndexCtrl(Info, Resource, filterFilter, $scope) {
   const vm = this;
 
-  vm.all = Info.query();
+  vm.allInfo = Info.query();
   vm.allResources = Resource.query();
   vm.categoryResource = '';
+  vm.categoryInfo = '';
+
+  function filterResources() {
+    vm.filteredResources = filterFilter(vm.allResources, { type: vm.categoryResource });
+  }
 
   function filterInfo() {
-    vm.filtered = filterFilter(vm.allResources, { type: vm.categoryResource });
-    console.log(vm.filtered);
+    const params = {};
+    if(vm.categoryInfo === 'Children') params.children = true;
+    if(vm.categoryInfo === 'Pets') params.pets = true;
+    vm.filteredInfo = filterFilter(vm.allInfo, params);
   }
 
   $scope.$watchGroup([
     () => vm.allResources.$resolved,
     () => vm.categoryResource
+  ], filterResources);
+
+  $scope.$watchGroup([
+    () => vm.allInfo.$resolved,
+    () => vm.categoryInfo
   ], filterInfo);
 }
 

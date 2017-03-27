@@ -13,7 +13,7 @@ function infoMap($window) {
     scope: {
       center: '=',
       resources: '=',
-      infos: '='
+      info: '='
     },
 
     link($scope, element) {
@@ -54,30 +54,49 @@ function infoMap($window) {
 
       getLocation();
 
-      let markers = [];
+      let resourceMarkers = [];
+      let infoMarkers = [];
 
-      function removeMarkers() {
+      function removeMarkers(markers) {
         markers.forEach((marker) => {
           marker.setMap(null);
         });
 
-        markers = [];
+        return [];
       }
 
-      function addMarkers() {
-        removeMarkers();
+      function addResourceMarkers() {
+        resourceMarkers = removeMarkers(resourceMarkers);
         $scope.resources.forEach((resource) => {
-          console.log(resource.location.lat);
           const marker = new $window.google.maps.Marker({
             position: { lat: parseFloat(resource.location.lat), lng: parseFloat(resource.location.lng) },
             map: map,
             animation: google.maps.Animation.DROP
           });
-          markers.push(marker);
+          resourceMarkers.push(marker);
         });
       }
 
-      $scope.$watch('resources', addMarkers);
+      function addInfoMarkers() {
+        infoMarkers = removeMarkers(infoMarkers);
+        $scope.info.forEach((info) => {
+          const marker = new $window.google.maps.Marker({
+            position: { lat: parseFloat(info.lat), lng: parseFloat(info.lng) },
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: '/images/1.png'
+          });
+          infoMarkers.push(marker);
+        });
+      }
+
+      $scope.$watch('resources', (newVal) => {
+        if(newVal && newVal.length) addResourceMarkers();
+      });
+
+      $scope.$watch('info', (newVal) => {
+        if(newVal && newVal.length) addInfoMarkers();
+      });
     }
   };
 

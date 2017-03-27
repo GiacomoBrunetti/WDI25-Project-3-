@@ -1,11 +1,10 @@
 <form class="search-form">
   <div class="form-group">
-    <select name="category" required ng-model="infoIndex.category" class="category">
+    <select name="categoryInfo" required ng-model="infoIndex.categoryInfo" class="categoryInfo">
       <option selected value="">All</option>
-      <option value="Density">Density of People</option>
-      <option value="Density">Areas with Children</option>
-      <option value="Density">Areas with Pets</option>
-      <option value="Resources">Resources</option>
+      <option value="Number">Density of People</option>
+      <option value="Children">Areas with Children</option>
+      <option value="Pets">Areas with Pets</option>
     </select>
   </div>
 </form>
@@ -22,4 +21,4 @@
   </div>
 </form>
 
-<info-map resources="infoIndex.filtered" infos="infoIndex.all" ng-if="infoIndex.filtered.length"></info-map>
+<info-map resources="infoIndex.filteredResources" info="infoIndex.filteredInfo"></info-map>
