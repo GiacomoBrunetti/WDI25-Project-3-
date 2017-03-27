@@ -525,6 +525,254 @@ Resource
   //   website: 'http://www.homeless.org.uk/homeless-england/service/ackee-housing-project',
   //   telephone: '020 7254 5159',
   //   address: 'N16 8SX'
+  // }, {
+  //   name: 'Whitechapel Mission',
+  //   type: 'Day Centre',
+  //   website: 'http://www.whitechapel.org.uk',
+  //   telephone: '020 7247 8280',
+  //   address: 'E1 1BJ'
+  // }, {
+  //   name: 'LB Tower Hamlets One Stop Shop - Stepney & Wapping',
+  //   type: 'Accommodation',
+  //   website: 'http://www.towerhamlets.gov.uk',
+  //   telephone: '020 7364 5020',
+  //   address: 'E1 2FB'
+  // }, {
+  //   name: 'Cardboard Citizens',
+  //   type: 'Day Centre',
+  //   website: 'http://www.cardboardcitizens.org.uk',
+  //   telephone: '020 7377 8948',
+  //   address: 'E1 1EJ'
+  // }, {
+  //   name: 'Advisory Service for Squatters',
+  //   type: 'Day Centre',
+  //   website: 'http://www.squatter.org.uk',
+  //   telephone: '020 3216 0099',
+  //   address: 'E1 7QX'
+  // }, {
+  //   name: 'Doctors of the World UK - London Clinic',
+  //   type: 'Health Centre',
+  //   website: 'http://www.doctorsoftheworld.org.uk',
+  //   telephone: '020 70789 629',
+  //   address: 'E2 0EF'
+  // }, {
+  //   name: 'Health E1 - Homeless Medical Centre',
+  //   type: 'Health Centre',
+  //   website: 'http://www.healthe1practice.nhs.uk',
+  //   telephone: '020 7247 0090',
+  //   address: 'E1 6PU'
+  // }, {
+  //   name: 'Dellow Centre',
+  //   type: 'Health Centre',
+  //   website: 'http://www.providencerow.org.uk',
+  //   telephone: '020 7375 0020',
+  //   address: 'E1 7SA'
+  // }, {
+  //   name: 'Providence Row',
+  //   type: 'Day Centre',
+  //   website: 'http://www.providencerow.org.uk',
+  //   telephone: '020 7375 0020',
+  //   address: 'E1 7SA'
+  // }, {
+  //   name: 'LB Tower Hamlets One Stop Shop - Bethnal Green',
+  //   type: 'Accommodation',
+  //   website: 'http://www.towerhamlets.gov.uk',
+  //   telephone: '020 7364 5020',
+  //   address: 'E2 6NE'
+  // }, {
+  //   name: 'Crisis Skylight - London',
+  //   type: 'Day Centre',
+  //   website: 'http://www.crisis.org.uk',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Drapers City Foyer',
+  //   type: 'Accommodation',
+  //   website: 'http://www.prha.net',
+  //   telephone: '0300 636 1967',
+  //   address: 'E1 6LT'
+  // }, {
+  //   name: 'LB Tower Hamlets - Housing Options Service',
+  //   type: 'Day Centre',
+  //   website: 'http://www.towerhamlets.gov.uk',
+  //   telephone: '020 7364 7474',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Look Ahead - Hackney Road Hostel & Flats',
+  //   type: 'Accommodation',
+  //   website: 'http://www.lookahead.org.uk',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Providence Row HA - Dallow Centre',
+  //   type: 'Health Centre',
+  //   website: '',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Riverside House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.prha.net/',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Salvation Army - Booth House Lifehouse (Tower Hamlets)',
+  //   type: 'Accommodation',
+  //   website: 'http://www.salvationarmy.org.uk',
+  //   telephone: '020 7364 7474',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Tower Hamlets North Young People's Support Service',
+  //   type: 'Accommodation',
+  //   website: '',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+  // }, {
+  //   name: 'Sonning & Culham Project',
+  //   type: 'Accommodation',
+  //   website: '',
+  //   telephone: '020 7613 4993',
+  //   address: 'E2 7LB'
+  // }, {
+  //   name: 'Lea Bridge House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.paradigmhousing.co.uk',
+  //   telephone: '0300 303 8644',
+  //   address: 'E10 7EB'
+  // }, {
+  //   name: 'Chapter 1 - Stephen House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.chapter1.org.uk',
+  //   telephone: '020 8509 1090',
+  //   address: 'E17 9DB'
+  // }, {
+  //   name: 'Ashiana Network',
+  //   type: 'Accommodation',
+  //   website: 'http://www.ashiana.org.uk',
+  //   telephone: '020 8539 0427',
+  //   address: 'E11 1QY'
+  // }, {
+  //   name: 'Nacro - Waltham Forest High Risk Offender Project',
+  //   type: 'Accommodation',
+  //   website: 'http://www.nacro.org.uk',
+  //   telephone: '020 8558 1871, 020 8558 9560',
+  //   address: 'E11 3BG'
+  // }, {
+  //   name: 'Nacro - Waltham Forest YP Project',
+  //   type: 'Accommodation',
+  //   website: 'http://www.nacro.org.uk',
+  //   telephone: '020 8539 6855',
+  //   address: 'E11 1AR'
+  // }, {
+  //   name: 'Nacro - Waltham Forest YP Project',
+  //   type: 'Accommodation',
+  //   website: 'http://www.nacro.org.uk',
+  //   telephone: '020 8539 6855',
+  //   address: 'E11 1AR'
+  // }, {
+  //   name: 'Forest YMCA',
+  //   type: 'Accommodation',
+  //   website: 'http://www.forestymca.org.uk',
+  //   telephone: '020 8509 4600',
+  //   address: 'E17 3EF'
+  // }, {
+  //   name: 'Forest YMCA - Waltham Forest Refugee Project',
+  //   type: 'Accommodation',
+  //   website: 'http://www.forestymca.org.uk',
+  //   telephone: '020 8509 4626',
+  //   address: 'E17 3EF'
+  // }, {
+  //   name: 'St Mungo's - Hackney Substance Misuse',
+  //   type: 'Accommodation',
+  //   website: 'http://www.mungos.org',
+  //   telephone: '020 8985 3519',
+  //   address: 'E5 8NP'
+  // }, {
+  //   name: 'Branches',
+  //   type: 'Accommodation',
+  //   website: 'http://www.wfcbranches.org.uk',
+  //   telephone: '020 8520 6363',
+  //   address: 'E17 3HR'
+  // }, {
+  //   name: 'Children's Society - New Londoners',
+  //   type: 'Advice',
+  //   website: 'http://www.childrenssociety.org.uk/what-we-do/helping-children/destitution-proje...',
+  //   telephone: '0208 221 8200',
+  //   address: 'E15 4BQ'
+  // }, {
+  //   name: 'Providence Row HA - Elsdale Street',
+  //   type: 'Accommodation',
+  //   website: 'http://www.childrenssociety.org.uk/what-we-do/helping-children/destitution-proje...',
+  //   telephone: '020 8525 0127',
+  //   address: 'E9 6QY'
+  // }, {
+  //   name: 'Newham Transitional Practice (Vicarage Lane)',
+  //   type: 'Health Centre',
+  //   website: 'http://www.childrenssociety.org.uk/what-we-do/helping-children/destitution-proje...',
+  //   telephone: '0208 236 2255',
+  //   address: 'E15 4ES'
+  // }, {
+  //   name: 'LB Hackney - Housing Advice Centre',
+  //   type: 'Accommodation',
+  //   website: 'http://www.hackney.gov.uk',
+  //   telephone: '020 8356 2929',
+  //   address: 'E8 1DY'
+  // }, {
+  //   name: 'LB Waltham Forest - Housing Assessment and Options Unit',
+  //   type: 'Accommodation',
+  //   website: 'http://www.walthamforest.gov.uk',
+  //   telephone: '020 8496 3000',
+  //   address: 'E17 4GG'
+  // }, {
+  //   name: 'LB Tower Hamlets One Stop Shop - Bow & North Poplar',
+  //   type: 'Accommodation',
+  //   website: 'http://www.towerhamlets.gov.uk',
+  //   telephone: '020 7364 5020',
+  //   address: 'E3 5EQ'
+  // }, {
+  //   name: 'LB Tower Hamlets One Stop Shop - Bow & North Poplar',
+  //   type: 'Accommodation',
+  //   website: 'http://www.towerhamlets.gov.uk',
+  //   telephone: '020 7364 5020',
+  //   address: 'E3 5EQ'
+  // }, {
+  //   name: 'Greenhouse Walk-In Centre',
+  //   type: 'Accommodation',
+  //   website: 'http://www.thamesreach.org.uk',
+  //   telephone: '020 8510 4490',
+  //   address: 'E9 7SN'
+  // }, {
+  //   name: 'Princes Trust - Fairbridge Programme (Hackney Centre)',
+  //   type: 'Accommodation',
+  //   website: 'http://www.fairbridge.org.uk',
+  //   telephone: '020 3222 5900',
+  //   address: 'E8 3SE'
+  // }, {
+  //   name: 'Princes Trust - Fairbridge Programme (Hackney Centre)',
+  //   type: 'Advice',
+  //   website: 'http://www.fairbridge.org.uk',
+  //   telephone: '020 3222 5900',
+  //   address: 'E8 3SE'
+  // }, {
+  //   name: 'St Mungo's - Mare Street Hostel',
+  //   type: 'Accommodation',
+  //   website: 'http://www.mungos.org',
+  //   telephone: '020 8525 7700',
+  //   address: 'E8 3SG'
+  // }, {
+  //   name: 'Drapers City Foyer',
+  //   type: 'Accommodation',
+  //   website: 'http://www.prha.net',
+  //   telephone: '020 7364 7151',
+  //   address: 'E2 0PG'
+
+
+
+
+
+
+
+
   }])
   .then((resources) => {
     console.log(`${resources.length} resources created!`);
