@@ -886,13 +886,6 @@ Resource
   //   telephone: '0208 316 5398',
   //   address: 'SE18 7NN'
 
-
-
-
-
-
-
-
   }])
   .then((resources) => {
     console.log(`${resources.length} resources created!`);

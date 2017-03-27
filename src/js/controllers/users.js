@@ -22,9 +22,10 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
   });
 
   function userDelete() {
-    vm.info
+    console.log('clicked');
+    vm.user
       .$remove()
-      .then(() => $state.go('/'));
+      .then(() => $state.go('login'));
   }
 
   vm.delete = userDelete;
