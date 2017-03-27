@@ -11,11 +11,15 @@ function UserCtrl($rootScope, $state, $auth, User) {
   if(userId) vm.user= User.get({ id: userId });
 }
 
-UserShowCtrl.$inject = ['User', '$stateParams', '$state'];
-function UserShowCtrl($stateParams, $state, User) {
+UserShowCtrl.$inject = ['User', 'Info', '$stateParams', '$state'];
+function UserShowCtrl(User, Info, $stateParams, $state) {
   const vm = this;
   vm.newComment = {};
-  vm.info = User.get($stateParams);
+
+  User.get($stateParams, (user) => {
+    vm.user = user;
+    vm.userInfos = Info.query({ createdBy: user.id });
+  });
 
   function userDelete() {
     vm.info

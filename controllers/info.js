@@ -2,13 +2,14 @@ const Info = require('../models/info');
 
 function indexRoute(req, res, next) {
   Info
-    .find()
+    .find(req.query)
     .exec()
     .then((info) => res.json(info))
     .catch(next);
 }
 
 function createRoute(req, res, next) {
+  req.body.createdBy = req.user;
   Info
     .create(req.body)
     .then((info) => res.status(201).json(info))

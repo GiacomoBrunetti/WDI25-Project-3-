@@ -1,9 +1,29 @@
+body {
+  font-family: 'Anonymous Pro', monospace;
+}
+
 .google-map {
   height: 85vh;
   width: 100%;
   display: inline-block;
   margin-top: 20px;
   border: 3px solid skyblue;
+}
+
+.centered-styles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  text-transform: uppercase;
+  border: 1px solid black;
+  margin-top: 30%;
+  .btn {
+    margin-left: 33%;
+  }
 }
 
 #q1, #q2, #q3, #q4, #q5, #q6{
@@ -22,7 +42,6 @@ span {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
   padding: 10;
   font-weight: bold;
   font-size: 15px;
@@ -47,7 +66,6 @@ span {
 select.category, .categoryResource {
   border: 0;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 15px;
   position: center;
