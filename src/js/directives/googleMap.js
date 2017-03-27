@@ -14,6 +14,7 @@ function googleMap($window) {
       center: '=',
       resources: '='
     },
+    
     link($scope, element) {
 
       const map = new $window.google.maps.Map(element[0], {
