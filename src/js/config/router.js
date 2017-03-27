@@ -22,6 +22,11 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'js/views/info/show.html',
       controller: 'InfoShowCtrl as infoShow'
     })
+    .state('infoEdit', {
+      url: '/info/:id/edit',
+      templateUrl: 'js/views/info/edit.html',
+      controller: 'InfoEditCtrl as infoEdit'
+    })
     .state('userShow', {
       url: '/users/:id',
       templateUrl: 'js/views/user/show.html',

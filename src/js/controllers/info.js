@@ -42,8 +42,8 @@ function InfoNewCtrl(Info, $state, $auth) {
   vm.create = infoCreate;
 }
 
-InfoShowCtrl.$inject = ['Info', 'InfoComment', '$stateParams', '$state'];
-function InfoShowCtrl(Info, InfoComment, $stateParams, $state) {
+InfoShowCtrl.$inject = ['Info', '$stateParams', '$state'];
+function InfoShowCtrl(Info, $stateParams, $state) {
   const vm = this;
   vm.newComment = {};
   vm.info = Info.get($stateParams);
@@ -56,29 +56,6 @@ function InfoShowCtrl(Info, InfoComment, $stateParams, $state) {
 
   vm.delete = infoDelete;
 
-  function addComment() {
-    InfoComment
-      .save({ infoId: vm.info.id }, vm.newComment)
-      .$promise
-      .then((comment) => {
-        vm.info.comments.push(comment);
-        vm.newComment = {};
-      });
-  }
-
-  vm.addComment = addComment;
-
-  function deleteComment(comment) {
-    InfoComment
-      .delete({ infoId: vm.info.id, id: comment.id })
-      .$promise
-      .then(() => {
-        const index = vm.info.comments.indexOf(comment);
-        vm.info.comments.splice(index, 1);
-      });
-  }
-
-  vm.deleteComment = deleteComment;
 }
 
 InfoEditCtrl.$inject = ['Info', '$stateParams', '$state'];
@@ -90,7 +67,7 @@ function InfoEditCtrl(Info, $stateParams, $state) {
   function infoUpdate() {
     vm.info
       .$update()
-      .then(() => $state.go('infoShow', $stateParams));
+      .then(() => $state.go('usersShow', $stateParams));
   }
 
   vm.update = infoUpdate;

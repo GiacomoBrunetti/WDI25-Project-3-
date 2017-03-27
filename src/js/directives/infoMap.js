@@ -2,19 +2,20 @@
 
 angular
   .module('hrApp')
-  .directive('googleMap', googleMap);
+  .directive('infoMap', infoMap);
 
-googleMap.$inject = ['$window'];
-function googleMap($window) {
+infoMap.$inject = ['$window'];
+function infoMap($window) {
   const directive = {
     restrict: 'E',
     replace: true,
-    template: '<div class="google-map"></div>', //Better for small bits of html rather than creating a new file
+    template: '<div class="info-map"></div>', //Better for small bits of html rather than creating a new file
     scope: {
       center: '=',
-      resources: '='
+      resources: '=',
+      infos: '='
     },
-    
+
     link($scope, element) {
 
       const map = new $window.google.maps.Map(element[0], {

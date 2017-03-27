@@ -1,13 +1,12 @@
 <form class="search-form">
   <div class="form-group">
     <select name="category" required ng-model="infoIndex.category" class="category">
-      <option selected value="All">All</option>
-      <option value="Density">Density</option>
+      <option selected value="">All</option>
+      <option value="Density">Density of People</option>
+      <option value="Density">Areas with Children</option>
+      <option value="Density">Areas with Pets</option>
       <option value="Resources">Resources</option>
     </select>
-  </div>
-  <div class="col-md-3">
-    <input type="submit" value="Filter" class="btn submit">
   </div>
 </form>
 
@@ -16,13 +15,11 @@
     <select name="categoryResource" required ng-model="infoIndex.categoryResource" class="categoryResource">
       <option selected value="">All</option>
       <option value="Accommodation">Accommodation</option>
+      <option value="Accommodation">Advice</option>
       <option value="Day Centre">Day Centre</option>
       <option value="Health Service">Health Service</option>
     </select>
   </div>
-  <div class="col-md-3">
-    <input type="submit" value="Filter" class="btn submit">
-  </div>
 </form>
 
-<google-map resources="infoIndex.filtered" ng-if="infoIndex.filtered.length"></google-map>
+<info-map resources="infoIndex.filtered" infos="infoIndex.all" ng-if="infoIndex.filtered.length"></info-map>

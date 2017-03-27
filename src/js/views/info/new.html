@@ -1,4 +1,13 @@
-<google-map></google-map>
+<div>
+  <div id="pac-container">
+    <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoNew.info.location" lat="infoNew.info.lat" lng="infoNew.info.lng">
+    <div id="map" class="addMap"></div>
+  </div>
+</div>
+
+Here: {{ infoNew.info }}
+
+<user-map chosen-location="{ lat: infoNew.info.lat, lng: infoNew.info.lng }"></user-map>
 
 <div class="row">
   <div class="col-md-2">

@@ -4,15 +4,14 @@
     <img ng-src="{{ info.imageSRC }}">
   </div>
   <div class="col-md-4">
-
     <p>Number? {{ info.number }}</p>
     <p>Are there children? {{ info.children }}</p>
     <p>Are there pets? {{ info.pets }}</p>
     <p>Comment: {{ info.comment }}</p>
   </div>
   <div class="col-md-3">
-    <button ng-click="postsShow.delete()" class="btn">Delete</button>
-    <button ng-click="postsShow.edit()" class="btn">Edit</button>
+    <button ng-click="infoShow.delete()" class="btn">Delete</button>
+    <button ng-click="infoEdit({ id: infoShow.info.id })" class="btn">Edit</button>
     <button class="btn">Donate</button>
   </div>
 </div>

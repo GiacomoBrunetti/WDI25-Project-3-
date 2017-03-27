@@ -2,7 +2,7 @@ body {
   font-family: 'Catamaran', sans-serif;
 }
 
-.google-map {
+.info-map, .user-map {
   height: 85vh;
   width: 100%;
   display: inline-block;
@@ -112,4 +112,8 @@ select.category, .categoryResource {
   cursor:pointer;
   z-index:90;
   width: 90px;
+}
+
+#pac-container {
+  z-index: 999;
 }
