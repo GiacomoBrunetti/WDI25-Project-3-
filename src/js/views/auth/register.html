@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="col-md-4 form">
+  <div class="col-md-4 offset-md-4 form">
     <h2>Register</h2>
-    <form name="register.registerForm" ng-submit="register.submit()" novalidate class="form-control">
+    <form name="register.registerForm" ng-submit="register.submit()" novalidate class="form-group">
       <div>
         <label for="username">Username</label>
         <input type="text" name="username" id="username" ng-model="register.user.username" required class="form-control">
@@ -26,6 +26,9 @@
 
       <button class="btn">Register</button>
     </form>
-    <p>Already have an account with us? <a ui-sref="login">Login Here</a></p>
+
+    <p>Already have an account with us?</p>
+    <a ui-sref="login">Login Here</a>
+
   </div>
 </div>

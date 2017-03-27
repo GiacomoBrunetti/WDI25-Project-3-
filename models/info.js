@@ -7,8 +7,8 @@ const infoSchema = new mongoose.Schema({
   pets: { type: Boolean, required: true },
   image: { type: String },
   otherInfo: { type: String },
-  lat: { type: String, required: true },
-  lng: { type: String, required: true },
+  lat: { type: String },
+  lng: { type: String },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 },{
   timestamps: true

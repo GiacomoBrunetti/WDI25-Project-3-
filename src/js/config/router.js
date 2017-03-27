@@ -25,7 +25,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('userShow', {
       url: '/users/:id',
       templateUrl: 'js/views/user/show.html',
-      controller: 'UserShowCtrl as UserShow'
+      controller: 'UserShowCtrl as usersShow'
     })
     .state('login', {
       url: '/',

@@ -5,17 +5,28 @@ angular
   .controller('InfoShowCtrl', InfoShowCtrl)
   .controller('InfoEditCtrl', InfoEditCtrl);
 
-InfoIndexCtrl.$inject = ['Info', 'Resource'];
-function InfoIndexCtrl(Info, Resource) {
+InfoIndexCtrl.$inject = ['Info', 'Resource', 'filterFilter', '$scope'];
+function InfoIndexCtrl(Info, Resource, filterFilter, $scope) {
   const vm = this;
 
   vm.all = Info.query();
   vm.allResources = Resource.query();
+
+  function filterInfo() {
+    const params = vm.q;
+
+    vm.filtered = filterFilter(vm.all, params);
+  }
+
+  $scope.$watchGroup([
+    () => vm.q
+  ], filterInfo);
 }
 
-InfoNewCtrl.$inject = ['Info', '$state'];
-function InfoNewCtrl(Info, $state) {
+InfoNewCtrl.$inject = ['Info', '$state', '$auth'];
+function InfoNewCtrl(Info, $state, $auth) {
   const vm = this;
+  if($auth.getPayload()) vm.currentUserId = $auth.getPayload().userId;
   vm.info = {};
 
   function infoCreate() {
@@ -23,7 +34,7 @@ function InfoNewCtrl(Info, $state) {
       Info
         .save(vm.info)
         .$promise
-        .then(() => $state.go('infoIndex'));
+        .then(() => $state.go('userShow', { id: vm.currentUserId }));
     }
   }
 
