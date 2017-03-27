@@ -80,12 +80,12 @@ Here: {{ infoNew.info }}
 
       <div class="question">
         <label for="image"><span>Please add an image if useful.</span></label>
-        <input base64 type="file" name="base64" id="image" ng-model="infoNew.info.base64">
+        <input base64 type="file" name="image" id="image" ng-model="infoNew.info.image">
       </div>
 
       <div class="question">
         <label for="comment"><h4><span>Comment</span></h4></label>
-        <textarea name="comment" id="comment" ng-model="infoNew.info.comment"></textarea>
+        <textarea name="comment" id="comment" ng-model="infoNew.info.otherInfo"></textarea>
       </div>
 
       <button class="btn">Submit</button>
