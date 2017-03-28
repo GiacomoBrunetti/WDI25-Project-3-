@@ -2,10 +2,66 @@ body {
   font-family: 'Catamaran', sans-serif;
 }
 
+nav {
+  background-color: #F24E5D;
+  top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  .pageName {
+    height: 12vh;
+    h1 {
+      margin-top: 0px;
+      padding-top: 5%;
+      color: white;
+      font-weight: 100;
+      span {
+        font-weight: bolder;
+      }
+    }
+  }
+  .links {
+    background-color: #F24E5D;
+    height: 5vh;
+    top: 20;
+    text-align: center;
+    ul {
+      list-style: none;
+      padding-left: 0px;
+      margin: 0 auto;
+      li {
+        padding-left: 3.5vh;
+        padding-right: 3.5vh;
+        display: inline-block;
+        background-color: #F24E5D;
+        padding-bottom: 1vh;
+        a {
+          font-size: 1.7vh;
+          color: white;
+          text-decoration: none;
+           position: relative;
+          &:hover {
+            color: white;
+            &:after {
+              content: '';
+              background-color: white;
+              height: 1px;
+              width: 50%;
+              position: absolute;
+              bottom: -3px;
+              left: 25%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .info-map, .user-map {
-  height: 85vh;
+  height: 40vh;
   width: 100%;
   display: inline-block;
+  margin-left: 0px;
   margin-top: 20px;
   border: 3px solid skyblue;
 }
@@ -51,7 +107,7 @@ body {
   }
 }
 
-select.category, .categoryResource {
+select.categoryInfo, .categoryResource {
   border: 0;
   text-transform: uppercase;
   font-weight: bold;
@@ -116,4 +172,10 @@ select.category, .categoryResource {
 
 #pac-container {
   z-index: 999;
+}
+
+
+
+.hidden {
+  display: none;
 }
