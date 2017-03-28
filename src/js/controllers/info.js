@@ -9,30 +9,18 @@ InfoIndexCtrl.$inject = ['Info', 'Resource', 'filterFilter', '$scope'];
 function InfoIndexCtrl(Info, Resource, filterFilter, $scope) {
   const vm = this;
 
-  vm.allInfo = Info.query();
+  vm.all = Info.query();
   vm.allResources = Resource.query();
   vm.categoryResource = '';
-  vm.categoryInfo = '';
-
-  function filterResources() {
-    vm.filteredResources = filterFilter(vm.allResources, { type: vm.categoryResource });
-  }
 
   function filterInfo() {
-    const params = {};
-    if(vm.categoryInfo === 'Children') params.children = true;
-    if(vm.categoryInfo === 'Pets') params.pets = true;
-    vm.filteredInfo = filterFilter(vm.allInfo, params);
+    vm.filtered = filterFilter(vm.allResources, { type: vm.categoryResource });
+    console.log(vm.filtered);
   }
 
   $scope.$watchGroup([
     () => vm.allResources.$resolved,
     () => vm.categoryResource
-  ], filterResources);
-
-  $scope.$watchGroup([
-    () => vm.allInfo.$resolved,
-    () => vm.categoryInfo
   ], filterInfo);
 }
 
@@ -79,16 +67,16 @@ function InfoShowCtrl(Info, $stateParams, $state) {
 
 }
 
-InfoEditCtrl.$inject = ['Info', '$stateParams', '$state'];
-function InfoEditCtrl(Info, $stateParams, $state) {
+InfoEditCtrl.$inject = ['Info', '$stateParams', '$state', '$auth'];
+function InfoEditCtrl(Info, $stateParams, $state, $auth) {
   const vm = this;
-
+  if($auth.getPayload()) vm.currentUserId = $auth.getPayload().userId;
   vm.info = Info.get($stateParams);
 
   function infoUpdate() {
     vm.info
       .$update()
-      .then(() => $state.go('usersShow', $stateParams));
+      .then(() => $state.go('userShow', { id: vm.currentUserId }));
   }
 
   vm.update = infoUpdate;
