@@ -29,6 +29,19 @@ router.route('/register')
 router.route('/login')
   .post(auth.login);
 
+router.route('/auth/facebook')
+  .post(oauth.facebook);
+
+// router
+//   .post('/register', auth.controller)
+//   .post('/login', auth.controller)
+//   .post('/auth/facebook', oauth.facebook);
+
 router.all('/*', (req, res) => res.notFound());
+
+// Facebook login
+
+
+
 
 module.exports = router;
