@@ -18,6 +18,12 @@ function infoMap($window) {
 
     link($scope, element) {
 
+      let infoWindow = null;
+      let resourceMarkers = [];
+      let infoMarkers = [];
+      let radius = null;
+      const slider = document.getElementById('slider');
+
       const map = new $window.google.maps.Map(element[0], {
         zoom: 12,
         center: {lat: 51.515559, lng: -0.071746},
@@ -37,6 +43,22 @@ function infoMap($window) {
               lng: position.coords.longitude
             };
 
+            const circleUser = new google.maps.Circle({
+              strokeColor: '#0000FF',
+              strokeOpacity: 0.8,
+              strokeWeight: 1.5,
+              fillColor: '#0000FF',
+              fillOpacity: 0.1,
+              map: map,
+              center: pos,
+              radius: radius
+            });
+
+            slider.onchange = function() {
+              radius = parseFloat(this.value);
+              circleUser.setRadius(radius);
+            };
+
             locationMarker.setPosition(pos);
             map.setCenter(pos);
           }, function() {
@@ -50,12 +72,10 @@ function infoMap($window) {
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
           locationMarker.setPosition(pos);
         }
+
       }
 
       getLocation();
-
-      let resourceMarkers = [];
-      let infoMarkers = [];
 
       function removeMarkers(markers) {
         markers.forEach((marker) => {
@@ -65,7 +85,6 @@ function infoMap($window) {
         return [];
       }
 
-      let infoWindow = null;
 
       function addResourceMarkers() {
         resourceMarkers = removeMarkers(resourceMarkers);
