@@ -65,7 +65,7 @@ function infoMap($window) {
         return [];
       }
 
-      let infoWindow = null;
+      
 
       function addResourceMarkers() {
         resourceMarkers = removeMarkers(resourceMarkers);
@@ -75,17 +75,9 @@ function infoMap($window) {
             map: map,
             animation: google.maps.Animation.DROP
           });
+          console.log($scope.resources);
           resourceMarkers.push(marker);
 
-          google.maps.event.addListener(marker, 'click', function () {
-            if(infoWindow) infoWindow.close();
-            console.log(resource.name);
-            var infoWindowOptions = {
-              content: `<div><p>${resource.name}<br>${resource.type}<br>${resource.website}<br>${resource.telephone}<br>${resource.address}<br></p></div>`
-            };
-            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-            infoWindow.open(map, marker);
-          });
         });
       }
 
@@ -100,16 +92,10 @@ function infoMap($window) {
             animation: google.maps.Animation.DROP,
             icon: '/images/1.png'
           });
+
           infoMarkers.push(marker);
 
-          google.maps.event.addListener(marker, 'click', function () {
-            if(infoWindow) infoWindow.close();
-            var infoWindowOptions = {
-              content: `<div><p>${info.number}<br>${info.children}<br>${info.pets}<br>${info.comment}<br></p></div>`
-            };
-            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-            infoWindow.open(map, marker);
-          });
+
         });
       }
 
