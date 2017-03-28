@@ -65,7 +65,7 @@ function infoMap($window) {
         return [];
       }
 
-      
+      let infoWindow = null;
 
       function addResourceMarkers() {
         resourceMarkers = removeMarkers(resourceMarkers);
@@ -78,6 +78,14 @@ function infoMap($window) {
           console.log($scope.resources);
           resourceMarkers.push(marker);
 
+          google.maps.event.addListener(marker, 'click', function () {
+            if(infoWindow) infoWindow.close();
+            var infoWindowOptions = {
+              content: `<div><p>${resource.name}<br>${resource.type}</p></div>`
+            };
+            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+            infoWindow.open(map, marker);
+          });
         });
       }
 
@@ -95,7 +103,14 @@ function infoMap($window) {
 
           infoMarkers.push(marker);
 
-
+          google.maps.event.addListener(marker, 'click', function () {
+            if(infoWindow) infoWindow.close();
+            var infoWindowOptions = {
+              content: `<div><p>${info.number}<br>${info.children}</p></div>`
+            };
+            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+            infoWindow.open(map, marker);
+          });
         });
       }
 
