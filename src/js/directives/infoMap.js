@@ -25,7 +25,7 @@ function infoMap($window) {
       });
 
       function getLocation() {
-        const infoWindow = new $window.google.maps.Marker({
+        const locationMarker = new $window.google.maps.Marker({
           map: map,
           animation: google.maps.Animation.DROP
         });
@@ -37,18 +37,18 @@ function infoMap($window) {
               lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
+            locationMarker.setPosition(pos);
             map.setCenter(pos);
           }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
+            handleLocationError(true, locationMarker, map.getCenter());
           });
         } else {
         // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
+          handleLocationError(false, locationMarker, map.getCenter());
         }
 
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-          infoWindow.setPosition(pos);
+          locationMarker.setPosition(pos);
         }
       }
 
@@ -65,6 +65,8 @@ function infoMap($window) {
         return [];
       }
 
+      let infoWindow = null;
+
       function addResourceMarkers() {
         resourceMarkers = removeMarkers(resourceMarkers);
         $scope.resources.forEach((resource) => {
@@ -74,10 +76,22 @@ function infoMap($window) {
             animation: google.maps.Animation.DROP
           });
           resourceMarkers.push(marker);
+
+          google.maps.event.addListener(marker, 'click', function () {
+            if(infoWindow) infoWindow.close();
+            console.log(resource.name);
+            var infoWindowOptions = {
+              content: `<div><p>${resource.name}<br>${resource.type}<br>${resource.website}<br>${resource.telephone}<br>${resource.address}<br></p></div>`
+            };
+            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+            infoWindow.open(map, marker);
+          });
         });
       }
 
+
       function addInfoMarkers() {
+
         infoMarkers = removeMarkers(infoMarkers);
         $scope.info.forEach((info) => {
           const marker = new $window.google.maps.Marker({
@@ -87,8 +101,18 @@ function infoMap($window) {
             icon: '/images/1.png'
           });
           infoMarkers.push(marker);
+
+          google.maps.event.addListener(marker, 'click', function () {
+            if(infoWindow) infoWindow.close();
+            var infoWindowOptions = {
+              content: `<div><p>${info.number}<br>${info.children}<br>${info.pets}<br>${info.comment}<br></p></div>`
+            };
+            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+            infoWindow.open(map, marker);
+          });
         });
       }
+
 
       $scope.$watch('resources', (newVal) => {
         if(newVal && newVal.length) addResourceMarkers();
