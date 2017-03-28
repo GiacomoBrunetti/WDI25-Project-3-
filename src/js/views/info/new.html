@@ -7,7 +7,7 @@
 
 Here: {{ infoNew.info }}
 
-<user-map chosen-location="{ lat: infoNew.info.lat, lng: infoNew.info.lng }"></user-map>
+<user-map chosen-location="{ lat: infoNew.info.lat, lng: infoNew.info.lng }" info="infoNew.allInfo" ng-if="infoNew.allInfo.$resolved" data-method="infoNew.ctrlFn"></user-map>
 
 <div class="row">
   <div class="col-md-2">

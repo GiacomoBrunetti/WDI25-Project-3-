@@ -36,9 +36,10 @@ function InfoIndexCtrl(Info, Resource, filterFilter, $scope) {
   ], filterInfo);
 }
 
-InfoNewCtrl.$inject = ['Info', '$state', '$auth'];
-function InfoNewCtrl(Info, $state, $auth) {
+InfoNewCtrl.$inject = ['Info', '$state', '$auth', '$scope'];
+function InfoNewCtrl(Info, $state, $auth, $scope) {
   const vm = this;
+  vm.allInfo = Info.query();
   if($auth.getPayload()) vm.currentUserId = $auth.getPayload().userId;
   vm.info = {};
 
@@ -52,6 +53,15 @@ function InfoNewCtrl(Info, $state, $auth) {
   }
 
   vm.create = infoCreate;
+
+  vm.ctrlFn = function(latLng) {
+    console.log(latLng);
+    vm.info.lat = latLng.lat;
+    vm.info.lng = latLng.lng;
+    $scope.$apply();
+    console.log(vm.info);
+  };
+
 }
 
 InfoShowCtrl.$inject = ['Info', '$stateParams', '$state'];
