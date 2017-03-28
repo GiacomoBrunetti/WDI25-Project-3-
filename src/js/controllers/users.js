@@ -28,6 +28,8 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
 
   vm.delete = userDelete;
 
+
+
   function deleteInfo(info) {
     Info
     .delete({id: info.id})

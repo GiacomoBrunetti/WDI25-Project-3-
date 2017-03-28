@@ -12,7 +12,7 @@ router.route('/info')
   .post(secureRoute, imageUpload, info.create);
 
 router.route('/info/:id')
-  .get(info.show)
+  .get(secureRoute, info.show)
   .delete(secureRoute, info.delete)
   .put(secureRoute, info.update);
 

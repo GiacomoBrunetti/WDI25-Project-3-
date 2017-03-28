@@ -12,12 +12,16 @@ function userMap($window) {
     replace: true,
     template: '<div class="user-map"></div>', //Better for small bits of html rather than creating a new file
     scope: {
-      chosenLocation: '='
+      chosenLocation: '=',
+      info: '=',
+      updateLatLng: '=method'
     },
 
     link($scope, element) {
 
-      let infoWindow = null;
+      let infoMarkers = [];
+
+      let currentLocationMarker = null;
       const map = new $window.google.maps.Map(element[0], {
         zoom: 12,
         center: {lat: 51.515559, lng: -0.071746},
@@ -25,7 +29,7 @@ function userMap($window) {
       });
 
       function getLocation() {
-        infoWindow = new $window.google.maps.Marker({
+        currentLocationMarker = new $window.google.maps.Marker({
           map: map,
           animation: google.maps.Animation.DROP
         });
@@ -37,14 +41,18 @@ function userMap($window) {
               lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
+            console.log(pos);
+            $scope.updateLatLng(pos);
+
+
+            currentLocationMarker.setPosition(pos);
             map.setCenter(pos);
           }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
+            handleLocationError(true, currentLocationMarker, map.getCenter());
           });
         } else {
         // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
+          handleLocationError(false, currentLocationMarker, map.getCenter());
         }
 
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -56,9 +64,42 @@ function userMap($window) {
 
       $scope.$watch('chosenLocation', () => {
         if($scope.chosenLocation.lat && $scope.chosenLocation.lng) {
-          infoWindow.setPosition($scope.chosenLocation);
+          currentLocationMarker.setPosition($scope.chosenLocation);
           map.setCenter($scope.chosenLocation);
         }
+      });
+
+      function removeMarkers(markers) {
+        markers.forEach((marker) => {
+          marker.setMap(null);
+        });
+
+        return [];
+      }
+
+      function addInfoMarkers() {
+
+
+        infoMarkers = removeMarkers(infoMarkers);
+        $scope.info.forEach((info) => {
+          const marker = new $window.google.maps.Marker({
+            position: { lat: parseFloat(info.lat), lng: parseFloat(info.lng) },
+            map: map,
+            icon: '/images/1.png'
+          });
+
+          google.maps.event.addListener(marker, 'click', function () {
+            console.log(marker.position.lat(), marker.position.lng());
+
+            const latLng = { lat: marker.position.lat(), lng: marker.position.lng() };
+            $scope.updateLatLng(latLng);
+          });
+          infoMarkers.push(marker);
+        });
+      }
+
+      $scope.$watch('info', (newVal) => {
+        if(newVal && newVal.length) addInfoMarkers();
       });
 
     }
@@ -76,7 +117,7 @@ function autocomplete($window) {
       lat: '=',
       lng: '='
     },
-    link: function(scope, element, attrs, model) {
+    link: function($scope, element, attrs, model) {
       const options = {
         types: []
       };
@@ -85,8 +126,8 @@ function autocomplete($window) {
 
       autocomplete.addListener('place_changed', () => {
         const place = autocomplete.getPlace();
-        scope.lat = place.geometry.location.toJSON().lat;
-        scope.lng = place.geometry.location.toJSON().lng;
+        $scope.lat = place.geometry.location.toJSON().lat;
+        $scope.lng = place.geometry.location.toJSON().lng;
         model.$setViewValue(element.val());
       });
     }
