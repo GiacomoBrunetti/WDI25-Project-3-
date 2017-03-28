@@ -1,6 +1,6 @@
 <h3>{{ user.username }}</h3>
 <div>
-<a class="btn">Donate</a>
+<a ui-sref="donate"class="btn">Donate</a>
 </div>
 <div class="">
 
@@ -18,6 +18,6 @@
   </div>
   <div class="col-md-3">
     <button ng-click="usersShow.deleteInfo(info)" class="btn">Delete</button>
-    <a href="info/{{ info.id }}/edit" class="btn">Edit</a>
+    <a ui-sref="info/{{ info.id }}/edit" class="btn">Edit</a>
   </div>
 </div>

@@ -12,7 +12,7 @@ router.route('/info')
   .post(secureRoute, imageUpload, info.create);
 
 router.route('/info/:id')
-  .get(info.show)
+  .get(secureRoute, info.show)
   .delete(secureRoute, info.delete)
   .put(secureRoute, info.update);
 
@@ -29,6 +29,19 @@ router.route('/register')
 router.route('/login')
   .post(auth.login);
 
+router.route('/auth/facebook')
+  .post(oauth.facebook);
+
+// router
+//   .post('/register', auth.controller)
+//   .post('/login', auth.controller)
+//   .post('/auth/facebook', oauth.facebook);
+
 router.all('/*', (req, res) => res.notFound());
+
+// Facebook login
+
+
+
 
 module.exports = router;

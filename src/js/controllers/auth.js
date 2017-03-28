@@ -23,6 +23,13 @@ function LoginCtrl($auth, $state) {
   const vm = this;
   vm.credentials = {};
 
+  function authenticate(service) {
+    $auth.authenticate(service)
+    .then(() => $state.go('infoNew'));
+  }
+
+  vm.authenticate = authenticate;
+
   function submit() {
     if (vm.loginForm.$valid) {
       $auth.login(vm.credentials)

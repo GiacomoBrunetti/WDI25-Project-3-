@@ -1,13 +1,13 @@
+
 <div class="googlePlaces">
   <div id="pac-container">
     <label >If the pin below indicates the wrong position, input here your location</label>
     <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoNew.info.location" lat="infoNew.info.lat" lng="infoNew.info.lng" class="form-control">
-    <div id="map" class="addMap"></div>
   </div>
 </div>
 
 
-<user-map chosen-location="{ lat: infoNew.info.lat, lng: infoNew.info.lng }"></user-map>
+<user-map chosen-location="{ lat: infoNew.info.lat, lng: infoNew.info.lng }" info="infoNew.allInfo" ng-if="infoNew.allInfo.$resolved" data-method="infoNew.ctrlFn"></user-map>
 
 <div class="row form">
   <div class="formContainer">

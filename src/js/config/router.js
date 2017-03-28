@@ -41,6 +41,10 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/register',
       templateUrl: 'js/views/auth/register.html',
       controller: 'RegisterCtrl as register'
+    })
+    .state('donate', {
+      url: '/donate',
+      templateUrl: 'js/donate.html'
     });
 
   $urlRouterProvider.otherwise('/');
