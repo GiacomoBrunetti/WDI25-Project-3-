@@ -80,7 +80,7 @@
       <div class="question imageSelect">
         <h4>Please add an image if useful.</h4>
         <label for="image">Choose file...</label>
-        <input base64 type="file" name="image" id="image" ng-model="infoNew.info.image">
+        <input base64 type="file" name="image" id="image" ng-model="infoNew.info.base64">
       </div>
 
       <div class="question">
@@ -89,7 +89,7 @@
         <textarea name="comment" id="comment" ng-model="infoNew.info.otherInfo" placeholder="Type here..."></textarea>
       </div>
 
-      <button class="btn">Submit</button>
+      <button class="btn" ng-if="(!infoNew.newForm.$pristine)">Submit</button>
 
     </form>
 

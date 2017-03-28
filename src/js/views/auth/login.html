@@ -1,30 +1,29 @@
-<div class="row">
-  <div class="col-md-4 form">
+
+  <div class="row form">
     <h2>Log in</h2>
     <form name="login.loginForm" ng-submit="login.submit()" novalidate class="form-group">
       <div>
         <label for="username">Username</label>
         <input type="username" name="username" id="username" ng-model="login.credentials.username" required class="form-control">
-        <div ng-messages="login.loginForm.username.$error" role="alert" ng-show="(login.loginForm.$submitted || login.loginForm.username.$touched) && login.loginForm.username.$invalid" class="error">
-          <div ng-message="required">Please enter a value for this field.</div>
+        <div class="messages" ng-messages="login.loginForm.username.$error" role="alert" ng-show="(login.loginForm.$submitted || login.loginForm.username.$touched) && login.loginForm.username.$invalid" class="error">
+          <div class="message" ng-message="required">Please enter a value for this field.</div>
         </div>
       </div>
       <div>
         <label for="password">Password</label>
         <input type="password" name="password" id="password" ng-model="login.credentials.password" required class="form-control">
-        <div ng-messages="login.loginForm.password.$error" role="alert" ng-show="(login.loginForm.$submitted || login.loginForm.password.$touched) && login.loginForm.password.$invalid" class="error">
-          <div ng-message="required">Please enter a value for this field.</div>
+        <div class="messages" ng-messages="login.loginForm.password.$error" role="alert" ng-show="(login.loginForm.$submitted || login.loginForm.password.$touched) && login.loginForm.password.$invalid" class="error">
+          <div class="message" ng-message="required">Please enter a value for this field.</div>
         </div>
       </div>
 
       <button class="btn">Login</button>
     </form>
-    <p>OR</p>
+    <p class="bottomLine">OR</p>
 
-    <span class="loginButtons">
-      <button class="btn" ng-click="login.authenticate('facebook')">Login with Facebook</button>
-    </span>
 
-    <p>Don't have an account with us? <a ui-sref="register">Register Here</a></p>
+    <button class="btn" ng-click="login.authenticate('facebook')">Facebook login</button>
+
+    <p class="bottomLine">Don't have an account with us?</p>
+    <a class="btn" ui-sref="register">Register Here</a>
   </div>
-</div>
