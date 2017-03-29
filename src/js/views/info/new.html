@@ -1,5 +1,4 @@
-
-<div class="googlePlaces">
+<div>
   <div id="pac-container">
     <label >If the pin below indicates the wrong position, input here your location</label>
     <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoNew.info.location" lat="infoNew.info.autocompleteLat" lng="infoNew.info.autocompleteLng" class="form-control">
@@ -81,9 +80,8 @@
 
       <div class="question imageSelect">
         <h4>Please add an image if useful.</h4>
-        <label for="image">Choose file...</label>
-
         <input base64 type="file" name="image" id="image" ng-model="infoNew.info.base64">
+        <label id="chooseFile" for="image">Choose file...</label>
 
       </div>
 
