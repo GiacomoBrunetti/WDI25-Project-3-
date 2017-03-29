@@ -60,7 +60,6 @@ function userMap($window) {
               radius: 100
             });
 
-            console.log(pos);
 
             currentLocationMarker.setPosition(pos);
 

@@ -65,15 +65,6 @@ User
       lng: '-0.049095',
       createdBy: users[0]
     },{
-      number: 1,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.512909',
-      lng: '-0.066948',
-      createdBy: users[0]
-    },{
       number: 3,
       children: 'false',
       pets: 'false',
@@ -90,24 +81,6 @@ User
       otherInfo: 'Worried that there is a child but have never seen them before so hopefully it is just a one off.',
       lat: '51.510238',
       lng: '-0.074673',
-      createdBy: users[0]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.509811',
-      lng: '-0.068665',
-      createdBy: users[0]
-    },{
-      number: 3,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: 'Often seen travelling up and down the road',
-      lat: '51.512909',
-      lng: '-0.06403',
       createdBy: users[0]
     },{
       number: 2,
@@ -128,24 +101,6 @@ User
       lng: '-0.059052',
       createdBy: users[0]
     },{
-      number: 2,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.514191',
-      lng: '-0.056648',
-      createdBy: users[0]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.515473',
-      lng: '-0.061283',
-      createdBy: users[0]
-    },{
       number: 1,
       children: 'false',
       pets: 'false',
@@ -162,42 +117,6 @@ User
       otherInfo: '',
       lat: '51.517503',
       lng: '-0.098362',
-      createdBy: users[1]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514298 ',
-      lng: '-0.092182',
-      createdBy: users[1]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.513871',
-      lng: '-0.098362',
-      createdBy: users[1]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.510772',
-      lng: '-0.115356',
-      createdBy: users[1]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.510559',
-      lng: '-0.112095',
       createdBy: users[1]
     },{
       number: 3,
@@ -223,27 +142,9 @@ User
       pets: 'false',
       image: '',
       otherInfo: '',
-      lat: '51.514939 ',
-      lng: '-0.128574',
-      createdBy: users[1]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
       lat: '51.516114',
       lng: '-0.138187',
       createdBy: users[1]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514725',
-      lng: '-0.131149',
-      createdBy: users[2]
     },{
       number: 2,
       children: 'false',
@@ -254,15 +155,6 @@ User
       lng: '-0.108147',
       createdBy: users[2]
     },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514618',
-      lng: '-0.101624',
-      createdBy: users[2]
-    },{
       number: 2,
       children: 'false',
       pets: 'true',
@@ -270,33 +162,6 @@ User
       otherInfo: '',
       lat: '51.517289',
       lng: '-0.096817',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514084 ',
-      lng: '-0.09407',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.510025',
-      lng: '-0.071239',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.510879',
-      lng: '-0.067291',
       createdBy: users[2]
     },{
       number: 1,
@@ -322,33 +187,6 @@ User
       pets: 'false',
       image: '',
       otherInfo: '',
-      lat: '51.518678',
-      lng: '-0.061369',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.519212',
-      lng: '-0.058107',
-      createdBy: users[3]
-    },{
-      number: 3,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.519425',
-      lng: ' -0.064287',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
       lat: '51.516648',
       lng: '-0.066433',
       createdBy: users[3]
@@ -367,108 +205,9 @@ User
       pets: 'false',
       image: '',
       otherInfo: '',
-      lat: '51.514458',
-      lng: '-0.077162',
-      createdBy: users[3]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514298',
-      lng: '-0.073986',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514565 ',
-      lng: '-0.066433',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
       lat: '51.512482',
       lng: '-0.072355',
       createdBy: users[3]
-    },{
-      number: 3,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.509223',
-      lng: '-0.083342',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'true',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514031',
-      lng: '-0.092354',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.51339',
-      lng: '-0.09819',
-      createdBy: users[4]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.513443',
-      lng: ' -0.085144',
-      createdBy: users[4]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.515526',
-      lng: '-0.069695',
-      createdBy: users[4]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.516221',
-      lng: '-0.081024',
-      createdBy: users[4]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.513977',
-      lng: ' -0.078278',
-      createdBy: users[4]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.513977',
-      lng: '-0.075445',
-      createdBy: users[4]
     },{
       number: 1,
       children: 'false',
@@ -477,24 +216,6 @@ User
       otherInfo: '',
       lat: '51.515313',
       lng: '-0.072269',
-      createdBy: users[4]
-    },{
-      number: 1,
-      children: 'true',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514779',
-      lng: '-0.067806',
-      createdBy: users[4]
-    },{
-      number: 3,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514244 ',
-      lng: '-0.075703',
       createdBy: users[4]
     },{
       number: 2,
@@ -556,15 +277,6 @@ User
       pets: 'false',
       image: '',
       otherInfo: '',
-      lat: '51.518037',
-      lng: '-0.076132',
-      createdBy: users[5]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
       lat: '51.519532',
       lng: '-0.059738',
       createdBy: users[5]
@@ -580,56 +292,11 @@ User
     },{
       number: 2,
       children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.51825',
-      lng: '-0.088792',
-      createdBy: users[5]
-    },{
-      number: 2,
-      children: 'false',
       pets: 'true',
       image: '',
       otherInfo: 'probably a couple in very bad conditions',
       lat: '51.520707',
       lng: '-0.07935',
-      createdBy: users[6]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.516194',
-      lng: '-0.080981',
-      createdBy: users[6]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.514512 ',
-      lng: '-0.080338',
-      createdBy: users[6]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.51363',
-      lng: '-0.083299',
-      createdBy: users[6]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.510879',
-      lng: '-0.086603',
       createdBy: users[6]
     },{
       number: 1,
@@ -643,29 +310,11 @@ User
     },{
       number: 1,
       children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.510639',
-      lng: '-0.077419',
-      createdBy: users[6]
-    },{
-      number: 1,
-      children: 'false',
       pets: 'false',
       image: '',
       otherInfo: '',
       lat: '51.50957',
       lng: '-0.08244',
-      createdBy: users[6]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'true',
-      image: '',
-      otherInfo: '',
-      lat: '51.510612',
-      lng: ' -0.07802',
       createdBy: users[6]
     },{
       number: 1,
@@ -686,51 +335,6 @@ User
       lng: '-0.076518',
       createdBy: users[6]
     },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.509143',
-      lng: '-0.074329',
-      createdBy: users[7]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.509223 ',
-      lng: '-0.079608',
-      createdBy: users[7]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.509303',
-      lng: ' -0.070381',
-      createdBy: users[7]
-    },{
-      number: 2,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.509784',
-      lng: '-0.063815',
-      createdBy: users[7]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.516007',
-      lng: '-0.068707',
-      createdBy: users[7]
-    },{
       number: 1,
       children: 'false',
       pets: 'false',
@@ -747,15 +351,6 @@ User
       otherInfo: '',
       lat: '51.515339',
       lng: '-0.076904',
-      createdBy: users[7]
-    },{
-      number: 1,
-      children: 'false',
-      pets: 'false',
-      image: '',
-      otherInfo: '',
-      lat: '51.517529',
-      lng: '-0.0736',
       createdBy: users[7]
     },{
       number: 2,

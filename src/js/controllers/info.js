@@ -61,8 +61,8 @@ function InfoNewCtrl(Info, $state, $auth, $scope) {
       vm.info.lat = latLng.lat;
       vm.info.lng = latLng.lng;
 
-      vm.info.lat = vm.info.autocompleteLat;
-      vm.info.lng = vm.info.autocompleteLng;
+      // vm.info.lat = vm.info.autocompleteLat;
+      // vm.info.lng = vm.info.autocompleteLng;
     } else {
       console.log('marker nearby');
       vm.message = 'Please select a marker within your radius';
