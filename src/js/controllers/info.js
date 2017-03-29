@@ -54,11 +54,22 @@ function InfoNewCtrl(Info, $state, $auth, $scope) {
 
   vm.create = infoCreate;
 
-  vm.ctrlFn = function(latLng) {
+  vm.ctrlFn = function(latLng, nearbyMarker) {
     console.log(latLng);
-    vm.info.lat = latLng.lat;
-    vm.info.lng = latLng.lng;
-    $scope.$apply();
+    if (!nearbyMarker) {
+      vm.message = null;
+      vm.info.lat = latLng.lat;
+      vm.info.lng = latLng.lng;
+
+      vm.info.lat = vm.info.autocompleteLat;
+      vm.info.lng = vm.info.autocompleteLng;
+    } else {
+      console.log('marker nearby');
+      vm.message = 'Please select a marker within your radius';
+    }
+    if(!$scope.$$phase) {
+      $scope.$apply();
+    }
     console.log(vm.info);
   };
 
