@@ -28,4 +28,17 @@ function MainCtrl($rootScope, $state, $auth) {
   }
 
   vm.logout = logout;
+
+  const protectedStates = ['infoNew'];
+
+  function secureState(e, toState) {
+    vm.message = null;
+    if(!$auth.isAuthenticated() && protectedStates.includes(toState.name)) {
+      e.preventDefault();
+      $state.go('login');
+      vm.message = 'You must be logged in to go there!';
+    }
+  }
+
+  $rootScope.$on('$stateChangeStart', secureState);
 }
