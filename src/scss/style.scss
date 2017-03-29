@@ -307,29 +307,72 @@ select.categoryInfo, .categoryResource {
 
 
 #about{
-  p{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: white;
-    display: inline-block;
-    font-size: 20px;
-  }
-}
-
-section{
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  position: relative;
-  h2 {
-    font-size: 48px;
-    color: white;
-    height: 60vh;
-    width: 100%;
-    font-weight: bold;
+  .row {
+    .firstLink {
+      h2 {
+        font-size: 3em;
+      }
+      p {
+        width: 80%;
+        margin-left: 10%;
+      }
+      a {
+      background-color:  #F24E5D;
+      border: 2px solid white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      }
+    }
+    .secondLink {
+      h2 {
+        font-size: 3em;
+      }
+      p {
+        width: 80%;
+        margin-left: 10%;
+      }
+      a {
+      background-color:  #F24E5D;
+      border: 2px solid white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      }
+    }
+    .thirdLink {
+      h2 {
+        font-size: 3em;
+      }
+      p {
+        width: 80%;
+        margin-left: 10%;
+      }
+      a {
+      background-color:  #F24E5D;
+      border: 2px solid white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      }
+    }
   }
+
+
+//   section{
+//   text-align: center;
+//   padding-top: 80px;
+//   padding-bottom: 80px;
+//   position: relative;
+//   h2 {
+//     font-size: 48px;
+//     color: white;
+//     height: 60vh;
+//     width: 100%;
+//     font-weight: bold;
+//   }
+// }
 }
 
 .facebook {
@@ -380,6 +423,7 @@ p,a {
     }
   }
 }
+
 
 
 .selected {
