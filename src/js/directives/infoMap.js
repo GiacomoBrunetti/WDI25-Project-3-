@@ -100,7 +100,7 @@ function infoMap($window) {
           google.maps.event.addListener(marker, 'click', function () {
             if(infoWindow) infoWindow.close();
             var infoWindowOptions = {
-              content: `<div><p>${resource.name}<br>${resource.type}</p></div>`
+              content: `<div><p>${resource.name}<br>${resource.type}<br>${resource.telephone}<br><a href="${resource.website}" target="_blank">Website</a><br>${resource.address}</p></div>`
             };
             infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             infoWindow.open(map, marker);
