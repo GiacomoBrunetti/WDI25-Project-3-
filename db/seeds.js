@@ -63,12 +63,12 @@ Resource
     website: 'http://www.homeless.org.uk/homeless-england/service/st-mungos-st-pancras-way',
     telephone: '020 7383 2748',
     address: '9 St Pancras Way, London, NW1 0PB'
-  // }, {
-  //   name: 'New Horizon Youth Centre',
-  //   type: 'Day Centre',
-  //   website: 'http://www.homeless.org.uk/homeless-england/service/new-horizon-youth-centre',
-  //   telephone: '020 7388 5580',
-  //   address: '68 Chalton Street, London, NW1 1JR'
+  }, {
+    name: 'New Horizon Youth Centre',
+    type: 'Day Centre',
+    website: 'http://www.homeless.org.uk/homeless-england/service/new-horizon-youth-centre',
+    telephone: '020 7388 5580',
+    address: '68 Chalton Street, London, NW1 1JR'
   // }, {
   //   name: 'St Mungo\'s - Endsleigh Gardens',
   //   type: 'Accommodation',
@@ -622,7 +622,7 @@ Resource
   //   telephone: '020 7364 7474',
   //   address: 'E2 0PG'
   // }, {
-  //   name: 'Tower Hamlets North Young People's Support Service',
+  //   name: 'Tower Hamlets North Young People Support Service',
   //   type: 'Accommodation',
   //   website: '',
   //   telephone: '020 7364 7151',
@@ -682,7 +682,7 @@ Resource
   //   telephone: '020 8509 4626',
   //   address: 'E17 3EF'
   // }, {
-  //   name: 'St Mungo's - Hackney Substance Misuse',
+  //   name: 'St Mungo - Hackney Substance Misuse',
   //   type: 'Accommodation',
   //   website: 'http://www.mungos.org',
   //   telephone: '020 8985 3519',
@@ -694,7 +694,7 @@ Resource
   //   telephone: '020 8520 6363',
   //   address: 'E17 3HR'
   // }, {
-  //   name: 'Children's Society - New Londoners',
+  //   name: 'Children Society - New Londoners',
   //   type: 'Advice',
   //   website: 'http://www.childrenssociety.org.uk/what-we-do/helping-children/destitution-proje...',
   //   telephone: '0208 221 8200',
@@ -754,7 +754,7 @@ Resource
   //   telephone: '020 3222 5900',
   //   address: 'E8 3SE'
   // }, {
-  //   name: 'St Mungo's - Mare Street Hostel',
+  //   name: 'St Mungo - Mare Street Hostel',
   //   type: 'Accommodation',
   //   website: 'http://www.mungos.org',
   //   telephone: '020 8525 7700',
@@ -808,7 +808,7 @@ Resource
   //   telephone: '020 7613 3232',
   //   address: 'E1 6JN'
   // }, {
-  //   name: 'Queen Victoria Seamen's Rest',
+  //   name: 'Queen Victoria Seamen Rest',
   //   type: 'Accommodation',
   //   website: 'http://www.qvsr.org.uk',
   //   telephone: '020 7987 5466',
@@ -885,7 +885,126 @@ Resource
   //   website: 'http://www.emmaus.org.uk',
   //   telephone: '0208 316 5398',
   //   address: 'SE18 7NN'
-
+  // }, {
+  //   name: 'Thames Reach - Shroton Street Hostel',
+  //   type: 'Accommodation',
+  //   website: 'http://www.thamesreach.org.uk',
+  //   telephone: '020 7706 0096',
+  //   address: 'NW1 6UG'
+  // }, {
+  //   name: 'The Marylebone Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.churcharmy.org.uk/marylebone',
+  //   telephone: '020 36753645',
+  //   address: 'NW1 5NR'
+  // }, {
+  //   name: 'The Marylebone Project - Bradbury House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.maryleboneproject.org.uk',
+  //   telephone: '020 7262 3818',
+  //   address: 'NW1 5NR'
+  // }, {
+  //   name: 'The Marylebone Project - Elgood/Portman House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.maryleboneproject.org.uk',
+  //   telephone: '020 7402 4971',
+  //   address: 'NW1 5NX'
+  // }, {
+  //   name: 'West London Day Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.wlm.org.uk',
+  //   telephone: '020 7569 5900',
+  //   address: 'W1H 1NT'
+  // }, {
+  //   name: 'Nacro - Westminster Ex-offenders Project',
+  //   type: 'Accommodation',
+  //   website: 'http://www.nacro.org.uk',
+  //   telephone: '020 7641 1000',
+  //   address: 'NW8 8EA'
+  // }, {
+  //   name: 'Wytham Hall',
+  //   type: 'Accommodation',
+  //   website: 'http://www.wythamhall.co.uk',
+  //   telephone: '020 7289 1978',
+  //   address: 'W9 2QJ'
+  // }, {
+  //   name: 'London Irish Centre - Welfare Services Department',
+  //   type: 'Day Centre',
+  //   website: 'http://www.londonirishcentre.org',
+  //   telephone: '020 7916 2222',
+  //   address: 'NW1 9XB'
+  // }, {
+  //   name: 'Focus Homeless Outreach Team',
+  //   type: 'Advice',
+  //   website: 'http://www.candi.nhs.uk',
+  //   telephone: '020 3317 6590',
+  //   address: 'NW1 0AS'
+  // }, {
+  //   name: 'Thames Reach - Spectrum Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.thamesreach.org.uk',
+  //   telephone: '020 7267 4937',
+  //   address: 'NW1 0ND'
+  // }, {
+  //   name: 'One Support - Arlington',
+  //   type: 'Accommodation',
+  //   website: 'http://www.onehousinggroup.co.uk',
+  //   telephone: '020 7974 5801',
+  //   address: 'NW1 7HE'
+  // }, {
+  //   name: 'SHP - Arlington Road',
+  //   type: 'Accommodation',
+  //   website: 'http://www.shp.org.uk',
+  //   telephone: '020 7387 3879',
+  //   address: 'NW1 7HT'
+  // }, {
+  //   name: 'One Support - Mornington Crescent',
+  //   type: 'Accommodation',
+  //   website: 'http://www.onehousinggroup.co.uk',
+  //   telephone: '020 7383 0465',
+  //   address: 'NW1 7RG'
+  // }, {
+  //   name: 'All Saints Church, Islington',
+  //   type: 'Advice',
+  //   website: '',
+  //   telephone: '020 7837 0720',
+  //   address: 'N1 9QW'
+  // }, {
+  //   name: 'New Horizon Youth Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.nhyouthcentre.org.uk',
+  //   telephone: '020 7388 5580 ',
+  //   address: 'NW1 1JR'
+  // }, {
+  //   name: 'One Support - Arlington',
+  //   type: 'Accommodation',
+  //   website: 'http://www.onehousinggroup.co.uk',
+  //   telephone: '020 7974 5801',
+  //   address: 'NW1 7HE'
+  // }, {
+  //   name: 'Focus Homeless Outreach Team',
+  //   type: 'Advice',
+  //   website: 'http://www.candi.nhs.uk',
+  //   telephone: '020 3317 6590',
+  //   address: 'NW1 0AS'
+  // }, {
+  //   name: 'Ashford Place',
+  //   type: 'Day Centre',
+  //   website: 'http://www.ashfordplace.org.uk',
+  //   telephone: '020 8208 8590',
+  //   address: 'NW2 6TU'
+  // }, {
+  //   name: 'Safe Start Foundation',
+  //   type: 'Advice',
+  //   website: 'http://www.safestart.org.uk',
+  //   telephone: '020 8452 9990',
+  //   address: 'NW2 1TD'
+  // }, {
+  //   name: 'Safe Start Foyer',
+  //   type: 'Accommodation',
+  //   website: 'http://www.safestart.org.uk',
+  //   telephone: '020 8452 9990',
+  //   address: 'NW2 1TD'
   }])
   .then((resources) => {
     console.log(`${resources.length} resources created!`);
