@@ -124,7 +124,7 @@ nav {
         textarea {
           height: 30vh;
           width: 80%;
-          margin-right: 40px;
+          margin-right: 9%;
 
         }
         ul {
@@ -176,6 +176,9 @@ nav {
         }
         input[type="file"] {
           display: none;
+          &:checked ~ label {
+            border: 1px solid green;
+          }
         }
       }
       button {
