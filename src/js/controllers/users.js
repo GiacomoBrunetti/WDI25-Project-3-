@@ -17,7 +17,7 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
 
   User.get($stateParams, (user) => {
     vm.user = user;
-    vm.userInfos = Info.query({ createdBy: user.id });
+    vm.userInfo = Info.query({ createdBy: user.id });
   });
 
   function userDelete() {
@@ -27,8 +27,6 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
   }
 
   vm.delete = userDelete;
-
-
 
   function deleteInfo(info) {
     Info

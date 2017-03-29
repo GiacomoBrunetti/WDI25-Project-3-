@@ -4,7 +4,9 @@
 <button ng-click="usersShow.delete()" class="subNavBtn">Delete Account</button>
 </div>
 
-<div class="row userInfo" ng-repeat="info in usersShow.userInfos">
+<profile-map user-info="usersShow.userInfo"></profile-map>
+
+<!-- <div class="row userInfo" ng-repeat="info in usersShow.userInfo">
   <div class="infoImg">
     <img ng-src="{{ info.imageSRC }}">
   </div>
@@ -18,4 +20,4 @@
     <button ng-click="usersShow.deleteInfo(info)" class="btn">Delete</button>
     <a ui-sref="infoEdit" class="btn">Edit</a>
   </div>
-</div>
+</div> -->
