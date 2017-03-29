@@ -13,7 +13,8 @@ function profileMap($window) {
     template: '<div class="profile-map"></div>', //Better for small bits of html rather than creating a new file
     scope: {
       chosenLocation: '=',
-      userInfo: '='
+      userInfo: '=',
+      selectedInfo: '='
     },
 
     link($scope, element) {
@@ -56,7 +57,6 @@ function profileMap($window) {
       getLocation();
 
       let infoMarkers = [];
-      let infoWindow = [];
 
       function removeMarkers(markers) {
         markers.forEach((marker) => {
@@ -80,18 +80,18 @@ function profileMap($window) {
           console.log($scope.profile);
 
           google.maps.event.addListener(marker, 'click', function () {
-            if(infoWindow) infoWindow.close();
-            var infoWindowOptions = {
-              content: `<div class="info-window"><p>${info.number}<br>${info.children}</p></div>`
-            };
-            infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-            infoWindow.open(map, marker);
+            $scope.selectedInfo = info;
+            $scope.$apply();
           });
         });
       }
 
-      $scope.$watch('userInfo.$resolved', (resolved) => {
-        if(resolved) addInfoMarkers();
+      $scope.$watchGroup([
+        'userInfo.$resolved',
+        'userInfo.length'
+      ], () => {
+        console.log($scope.userInfo);
+        if($scope.userInfo && $scope.userInfo.$resolved) addInfoMarkers();
       });
 
     }
