@@ -3,17 +3,15 @@ angular
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nav =   document.getElementsByTagName('nav')[0];
-//   function showNav() {
-//     if(document.URL==='localhost:7000') {
-//       nav.className += 'hidden';
-//     } else {
-//       nav.classList.remove('hidden');
-//     }
-//
-//   }
-//
-//   showNav();
-//
-// });
+document.addEventListener('DOMContentLoaded', () => {
+
+  const labels = document.getElementsByTagName('label');
+  console.log(labels);
+  for (let i = 0; i < labels.length; i++) {
+    labels[i].addEventListener('click', () => {
+      console.log('click');
+      labels[i].className +='selected';
+    });
+  }
+
+});
