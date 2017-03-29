@@ -8,7 +8,8 @@ function Auth($authProvider) {
   $authProvider.loginUrl = '/api/login';
   $authProvider.facebook({
     clientId: '1840903826192699',
-    url: '/api/oauth/facebook' 
+    url: 'api/auth/facebook'
+    // responseToken: 'token'
 
   });
   $authProvider.tokenPrefix = '';

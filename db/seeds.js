@@ -832,18 +832,6 @@ Resource
   //   telephone: '020 8430 2000',
   //   address: 'E6 2RT'
   // }, {
-  //   name: 'Dogs Trust - Hope Project',
-  //   type: 'Advice',
-  //   website: 'http://www.dogstrusthopeproject.org.uk',
-  //   telephone: '020 8430 2000',
-  //   address: 'EC1V 7RQ'
-  // }, {
-  //   name: 'Catch22 - London Housing Service',
-  //   type: 'Accommodation',
-  //   website: 'http://www.catch-22.org.uk',
-  //   telephone: '020 7336 4800',
-  //   address: 'EC1V 3AG'
-  // }, {
   //   name: 'City of London - Homelessness Team',
   //   type: 'Accommodation',
   //   website: 'http://www.cityoflondon.gov.uk',
@@ -885,6 +873,37 @@ Resource
   //   website: 'http://www.emmaus.org.uk',
   //   telephone: '0208 316 5398',
   //   address: 'SE18 7NN'
+  //  }, {
+  //   name: 'Chelsea Methodist Church Pastoral Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.chelseamethodist.org.uk',
+  //   telephone: '020 7352 9305 ext 21',
+  //   address: 'SW3 5TX'
+  // }, {
+  //   name: 'Veterans Aid',
+  //   type: 'Day Centre',
+  //   website: 'http://www.veterans-aid.net',
+  //   telephone: '020 7828 2468',
+  //   address: 'SW1W 0RE'
+  // }, {
+  //   name: 'Montfort House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.passage.org.uk',
+  //   telephone: '020 7592 1875',
+  //   address: 'SW1P 1NL'
+  // }, {
+  //   name: 'The Passage Day Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.passage.org.uk',
+  //   telephone: '020 7592 1850',
+  //   address: 'SW3 5TX'
+  // }, {
+  //   name: 'Joint Homelessness Team (JHT) - Westminster',
+  //   type: 'Health Service',
+  //   website: 'http://www.cnwl.nhs.uk/service/joint-homelessness-team/',
+  //   telephone: '020 7854 4206',
+  //   address: 'SW1V 1DX'
+  // }, {
 
   }])
   .then((resources) => {

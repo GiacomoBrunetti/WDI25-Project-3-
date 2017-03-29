@@ -38,4 +38,18 @@ function LoginCtrl($auth, $state) {
   }
 
   vm.submit = submit;
+
+  // vm.show = false;
+  //
+  // function hide() {
+  //   if(!vm.show) {
+  //     vm.show = false;
+  //   } else {
+  //     vm.show = true;
+  //   }
+  //
+  //   console.log(vm.show);
+  //
+  // }
+  // vm.hide = hide;
 }
