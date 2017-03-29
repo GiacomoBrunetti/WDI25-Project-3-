@@ -124,17 +124,22 @@ nav {
         textarea {
           height: 30vh;
           width: 80%;
-          margin-right: 40px;
+          margin-right: 9%;
 
         }
         ul {
           list-style: none;
           padding-left: 0px;
           li {
+            position: relative;
             display: inline-block;
             height: 10vh;
             width: 10vh;
             label {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
               color: white;
               font-weight: bold;
               font-size: 1.5em;
@@ -145,8 +150,17 @@ nav {
                 border-radius: 30px;
               }
             }
+            // .num{
+            //   height: 5vh;
+            //   width: 5vh;
+            // }
             input[type="radio"]{
               display: none;
+              &:checked ~ label {
+                border: 5px solid white;
+                border-radius: 30px;
+                padding:  0 1.5vh;
+              }
             }
           }
 
@@ -162,6 +176,9 @@ nav {
         }
         input[type="file"] {
           display: none;
+          &:checked ~ label {
+            border: 1px solid green;
+          }
         }
       }
       button {
@@ -290,29 +307,72 @@ select.categoryInfo, .categoryResource {
 
 
 #about{
-  p{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: white;
-    display: inline-block;
-    font-size: 20px;
-  }
-}
-
-section{
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  position: relative;
-  h2 {
-    font-size: 48px;
-    color: white;
-    height: 60vh;
-    width: 100%;
-    font-weight: bold;
+  .row {
+    .firstLink {
+      h2 {
+        font-size: 3em;
+      }
+      p {
+        width: 80%;
+        margin-left: 10%;
+      }
+      a {
+      background-color:  #F24E5D;
+      border: 2px solid white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      }
+    }
+    .secondLink {
+      h2 {
+        font-size: 3em;
+      }
+      p {
+        width: 80%;
+        margin-left: 10%;
+      }
+      a {
+      background-color:  #F24E5D;
+      border: 2px solid white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      }
+    }
+    .thirdLink {
+      h2 {
+        font-size: 3em;
+      }
+      p {
+        width: 80%;
+        margin-left: 10%;
+      }
+      a {
+      background-color:  #F24E5D;
+      border: 2px solid white;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      }
+    }
   }
+
+
+//   section{
+//   text-align: center;
+//   padding-top: 80px;
+//   padding-bottom: 80px;
+//   position: relative;
+//   h2 {
+//     font-size: 48px;
+//     color: white;
+//     height: 60vh;
+//     width: 100%;
+//     font-weight: bold;
+//   }
+// }
 }
 
 .facebook {
@@ -362,4 +422,16 @@ p,a {
       border: 2px solid #F24E5D;
     }
   }
+}
+
+
+
+.selected {
+  border: 3px solid white;
+}
+
+.info-window {
+  p {
+    color: black;
+  }  
 }

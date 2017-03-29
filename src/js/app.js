@@ -3,17 +3,13 @@ angular
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nav =   document.getElementsByTagName('nav')[0];
-//   function showNav() {
-//     if(document.URL==='localhost:7000') {
-//       nav.className += 'hidden';
-//     } else {
-//       nav.classList.remove('hidden');
-//     }
-//
-//   }
-//
-//   showNav();
-//
-// });
+document.addEventListener('DOMContentLoaded', () => {
+
+  const chooseFile = document.getElementById('chooseFile');
+  console.log(chooseFile);
+  chooseFile.addEventListener('change', () => {
+    chooseFile.innerText = this.value;
+  });
+
+
+});

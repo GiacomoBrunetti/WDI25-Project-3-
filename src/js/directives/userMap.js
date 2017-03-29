@@ -20,13 +20,21 @@ function userMap($window) {
     link($scope, element) {
 
       let infoMarkers = [];
+      let userCircle = null;
 
       let currentLocationMarker = null;
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 12,
+        zoom: 16,
         center: {lat: 51.515559, lng: -0.071746},
         scrollwheel: false
       });
+
+      function findDistance(p1, p2){
+
+        console.log(google.maps.geometry.spherical.computeDistanceBetween(p1, p2));
+        //calculates distance between two points in km's
+        return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2)).toFixed(2);
+      }
 
       function getLocation() {
         currentLocationMarker = new $window.google.maps.Marker({
@@ -41,12 +49,31 @@ function userMap($window) {
               lng: position.coords.longitude
             };
 
-            console.log(pos);
-            $scope.updateLatLng(pos);
+            userCircle = new google.maps.Circle({
+              strokeColor: '#0000FF',
+              strokeOpacity: 0.8,
+              strokeWeight: 1.5,
+              fillColor: '#0000FF',
+              fillOpacity: 0.1,
+              map: map,
+              center: pos,
+              radius: 100
+            });
 
+            console.log(pos);
 
             currentLocationMarker.setPosition(pos);
+
             map.setCenter(pos);
+            let nearbyMarker = false;
+            infoMarkers.forEach((marker) => {
+              const distanceFromPin = findDistance(new google.maps.LatLng(pos), new google.maps.LatLng(marker.position.toJSON()));
+              if (distanceFromPin < 100) nearbyMarker = true;
+              console.log(nearbyMarker);
+            });
+
+            $scope.updateLatLng(pos, nearbyMarker);
+
           }, function() {
             handleLocationError(true, currentLocationMarker, map.getCenter());
           });
@@ -66,6 +93,15 @@ function userMap($window) {
         if($scope.chosenLocation.lat && $scope.chosenLocation.lng) {
           currentLocationMarker.setPosition($scope.chosenLocation);
           map.setCenter($scope.chosenLocation);
+          userCircle.setCenter($scope.chosenLocation);
+          let nearbyMarker = false;
+          infoMarkers.forEach((marker) => {
+            const distanceFromPin = findDistance(new google.maps.LatLng($scope.chosenLocation), new google.maps.LatLng(marker.position.toJSON()));
+            if (distanceFromPin < 100) nearbyMarker = true;
+            console.log(nearbyMarker);
+          });
+
+          $scope.updateLatLng($scope.chosenLocation, nearbyMarker);
         }
       });
 
