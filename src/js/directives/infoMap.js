@@ -111,22 +111,51 @@ function infoMap($window) {
 
       function addInfoMarkers() {
 
-        infoMarkers = removeMarkers(infoMarkers);
+        const sortedInfos = []; // eventually an array of arrays
         $scope.info.forEach((info) => {
+          let pushed = false;
+
+          sortedInfos.forEach((infoArray) => {
+
+            console.log(info.lat, infoArray[0].lat);
+            console.log(info.lng, infoArray[0].lng);
+
+            var lat = infoArray[0].lat;
+            var lng = infoArray[0].lng;
+
+            if (info.lat === lat && info.lng === lng) {
+              infoArray.push(info);
+              pushed = true;
+            }
+
+          });
+
+          if (!pushed) sortedInfos.push([info]);
+
+        });
+        console.log(sortedInfos);
+
+
+        infoMarkers = removeMarkers(infoMarkers);
+        sortedInfos.forEach((infoArray) => {
+
           const marker = new $window.google.maps.Marker({
-            position: { lat: parseFloat(info.lat), lng: parseFloat(info.lng) },
+            position: { lat: parseFloat(infoArray[0].lat), lng: parseFloat(infoArray[0].lng) },
             map: map,
             animation: google.maps.Animation.DROP,
             icon: '/images/1.png'
           });
 
           infoMarkers.push(marker);
-          console.log($scope.info);
+
+          const averageNumber = infoArray.reduce((acc,info) => {
+            return acc + info.number;
+          }, 0);
 
           google.maps.event.addListener(marker, 'click', function () {
             if(infoWindow) infoWindow.close();
             var infoWindowOptions = {
-              content: `<div class="info-window"><p>${info.number}<br>${info.children}</p></div>`
+              content: `<div class="info-window"><p>${Math.ceil(averageNumber/infoArray.length)}<br>${infoArray[infoArray.length - 1].children}</p><p>Based on ${infoArray.length} submissions</p></div>`
             };
             infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             infoWindow.open(map, marker);

@@ -75,7 +75,7 @@ nav {
   z-index: 100;
 }
 
-.info-map, .user-map {
+.info-map, .user-map, .profile-map {
   height: 50vh;
   width: 100%;
   display: inline-block;
@@ -434,6 +434,7 @@ p,a {
   p {
     color: black;
   }
+
 }
 
 #amadre {
@@ -476,4 +477,5 @@ p,a {
     background-color: white;
 
   }
+
 }

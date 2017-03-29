@@ -6,7 +6,7 @@ mongoose.connect(dbURI);
 
 const Resource = require('../models/resource');
 
-Resource.collection.drop();
+// Resource.collection.drop();
 
 Resource
   .create([{

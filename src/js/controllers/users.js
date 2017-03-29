@@ -17,8 +17,10 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
 
   User.get($stateParams, (user) => {
     vm.user = user;
-    vm.userInfos = Info.query({ createdBy: user.id });
+    vm.userInfo = Info.query({ createdBy: user.id });
   });
+
+  vm.selectedInfo = null;
 
   function userDelete() {
     vm.user
@@ -28,16 +30,15 @@ function UserShowCtrl(User, Info, $stateParams, $state) {
 
   vm.delete = userDelete;
 
-
-
-  function deleteInfo(info) {
+  function deleteInfo() {
     Info
-    .delete({id: info.id})
-    .$promise
-    .then(() => {
-      const index = vm.userInfos.indexOf(info);
-      vm.userInfos.splice(index, 1);
-    });
+      .delete({ id: vm.selectedInfo.id })
+      .$promise
+      .then(() => {
+        const index = vm.userInfo.indexOf(vm.selectedInfo);
+        if(index > -1) vm.userInfo.splice(index, 1);
+        vm.selectedInfo = null;
+      });
   }
 
   vm.deleteInfo = deleteInfo;
