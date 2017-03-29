@@ -433,5 +433,47 @@ p,a {
 .info-window {
   p {
     color: black;
-  }  
+  }
+}
+
+#amadre {
+  text-align: center;
+}
+
+.myDiv{
+  text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #F24E5D;
+   -webkit-transition: 1s ease-in-out;
+    /*to only change opacity*/
+    /*-webkit-transition: opacity 1s ease-in-out*/
+  //  -moz-transition: 1s ease-in-out;
+  //  -o-transition: 1s ease-in-out;
+   transition: 0.5s ease-in-out ;
+   animation: typing 10s;
+   opacity: 1;
+}
+
+.foo{
+    background-color: #F24E5D;
+    opacity: 0;
+    height: 0;
+}
+
+
+
+.closeBtn {
+  text-transform: uppercase;
+  padding: 2%;
+  font-weight: bold;
+  background-color: #F24E5D;
+  color: white;
+  border: 2px solid white;
+  margin: 0 auto;
+  &:hover {
+    color: #F24E5D;
+    background-color: white;
+
+  }
 }

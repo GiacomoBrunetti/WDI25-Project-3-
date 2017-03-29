@@ -38,4 +38,9 @@ function LoginCtrl($auth, $state) {
   }
 
   vm.submit = submit;
+  vm.bar = false;
+  vm.clicked = function(){
+    vm.bar = !(vm.bar);
+  };
+
 }
