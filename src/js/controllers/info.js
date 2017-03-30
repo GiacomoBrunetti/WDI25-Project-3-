@@ -54,6 +54,14 @@ function InfoNewCtrl(Info, $state, $auth, $scope) {
 
   vm.create = infoCreate;
 
+    // function scroll() {
+    //   const q1 = angular.element(document.getElementById('q1'));
+    //   const q2 = angular.element(document.getElementById('q2'));
+    //   const q3 = angular.element(document.getElementById('q3'));
+    //   const q4 = angular.element(document.getElementById('q4'));
+    // }
+    // vm.scroll = scroll;
+
   vm.ctrlFn = function(latLng, nearbyMarker) {
     if (!nearbyMarker) {
       vm.message = null;

@@ -12,7 +12,7 @@ body {
 //-----------------------------NAVBAR-----------------------------------
 
 main  {
-  margin-top: 133px;
+  margin-top: 20vh;
 }
 
 nav {
@@ -24,17 +24,19 @@ nav {
   top: 0;
   text-align: center;
   .gradient {
-    background: linear-gradient(#F24E5D, #77252c);
+    background-color: #F24E5D;
     .pageName {
       height: 12vh;
       h1 {
+        font-size: 2.5em;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
         padding-top: 1.5%;
         color: white;
         font-weight: 100;
         margin-top: 0;
         #data {
-          font-family: 'Bungee Outline', cursive;
-          text-transform: lowercase;
+        color: #F24E5D;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
         }
       }
     }
@@ -62,10 +64,10 @@ nav {
               &:after {
                 content: '';
                 background-color: white;
-                height: 1px;
+                height: 2px;
                 width: 50%;
                 position: absolute;
-                bottom: -3px;
+                bottom: -4px;
                 left: 25%;
               }
             }
@@ -103,6 +105,8 @@ nav {
 
 p {
   color: #F24E5D;
+  width: 80%;
+  margin-left: 10%;
   margin: 2vh auto;
 }
 
@@ -193,6 +197,9 @@ p {
         background-color: #F24E5D;
         color: white;
         border: 2px solid white;
+        &:hover {
+          border-color: #F24E5D;
+        }
       }
     }
   }
@@ -204,13 +211,19 @@ p {
   form {
     div {
       label {
-        color: #F24E5D;
+        color: #aaa;
         padding: 15px;
+        text-transform: capitalize;
+        font-weight: normal;
       }
       input {
         margin-top: 15px;
         width: 80%;
         margin: 0 auto;
+        border: 2px solid #F24E5D;
+        border-radius: 30px;
+        text-align: center;
+        margin-bottom: 2vh;
       }
       .messages {
         div.message {
@@ -223,6 +236,9 @@ p {
     background-color: #F24E5D;
     color: white;
     border: 2px solid white;
+    margin-top: 10vh;
+    text-transform: uppercase;
+    font-size: 0.8em;
     &:hover {
       background-color: white;
       color: #F24E5D;
@@ -230,7 +246,7 @@ p {
     }
   }
   .bottomLine {
-    color: #F24E5D;
+    color: #aaa;
   }
 }
 
@@ -239,23 +255,26 @@ p {
   background-color: white;
   width: 200px;
   margin: 12px;
-  border: 1px solid black;
   border-radius: 30px;
   letter-spacing: 3px;
   padding: 15px;
 }
+<<<<<<< HEAD
+=======
+
+
+#facebook {
+  color: white;
+  background-color: #3b5998;
+  margin: 2vh 0;
+}
+>>>>>>> 06f92ddd46d60617dea115487d744b720a64a3d1
 
 
 //--------------------------USER-PROFILE-----------------------------------
 .subNav {
   text-align: center;
   border-bottom: 2px solid white;
-  // width: 100%;
-  // padding-left: 20%;
-  // padding-right: 20%;
-  // z-index: 9;
-  // background-color: #F24E5D;
-  // border-top: 2px solid white;
   margin-top: 3vh;
   .subNavBtn {
     height: 8vh;
@@ -265,12 +284,6 @@ p {
     text-transform: uppercase;
     font-size: 1em;
     border: 2px solid white ;
-    &:nth-child(1) {
-
-    }
-    &:nth-child(2) {
-
-    }
     &:hover {
       text-decoration: none;
       border-color: #F24E5D;
@@ -299,10 +312,14 @@ p {
       height: 8vh;
       background-color: #F24E5D;
       margin: 0 auto;
+      margin-bottom: 5vh;
       color: white;
       text-transform: uppercase;
       font-size: 1em;
-      border: 2px solid white ;
+      border: 2px solid white;
+      &:hover {
+        border-color: #F24E5D;
+      }
     }
   }
 }
@@ -310,22 +327,20 @@ p {
 //--------------------------DATA-SHOW-PAGE----------------------------------
 select.categoryInfo, .categoryResource {
   color: white;
-  border: 2px solid white;
-  text-transform: uppercase;
-  font-weight: bold;
+  border: 2px solid #F24E5D;
+  text-transform: capitalize;
   font-size: 1em;
   position: center;
   background-color: #F24E5D;
   width: 80%;
   margin-left: 10%;
   letter-spacing: 3px;
-  margin-top: 30px;
+  margin-top: 0.8vh;
 }
-
 input[type='range'] {
   appearance: none;
   background-color: #F24E5D;
-  border-radius: 10px;
+  border-radius: 30px;
   height: 1vh;
   width: 80%;
   margin-left: 10%;
@@ -333,21 +348,38 @@ input[type='range'] {
     outline: none;
   }
 }
-
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: white;
   border: 2px solid #F24E5D;
   border-radius: 30px;
-  height: 2vh;
-  width: 2vh;
+  height: 2.5vh;
+  width: 2.5vh;
 }
 
 
 #pac-container {
-  z-index: 999;
+  margin-top: 5vh;
+  text-align: center;
+  label {
+    color: #F24E5D;
+    font-weight: normal;
+  }
+  input[type=text] {
+    border: 2px solid #F24E5D;
+    border-radius: 30px;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+  }
 }
 
+h2 {
+  color: #F24E5D;
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: center;
+}
 
 
 
@@ -364,10 +396,13 @@ input[type=range]::-webkit-slider-thumb {
         margin-left: 10%;
       }
       a {
-      background-color:  #F24E5D;
       border: 2px solid white;
+      background-color:  #F24E5D;
       text-transform: uppercase;
-      font-weight: 700;
+      color: white;
+      &:hover {
+        border: 2px solid #F24E5D;
+      }
       }
     }
     .secondLink {
@@ -379,10 +414,13 @@ input[type=range]::-webkit-slider-thumb {
         margin-left: 10%;
       }
       a {
-      background-color:  #F24E5D;
       border: 2px solid white;
+      background-color:  #F24E5D;
       text-transform: uppercase;
-      font-weight: 700;
+      color: white;
+      &:hover {
+        border: 2px solid #F24E5D;
+      }
       }
     }
     .thirdLink {
@@ -394,16 +432,19 @@ input[type=range]::-webkit-slider-thumb {
         margin-left: 10%;
       }
       a {
-      background-color:  #F24E5D;
       border: 2px solid white;
+      background-color:  #F24E5D;
       text-transform: uppercase;
-      font-weight: 700;
-
+      color: white;
+      &:hover {
+        border: 2px solid #F24E5D;
+      }
       }
     }
   }
 }
 //-------------------------OTHER-STUFF--------------------------
+
 h2 {
   color: #F24E5D;
 }
@@ -421,14 +462,4 @@ label {
   letter-spacing: 3px;
   padding: 15px;
   font-size: 20px;
-}
-
-
-
-// .selected {
-//   border: 3px solid white;
-// }
-
-.hidden {
-  display: none;
 }
