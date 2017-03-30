@@ -1,5 +1,6 @@
 <div>
   <div id="pac-container">
+    <label >If the pin below indicates the wrong position, input here your location</label>
     <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoEdit.info.location" lat="infoEdit.info.lat" lng="infoEdit.info.lng">
     <div id="map" class="addMap"></div>
   </div>
@@ -11,33 +12,32 @@ Here: {{ infoEdit.info }}
 <user-map chosen-location="{ lat: info.lat, lng: info.lng }"></user-map>
 
 <div class="row form">
-  <div class="col-md-2">
+  <div class="formContainer">
 
     <form name="infoEdit.editForm" ng-submit="infoEdit.update()" novalidate>
-      <!-- <p>The edit info will look like this: {{ infoEdit.info }}</p> -->
 
         <div class="question">
           <h4>Number of people?</h4>
           <ul class="q1">
             <li>
-              <label for="1">1</label>
               <input type="radio" id ="1" name="number" ng-model="infoEdit.info.number" ng-value="1">
+              <label class="num" for="1">1</label>
             </li>
             <li>
-              <label for="2">2</label>
               <input type="radio" id ="2" name="number" ng-model="infoEdit.info.number" ng-value="2">
+              <label class="num" for="2">2</label>
             </li>
             <li>
-              <label for="3">3</label>
               <input type="radio" id ="3" name="number" ng-model="infoEdit.info.number" ng-value="3">
+              <label class="num" for="3">3</label>
             </li>
             <li>
-              <label for="4">4</label>
               <input type="radio" id ="4" name="number" ng-model="infoEdit.info.number" ng-value="4">
+              <label class="num" for="4">4</label>
             </li>
             <li>
-              <label for="5">5</label>
               <input type="radio" id ="5" name="number" ng-model="infoEdit.info.number" ng-value="5">
+              <label class="num" for="5">5</label>
             </li>
           </ul>
           <div ng-messages="infoEdit.editForm.number.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.number.$touched) && infoEdit.editForm.number.$invalid" class="error">
@@ -49,12 +49,12 @@ Here: {{ infoEdit.info }}
         <h4>Are there children?</h4>
         <ul class="q2">
           <li>
-            <label for="childTrue">Yes</label>
             <input type="radio" id="childTrue" name="children" ng-model="infoEdit.info.children" ng-value="true">
+            <label for="childTrue">Yes</label>
           </li>
           <li>
-            <label for="childFalse">No</label>
             <input type="radio" id="childFalse" name="children" ng-model="infoEdit.info.children" ng-value="false">
+            <label for="childFalse">No</label>
           </li>
         </ul>
         <div ng-messages="infoEdit.editForm.children.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.children.$touched) && infoEdit.editForm.children.$invalid" class="error">
@@ -66,12 +66,12 @@ Here: {{ infoEdit.info }}
         <h4>Are there pets?</h4>
          <ul class="q2">
           <li>
-             <label for="petsTrue">Yes</label>
              <input type="radio" id="petTrue" name="petsTrue" ng-model="infoEdit.info.pets" ng-value="true">
+             <label for="petsTrue">Yes</label>
            </li>
            <li>
-             <label for="petFalse">No</label>
              <input type="radio" id="petFalse" name="petsTrue" ng-model="infoEdit.info.pets" ng-value="false">
+             <label for="petFalse">No</label>
            </li>
          </ul>
          <div ng-messages="infoEdit.editForm.pets.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.pets.$touched) && infoEdit.editForm.pets.$invalid" class="error">
@@ -80,13 +80,9 @@ Here: {{ infoEdit.info }}
       </div>
 
       <div class="question">
-        <label for="image"><span>Please add an image if useful.</span></label>
-        <input base64 type="file" name="image" id="image" ng-model="infoEdit.info.image">
-      </div>
-
-      <div class="question">
-        <label for="comment"><h4><span>Comment</span></h4></label>
-        <textarea name="comment" id="comment" ng-model="infoEdit.info.otherInfo"></textarea>
+        <h4>Comment</h4>
+        <label for="comment"></label>
+        <textarea name="comment" id="comment" ng-model="infoEdit.info.otherInfo" value="info.otherInfo"></textarea>
       </div>
 
       <button class="btn">Submit</button>

@@ -1,6 +1,8 @@
+<p>Filter by Info Type: </p>
+
 <form class="search-form">
   <div class="form-group">
-    <select name="categoryInfo" required ng-model="infoIndex.categoryInfo" class="categoryInfo">
+    <select name="categoryInfo" required ng-model="infoIndex.categoryInfo" class="categoryInfo" >
       <option selected value="">All</option>
       <option value="Number">Density of People</option>
       <option value="Children">Areas with Children</option>
@@ -8,6 +10,8 @@
     </select>
   </div>
 </form>
+
+<p>Filter by Resourse Type: </p>
 
 <form class="search-form">
   <div class="form-group">
@@ -21,6 +25,7 @@
   </div>
 </form>
 
-<info-map resources="infoIndex.filteredResources" info="infoIndex.filteredInfo"></info-map>
+<p>Distance From You: {{infoIndex.distance/1000 | number: 2}}KM</p>
+<input type="range" min="1000" max="10000" name="slider" id="slider" ng-model="infoIndex.distance" value="5000">
 
-<input type="range" min="1000" max="10000" name="slider" id="slider" value="5000">
+<info-map resources="infoIndex.filteredResources" info="infoIndex.filteredInfo"></info-map>

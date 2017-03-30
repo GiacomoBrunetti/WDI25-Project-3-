@@ -4,12 +4,11 @@ const users = require('../controllers/users');
 const resources = require('../controllers/resources');
 const auth = require('../controllers/auth');
 const oauth = require('../controllers/oauth');
-const imageUpload = require('../lib/imageUpload');
 const secureRoute = require('../lib/secureRoute');
 
 router.route('/info')
   .get(info.index)
-  .post(secureRoute, imageUpload, info.create);
+  .post(secureRoute, info.create);
 
 router.route('/info/:id')
   .get(secureRoute, info.show)
