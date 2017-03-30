@@ -2,7 +2,6 @@
 
 body {
   font-family: 'Catamaran', sans-serif;
-  background-color: #F24E5D;
 
 
 }
@@ -11,18 +10,28 @@ body {
   font-family: inherit;
 }
 
+
+//-----------------------------NAVBAR-----------------------------------
 nav {
   background-color: #F24E5D;
   top: 0;
-  margin-bottom: 5px;
   text-align: center;
   .pageName {
     height: 12vh;
     h1 {
-      margin: 3% auto;
-      // padding-top: 5%;
+      padding-top: 1.5%;
       color: white;
       font-weight: 100;
+      margin-top: 0;
+      &:after {
+        content: '';
+        background-color: white;
+        height: 5px;
+        width: 50%;
+        position: absolute;
+        bottom: -3px;
+        left: 25%;
+      }
       span {
         font-weight: bolder;
       }
@@ -67,22 +76,28 @@ nav {
   }
 }
 
-#line {
-  height: 2px;
-  background-color: white;
-  width: 90%;
-  margin: 0 auto;
-  z-index: 100;
+// #line {
+//   height: 2px;
+//   background-color: white;
+//   width: 90%;
+//   margin: 0 auto;
+//   z-index: 100;
+// }
+
+main {
+  overflow: visible;
 }
 
+
+//-----------------------------MAPS------------------------------------
 .info-map, .user-map, .profile-map {
   height: 50vh;
   width: 100%;
   display: inline-block;
   margin-left: 0px;
   margin-top: 20px;
-  border: 3px solid white;
-  margin-bottom: 10vh;
+  border: 3px solid red;
+  margin-bottom: 7vh;
 }
 
 .centered-styles {
@@ -94,19 +109,19 @@ nav {
 
 
 .googlePlaces {
-
   margin-top: 15px;
   color: white;
   text-align: center;
 }
 
-
+//-----------------------------NEW-EDIT-FORM-------------------------------
 .form {
   margin-top: 15px;
   text-align: center;
   text-transform: uppercase;
+
   h2 {
-    color: white;
+    color: red;
   }
   .formContainer {
     form {
@@ -115,7 +130,7 @@ nav {
         width: 100%;
         text-align: center;
         h4 {
-          color: white;
+          color: red;
           letter-spacing: 2px;
           margin: 13vh 0;
           font-size: 2.5em;
@@ -140,7 +155,7 @@ nav {
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
-              color: white;
+              color: red;
               font-weight: bold;
               font-size: 1.5em;
               padding: 1vh;
@@ -150,17 +165,25 @@ nav {
                 border-radius: 30px;
               }
             }
-            // .num{
-            //   height: 5vh;
-            //   width: 5vh;
-            // }
             input[type="radio"]{
               display: none;
               &:checked ~ label {
-                border: 5px solid white;
+                border: 5px solid red;
                 border-radius: 30px;
                 padding:  0 1.5vh;
               }
+            }
+            .q2 {
+              // li {
+              //   padding: 20vh;
+              //   .bool {
+              //     padding-left: 100%;
+              //     padding-right: 100%;
+              //     &:nth-child(2) {
+              //       margin-left: 20vh;
+              //     }
+              //   }
+              // }
             }
           }
 
@@ -192,12 +215,12 @@ nav {
   }
 }
 
-
+//--------------------------LOGIN-REGISTER-FORM-------------------
 .form {
   form {
     div {
       label {
-        color: white;
+        color: red;
         padding: 15px;
       }
       input {
@@ -238,16 +261,6 @@ nav {
 }
 
 
-
-// .btn, a {
-//   color: black;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   padding: 10;
-//   font-weight: bold;
-//   font-size: 15px;
-// }
-
 .btn, .flash {
   background-color: white;
   width: 200px;
@@ -258,29 +271,71 @@ nav {
   padding: 15px;
 }
 
+
+//--------------------------USER-PROFILE-----------------------------------
+.subNav {
+  text-align: center;
+  border-bottom: 2px solid white;
+  // width: 100%;
+  // padding-left: 20%;
+  // padding-right: 20%;
+  // z-index: 9;
+  // background-color: #F24E5D;
+  // border-top: 2px solid white;
+  margin-top: 3vh;
+  .subNavBtn {
+    height: 8vh;
+    background-color: #F24E5D;
+    margin: 0 auto;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    border: 2px solid white ;
+    &:nth-child(1) {
+
+    }
+    &:nth-child(2) {
+
+    }
+    &:hover {
+      text-decoration: none;
+      border-color: #F24E5D;
+
+    }
+  }
+}
+
+
 .userInfo {
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
+  overflow-x: visible;
   .infoData {
-    color: white;
+    color: red;
     p {
-      font-size: 1em;
+      color: #F24E5D;
+      font-size: 2em;
       span {
         font-weight: bold;
       }
     }
   }
   .infoBtn {
+    float: right;
     display: inline;
     .btn {
-      padding: 5%;
-      background-color: inherit;
+      height: 8vh;
+      background-color: #F24E5D;
+      margin: 0 auto;
       color: white;
-      border: 2px solid white;
-      width: 40%;
+      text-transform: uppercase;
+      font-size: 1em;
+      border: 2px solid white ;
     }
   }
 }
+
+//------------------------MAP-STUFF------------------------------------
 select.categoryInfo, .categoryResource {
   border: 0;
   text-transform: uppercase;
@@ -301,11 +356,8 @@ select.categoryInfo, .categoryResource {
 
 
 
-.hidden {
-  display: none;
-}
 
-
+//---------------------------DONATE-PAGE----------------------------
 #about{
   text-align: center;
   .row {
@@ -359,7 +411,7 @@ select.categoryInfo, .categoryResource {
     }
   }
 
-
+//-------------------------OTHER-STUFF--------------------------
 //   section{
 //   text-align: center;
 //   padding-top: 80px;
@@ -392,37 +444,13 @@ h2 {
 }
 
 label {
-  color: white;
+  color: red;
 }
 
 p,a {
   color: white;
 }
 
-.subNav {
-  text-align: center;
-  border-bottom: 2px solid white;
-  width: 80%;
-  margin: 0 auto;
-  .subNavBtn {
-    height: 95%;
-    background-color: #F24E5D;
-    margin: 0 auto;
-    padding:  3% 5%;
-    color: white;
-    text-transform: uppercase;
-    font-size: 1em;
-    &:nth-child(1) {
-      padding-top: 2%;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    &:nth-child(2) {
-      border: 2px solid #F24E5D;
-    }
-  }
-}
 
 
 
@@ -437,45 +465,48 @@ p,a {
 
 }
 
-#amadre {
-  text-align: center;
+.hidden {
+  display: none;
 }
+// #amadre {
+//   text-align: center;
+// }
 
-.myDiv{
-  text-align: center;
-    width: 100%;
-    height: 100%;
-    background-color: #F24E5D;
-   -webkit-transition: 1s ease-in-out;
-    /*to only change opacity*/
-    /*-webkit-transition: opacity 1s ease-in-out*/
-  //  -moz-transition: 1s ease-in-out;
-  //  -o-transition: 1s ease-in-out;
-   transition: 0.5s ease-in-out ;
-   animation: typing 10s;
-   opacity: 1;
-}
+// .myDiv{
+//   text-align: center;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #F24E5D;
+//    -webkit-transition: 1s ease-in-out;
+//     /*to only change opacity*/
+//     /*-webkit-transition: opacity 1s ease-in-out*/
+//   //  -moz-transition: 1s ease-in-out;
+//   //  -o-transition: 1s ease-in-out;
+//    transition: 0.5s ease-in-out ;
+//    animation: typing 10s;
+//    opacity: 1;
+// }
+//
+// .foo{
+//     background-color: #F24E5D;
+//     opacity: 0;
+//     height: 0;
+// }
 
-.foo{
-    background-color: #F24E5D;
-    opacity: 0;
-    height: 0;
-}
 
 
-
-.closeBtn {
-  text-transform: uppercase;
-  padding: 2%;
-  font-weight: bold;
-  background-color: #F24E5D;
-  color: white;
-  border: 2px solid white;
-  margin: 0 auto;
-  &:hover {
-    color: #F24E5D;
-    background-color: white;
-
-  }
-
-}
+// .closeBtn {
+//   text-transform: uppercase;
+//   padding: 2%;
+//   font-weight: bold;
+//   background-color: #F24E5D;
+//   color: white;
+//   border: 2px solid white;
+//   margin: 0 auto;
+//   &:hover {
+//     color: #F24E5D;
+//     background-color: white;
+//
+//   }
+//
+// }

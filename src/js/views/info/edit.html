@@ -1,7 +1,7 @@
 <div>
   <div id="pac-container">
-    <label >If the pin below indicates the wrong position, input here your location</label>
-    <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoEdit.info.location" lat="infoEdit.info.lat" lng="infoEdit.info.lng">
+    <label>If the pin below indicates the wrong position, input here your location</label>
+    <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoEdit.info.location" lat="infoEdit.info.lat" lng="infoEdit.info.lng" class="form-control">
     <div id="map" class="addMap"></div>
   </div>
 </div>
@@ -91,7 +91,7 @@ Here: {{ infoEdit.info }}
         <textarea name="comment" id="comment" ng-model="infoEdit.info.otherInfo" value="info.otherInfo"></textarea>
       </div>
 
-      <button class="btn">Submit</button>
+      <button class="btn" ng-show="(!infoEdit.editForm.$pristine)">Submit</button>
 
     </form>
 
