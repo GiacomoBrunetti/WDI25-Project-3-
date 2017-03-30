@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const infoSchema = new mongoose.Schema({
   number: { type: Number, required: true },
-  children: { type: Boolean, required: true },
-  pets: { type: Boolean, required: true },
+  children: { type: String, required: true },
+  pets: { type: String, required: true },
   otherInfo: { type: String },
   lat: { type: String },
   lng: { type: String },
