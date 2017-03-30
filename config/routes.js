@@ -28,7 +28,7 @@ router.route('/register')
 router.route('/login')
   .post(auth.login);
 
-router.route('/auth/facebook')
+router.route('/oauth/facebook')
   .post(oauth.facebook);
 
 // router

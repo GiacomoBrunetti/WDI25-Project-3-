@@ -1,43 +1,37 @@
 const rp = require('request-promise');
-const oauth = require('../config/oAuth');
+const oauth = require('../config/oauth');
 const User = require('../models/user');
-// const qs = require('qs');
 const jwt = require('jsonwebtoken');
 const secret = require('../config/environment').secret;
 
-
 function facebook(req, res, next) {
-  return rp({
+  rp({
     method: 'GET',
     url: oauth.facebook.accessTokenURL,
     qs: {
+      code: req.body.code,
       client_id: oauth.facebook.clientId,
-      redirect_uri: req.body.redirectUri,
       client_secret: oauth.facebook.clientSecret,
-      code: req.body.code
+      redirect_uri: req.body.redirectUri
     },
     json: true
-  })
-  .then((token) => {
+  }).then((accessToken) => {
+    console.log('Getting accessToken', accessToken);
+    //request user's profile with accessToken
     return rp.get({
-      url: 'https://graph.facebook.com/v2.5/me?fields=id,name,email,picture.height(961)',
-      qs: token,
-      headers: {
-        'User-Agent': 'Request-Promise'
-      },
+      url: 'https://graph.facebook.com/v2.5/me?fields=id,name,email,picture',
+      qs: accessToken,
       json: true
-
     });
-  })
-  .then((profile) => {
+
+  }).then((profile) => {
     return User
       .findOne({ email: profile.email })
       .then((user) => {
         if(!user) {
           user = new User({
             username: profile.name,
-            email: profile.email,
-            image: profile.picture.data.url
+            email: profile.email
           });
         }
         user.facebookId = profile.id;
