@@ -843,6 +843,546 @@ Resource
   //   website: 'http://www.safestart.org.uk',
   //   telephone: '020 8452 9990',
   //   address: 'NW2 1TD'
+  }, {
+    name: 'St Mungo - Haverstock Hill',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 7431 3634',
+    address: 'NW3 2AL'
+  }, {
+    name: 'Doorstep Homeless Families Project',
+    type: 'Day Centre',
+    website: 'http://www.doorsteplondon.org',
+    telephone: '020 7372 0413',
+    address: 'NW6 3QX'
+  }, {
+    name: 'Centrepoint - Oak House',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 7485 9947',
+    address: 'NW5 4QY'
+  }, {
+    name: 'Sapphire Independent Housing - Hackett House',
+    type: 'Accommodation',
+    website: 'http://www.sih.org/our-services/supported-services/hackett-house-and-recovery-se...',
+    telephone: '020 7692 2785',
+    address: 'NW6 4TB'
+  }, {
+    name: 'Innisfree Housing Association',
+    type: 'Accommodation',
+    website: 'http://www.innisfree.org.uk',
+    telephone: '020 7625 1818',
+    address: 'NW6 2HL'
+  }, {
+    name: 'Sapphire Independent Housing - Conway House',
+    type: 'Accommodation',
+    website: 'http://www.sih.org',
+    telephone: '020 7372 6633',
+    address: 'NW6 4PG'
+  }, {
+    name: 'Acton Homeless Concern',
+    type: 'Day Centre',
+    website: 'http://www.actonhomelessconcern.org',
+    telephone: '020 8992 5768',
+    address: 'W3 8AA'
+  }, {
+    name: 'YMCA West London - Ealing Common Hostel',
+    type: 'Accommodation',
+    website: 'http://www.westlondonymca.org',
+    telephone: '020 8832 1575',
+    address: 'W5 2QB'
+  }, {
+    name: 'YMCA West London - Greenford',
+    type: 'Accommodation',
+    website: 'http://www.ealing.gov.uk',
+    telephone: '020 8825 7008',
+    address: 'W5 2BY'
+  }, {
+    name: 'Centrepoint - Ealing Service',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 8825 7626',
+    address: 'W5 2HL'
+  }, {
+    name: 'Ealing Law Centre',
+    type: 'Advice',
+    website: 'http://www.ealinglawcentre.org.uk',
+    telephone: '020 8579 4598',
+    address: 'W13 9SJ'
+  }, {
+    name: 'YMCA West London - St Christopher (Hanwell)',
+    type: 'Accommodation',
+    website: 'http://www.westlondonymca.org',
+    telephone: '020 8825 7513',
+    address: 'W5 2HL'
+  }, {
+    name: 'YMCA West London - 25 St Mary Road',
+    type: 'Accommodation',
+    website: 'http://www.westlondonymca.org',
+    telephone: '020 8825 7626',
+    address: 'W5 2HL'
+  }, {
+    name: 'Notting Hill Housing Trust',
+    type: 'Accommodation',
+    website: '',
+    telephone: '020 8357 5000',
+    address: 'W6 8DL'
+  }, {
+    name: 'Centrepoint - Buffy House',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 8753 4142',
+    address: 'W6 9XY'
+  }, {
+    name: 'Look Ahead - The Coninghams',
+    type: 'Accommodation',
+    website: 'http://www.lookahead.org.uk',
+    telephone: '020 8753 4142',
+    address: 'W6 9XY'
+  }, {
+    name: 'St Mungo - Edith Road Resettlement',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 8753 4142',
+    address: 'W6 9XY'
+  }, {
+    name: 'St Mungo - Homeless Support',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 8753 4142',
+    address: 'W6 9XY'
+  }, {
+    name: 'St Mungo - Hope Gardens',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 8753 4142',
+    address: 'W6 9XY'
+  }, {
+    name: 'St Mungo - The Old Theatre',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 8753 4142',
+    address: 'W6 9XY'
+  }, {
+    name: 'Barons Court Project',
+    type: 'Day Centre',
+    website: 'http://www.baronscourtproject.org',
+    telephone: '020 7603 5232',
+    address: 'W14 9DD'
+  }, {
+    name: 'St Mungo - Broadway Day Centre',
+    type: 'Day Centre',
+    website: 'http://www.mungos.org',
+    telephone: '020 8735 5810',
+    address: 'W12 8EZ'
+  }, {
+    name: 'London Irish Care',
+    type: 'Advice',
+    website: 'http://www.irishadvice.org.uk',
+    telephone: '020 8741 0466',
+    address: 'W14 8GT'
+  }, {
+    name: 'Centrepoint - Woodstock Grove',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 7423 6911',
+    address: 'W12 8LG'
+  }, {
+    name: 'Streetlytes-UK',
+    type: 'Day Centre',
+    website: 'http://www.streetlytes.org',
+    telephone: '020 7602 8011',
+    address: 'W12 8JJ'
+  }, {
+    name: 'Earls Court Community Project',
+    type: 'Advice',
+    website: 'http://www.eccp-ywam.org.uk',
+    telephone: '020 7370 4424',
+    address: 'W14 8LH'
+  }, {
+    name: 'St Mungo - Sixty Five',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 8567 4757',
+    address: 'W7 3PX'
+  }, {
+    name: 'Ealing Churches Winter Night Shelter',
+    type: 'Accommodation',
+    website: 'http://www.ecwns.org.uk',
+    telephone: '07930 378263',
+    address: 'W7 1AG'
+  }, {
+    name: 'Chapter 1 - Dashwood House',
+    type: 'Accommodation',
+    website: 'http://www.chapter1.org.uk',
+    telephone: '020 7361 3008',
+    address: 'W8 7NX'
+  }, {
+    name: 'Evolve Housing and Support - Beacon House',
+    type: 'Accommodation',
+    website: 'http://www.evolvehousing.org.uk/',
+    telephone: '020 7341 5184',
+    address: 'W8 7NX'
+  }, {
+    name: 'Kensington & Chelsea SIH',
+    type: 'Accommodation',
+    website: '',
+    telephone: '020 7361 3008',
+    address: 'W8 7NX'
+  }, {
+    name: 'Look Ahead - Cromwell Road',
+    type: 'Accommodation',
+    website: 'http://www.lookahead.org.uk',
+    telephone: '020 7361 3008',
+    address: 'W8 7NX'
+  }, {
+    name: 'Stoneleigh Street',
+    type: 'Accommodation',
+    website: 'http://www.hestia.org',
+    telephone: '020 7361 3008',
+    address: 'W8 7NX'
+  }, {
+    name: 'Evolve Housing and Support - Burton White House',
+    type: 'Accommodation',
+    website: 'http://www.evolvehousing.org.uk/',
+    telephone: '020 7373 0787',
+    address: 'SW5 9QJ'
+  }, {
+    name: 'Viridian - Supported Housing',
+    type: 'Accommodation',
+    website: 'http://www.viridianhousing.org.uk',
+    telephone: '0330 123 0220',
+    address: 'SW5 9AR'
+  }, {
+    name: 'St Cuthbert Drop-In Centre',
+    type: 'Day Centre',
+    website: '',
+    telephone: '020 7835 1389',
+    address: 'SW5 9EB'
+  }, {
+    name: 'London Cyrenians Housing - Westway House',
+    type: 'Accommodation',
+    website: '',
+    telephone: '020 7938 2004',
+    address: 'W11 1QS'
+  }, {
+    name: 'Zacchaeus 2000 Trust - NextDoor Project',
+    type: 'Advice',
+    website: 'http://www.nextdoor.z2k.org',
+    telephone: '020 8964 0961',
+    address: 'W10 4JL'
+  }, {
+    name: 'Action for Children - Bayswater Families Centre',
+    type: 'Day Centre',
+    website: 'http://www.actionforchildren.org.uk',
+    telephone: '020 7221 3290',
+    address: 'W2 5LT'
+  }, {
+    name: 'Depaul UK - Westbourne House',
+    type: 'Accommodation',
+    website: 'http://www.depauluk.org',
+    telephone: '020 7792 0625',
+    address: 'W2 5QT'
+  }, {
+    name: 'St Mungo - Harrow Rd/Royal Oak Project',
+    type: 'Accommodation',
+    website: 'http://www.mungos.org',
+    telephone: '020 7266 3408',
+    address: 'W2 5XQ'
+  }, {
+    name: 'St Mungo - Westminster General SIH',
+    type: 'Accommodation',
+    website: 'http://www.mungos.org',
+    telephone: '020 7266 6130',
+    address: 'W9 2JD'
+  }, {
+    name: '240 Project',
+    type: 'Day Centre',
+    website: 'http://www.240project.org.uk',
+    telephone: '020 7221 7530',
+    address: 'W10 6SU'
+  }, {
+    name: 'Latimer Road',
+    type: 'Accommodation',
+    website: 'http://www.homeless.org.uk/www.richmondfellowship.org.',
+    telephone: '020 8969 2785',
+    address: 'W10 6RF'
+  }, {
+    name: 'The Upper Room',
+    type: 'Day Centre',
+    website: 'http://www.theupperroom.org.uk',
+    telephone: '020 8740 5688',
+    address: 'W12 9LN'
+  }, {
+    name: 'St Mungo - Broadway Day Centre',
+    type: 'Day Centre',
+    website: 'http://www.mungos.org',
+    telephone: '020 8735 5810',
+    address: 'W12 8EZ'
+  }, {
+    name: 'MST - Supported Housing',
+    type: 'Accommodation',
+    website: 'http://www.metropolitan.org.uk',
+    telephone: '020 3535 3535',
+    address: 'SW2 4AX'
+  }, {
+    name: 'Centrepoint - Camberwell Foyer',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 7926 4407',
+    address: 'SW2 1RP'
+  }, {
+    name: 'Evolve Housing and Support - King George House (Lambeth)',
+    type: 'Accommodation',
+    website: '',
+    telephone: '020 7926 4407',
+    address: 'SW2 1RP'
+  }, {
+    name: 'Latch House',
+    type: 'Accommodation',
+    website: 'http://blenheimcdp.org.uk/services/latch-house/',
+    telephone: '020 7926 4407',
+    address: 'SW2 1RP'
+  }, {
+    name: 'Riverside Care and Support - Acre Lane',
+    type: 'Accommodation',
+    website: 'http://www.riverside.org.uk',
+    telephone: '020 7926 4407',
+    address: 'SW2 1RP'
+  }, {
+    name: 'Southside Partnership Fanon Care - Fanon House',
+    type: 'Accommodation',
+    website: 'http://www.certitude.org.uk',
+    telephone: '020 7926 4407',
+    address: 'SW2 1RP'
+  }, {
+    name: 'Southside Partnership Fanon Care - Women s Hostel',
+    type: 'Accommodation',
+    website: 'http://www.certitude.org.uk',
+    telephone: '020 7926 4407',
+    address: 'SW2 1RP'
+  }, {
+    name: 'Chelsea Methodist Church Pastoral Centre',
+    type: 'Day Centre',
+    website: 'http://www.chelseamethodist.org.uk',
+    telephone: '',
+    address: 'SW3 5TX'
+  }, {
+    name: 'Ace of Clubs',
+    type: 'Day Centre',
+    website: 'http://www.aceofclubs.org.uk',
+    telephone: '020 7720 2811',
+    address: 'SW4 7AS'
+  }, {
+    name: 'Thames Reach - Robertson Street Project',
+    type: 'Accommodation',
+    website: 'http://www.thamesreach.org.uk',
+    telephone: '020 7720 9505',
+    address: 'SW8 3DA'
+  }, {
+    name: 'Springfield Community Flat',
+    type: 'Advice',
+    website: '',
+    telephone: '020 7720 2699',
+    address: 'SW8 2RE'
+  }, {
+    name: 'Stoll',
+    type: 'Accommodation',
+    website: 'http://www.stoll.org.uk',
+    telephone: '020 7385 2110',
+    address: 'SW6 1DT'
+  }, {
+    name: 'Nightstop London',
+    type: 'Accommodation',
+    website: 'http://www.depauluk.org',
+    telephone: '07767 882881',
+    address: 'SE1 1JG'
+  }, {
+    name: 'Look Ahead - Southwark Bridge Road',
+    type: 'Accommodation',
+    website: 'http://www.lookahead.org.uk',
+    telephone: '020 7234 9500',
+    address: 'SE1 0ED'
+  }, {
+    name: 'Barka UK - Reconnection Project',
+    type: 'Advice',
+    website: 'http://www.barkauk.org',
+    telephone: '020 7275 7768',
+    address: 'SE1 6DF'
+  }, {
+    name: 'Missionaries of Charity - Gift of Love',
+    type: 'Accommodation',
+    website: '',
+    telephone: '020 7620 1504',
+    address: 'SE1 6EU'
+  }, {
+    name: 'Equinox - Brook Drive',
+    type: 'Accommodation',
+    website: 'http://www.equinoxcare.org.uk',
+    telephone: '020 7820 9924',
+    address: 'SE11 4TQ'
+  }, {
+    name: 'Webber Street',
+    type: 'Day Centre',
+    website: 'http://www.lcm.org.uk',
+    telephone: '020 7928 1677',
+    address: 'SE1 8QA'
+  }, {
+    name: 'Divine Rescue',
+    type: 'Day Centre',
+    website: 'http://www.drescue.org',
+    telephone: '020 3489 1765',
+    address: 'SE17 2US'
+  }, {
+    name: 'U-Turn Recovery Project',
+    type: 'Accommodation',
+    website: 'U-Turn Recovery Project',
+    telephone: '020 8694 6125',
+    address: 'SE4 2SA'
+  }, {
+    name: 'Thames Reach - Bermondsey Projects',
+    type: 'Accommodation',
+    website: 'http://www.thamesreach.org.uk',
+    telephone: '020 3228 1800',
+    address: 'SE5 7UD'
+  }, {
+    name: 'Advising London',
+    type: 'Advice',
+    website: 'http://advising.london/',
+    telephone: '020 7358 7034',
+    address: 'SE5 0HF'
+  }, {
+    name: 'Cambridge House Law Centre',
+    type: 'Advice',
+    website: 'http://www.ch1889.org',
+    telephone: '020 7358 7025',
+    address: 'SE5 0HF'
+  }, {
+    name: 'West London Mission - Big House',
+    type: 'Accommodation',
+    website: 'http://www.wlm.org.uk/what-we-do/big-house',
+    telephone: '020 7703 9613',
+    address: 'SE5 0EN'
+  }, {
+    name: 'Centrepoint - Haberdashers House',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Centrepoint - Lewisham Assessment Centre',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Centrepoint - Mansion House',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Centrepoint - Perry Vale',
+    type: 'Accommodation',
+    website: 'http://www.centrepoint.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Foundation66 - Bromley Road',
+    type: 'Accommodation',
+    website: 'http://www.foundation66.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Marsha Phoenix Memorial Trust',
+    type: 'Accommodation',
+    website: 'http://www.marshaphoenix.org',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Sanctuary Supported Living - South London',
+    type: 'Accommodation',
+    website: 'http://www.sanctuary-housing.co.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'St Mungo - LARC',
+    type: 'Accommodation',
+    website: 'http://www.mungosbroadway.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Thames Reach - Lewisham',
+    type: 'Accommodation',
+    website: 'http://www.thamesreach.org.uk',
+    telephone: '020 8314 3020',
+    address: 'SE6 4JU'
+  }, {
+    name: 'Bench Outreach',
+    type: 'Advice',
+    website: 'http://www.benchoutreach.com',
+    telephone: '020 8694 7740',
+    address: 'SE8 3HS'
+  }, {
+    name: 'Creekside Learning Centre',
+    type: 'Advice',
+    website: 'http://www.nacro.org.uk',
+    telephone: '020 8694 8143',
+    address: 'SE8 3ED'
+  }, {
+    name: 'Deptford Reach',
+    type: 'Day Centre',
+    website: 'http://www.deptfordreach.org.uk',
+    telephone: '020 8692 6548',
+    address: 'SE8 4AT'
+  }, {
+    name: 'New Cross NHS Walk-In Centre',
+    type: 'Health Service',
+    website: '',
+    telephone: '020 3049 2370',
+    address: 'SE8 4BG'
+  }, {
+    name: '999 Club',
+    type: 'Day Centre',
+    website: 'http://www.999club.org',
+    telephone: '020 8691 7734',
+    address: 'SE8 4PA'
+  }, {
+    name: '999 Club Nightshelter',
+    type: 'Accommodation',
+    website: 'http://www.999club.org',
+    telephone: '0208 694 5797',
+    address: 'SE8 4PA'
+  }, {
+    name: 'Stonewall Housing Advice Line',
+    type: 'Advice',
+    website: 'http://www.stonewallhousing.org',
+    telephone: '020 7359 5767',
+    address: 'N1 3QP'
+  }, {
+    name: 'SHP - Jason Lee House',
+    type: 'Accommodation',
+    website: 'http://www.shp.org.uk',
+    telephone: '020 8911 7470',
+    address: 'IG1 3AD'
+  }, {
+    name: 'Redbridge Cold Weather Centre, The Salvation Army',
+    type: 'Accommodation',
+    website: '',
+    telephone: '020 8220 4111',
+    address: 'IG1 1BH'
+  }, {
+    name: 'Queen Victoria Seamen Rest',
+    type: 'Accommodation',
+    website: 'http://www.qvsr.org.uk',
+    telephone: '020 7987 5466',
+    address: 'E14 6DF'
+  }, {
+    name: 'Children Society - New Londoners',
+    type: 'Advice',
+    website: '',
+    telephone: '0208 221 8200',
+    address: 'E15 4BQ'  
   }])
   .then((resources) => {
     console.log(`${resources.length} resources created!`);
