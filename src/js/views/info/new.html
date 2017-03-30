@@ -64,21 +64,13 @@
         <h4>Are there pets?</h4>
          <ul class="q2">
           <li>
-<<<<<<< HEAD
-             <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="true">
-             <label class="bool" for="petTrue">Yes</label>
-           </li>
-           <li>
-             <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="false">
-             <label class="bool" for="petFalse">No</label>
-=======
+
              <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="Yes">
              <label for="petTrue">Yes</label>
            </li>
            <li>
              <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="No">
              <label for="petFalse">No</label>
->>>>>>> development
            </li>
          </ul>
          <div ng-messages="infoNew.newForm.pets.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.pets.$touched) && infoNew.newForm.pets.$invalid" class="error">
