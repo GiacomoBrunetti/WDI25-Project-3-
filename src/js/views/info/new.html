@@ -1,6 +1,6 @@
 <div>
   <div id="pac-container">
-    <label >If the pin below indicates the wrong position, input here your location</label>
+    <label >If you have not allowed access to your location, or would like to change it, use the search bar below.</label>
     <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoNew.info.location" lat="infoNew.info.autocompleteLat" lng="infoNew.info.autocompleteLng" class="form-control">
   </div>
 </div>
@@ -53,6 +53,7 @@
           <li>
             <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="No">
             <label for="childFalse" ng-click="infoNew.scroll()">No</label>
+
           </li>
         </ul>
         <div ng-messages="infoNew.newForm.children.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.children.$touched) && infoNew.newForm.children.$invalid" class="error">
