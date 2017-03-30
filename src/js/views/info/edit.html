@@ -49,11 +49,11 @@ Here: {{ infoEdit.info }}
         <h4>Are there children?</h4>
         <ul class="q2">
           <li>
-            <input type="radio" id="childTrue" name="children" ng-model="infoEdit.info.children" ng-value="true">
+            <input type="radio" id="childTrue" name="children" ng-model="infoEdit.info.children" ng-value="Yes">
             <label for="childTrue">Yes</label>
           </li>
           <li>
-            <input type="radio" id="childFalse" name="children" ng-model="infoEdit.info.children" ng-value="false">
+            <input type="radio" id="childFalse" name="children" ng-model="infoEdit.info.children" ng-value="No">
             <label for="childFalse">No</label>
           </li>
         </ul>
@@ -66,23 +66,17 @@ Here: {{ infoEdit.info }}
         <h4>Are there pets?</h4>
          <ul class="q2">
           <li>
-             <input type="radio" id="petTrue" name="petsTrue" ng-model="infoEdit.info.pets" ng-value="true">
+             <input type="radio" id="petTrue" name="petsTrue" ng-model="infoEdit.info.pets" ng-value="Yes">
              <label for="petsTrue">Yes</label>
            </li>
            <li>
-             <input type="radio" id="petFalse" name="petsTrue" ng-model="infoEdit.info.pets" ng-value="false">
+             <input type="radio" id="petFalse" name="petsTrue" ng-model="infoEdit.info.pets" ng-value="No">
              <label for="petFalse">No</label>
            </li>
          </ul>
          <div ng-messages="infoEdit.editForm.pets.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.pets.$touched) && infoEdit.editForm.pets.$invalid" class="error">
            <div ng-message="required">Please enter a value for this field.</div>
          </div>
-      </div>
-
-      <div class="question imageSelect">
-        <h4>Please add an image if useful.</h4>
-        <input base64 type="file" name="image" id="image" ng-model="infoEdit.info.image">
-        <label id="chooseFile" for="image">Choose file...</label>
       </div>
 
       <div class="question">

@@ -47,12 +47,12 @@
         <h4>Are there children?</h4>
         <ul class="q2">
           <li>
-            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" ng-value="true">
-            <label class="bool" for="childTrue">Yes</label>
+            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" ng-value="Yes">
+            <label for="childTrue">Yes</label>
           </li>
           <li>
-            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="false">
-            <label class="bool" for="childFalse">No</label>
+            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="No">
+            <label for="childFalse">No</label>
           </li>
         </ul>
         <div ng-messages="infoNew.newForm.children.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.children.$touched) && infoNew.newForm.children.$invalid" class="error">
@@ -64,24 +64,26 @@
         <h4>Are there pets?</h4>
          <ul class="q2">
           <li>
+<<<<<<< HEAD
              <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="true">
              <label class="bool" for="petTrue">Yes</label>
            </li>
            <li>
              <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="false">
              <label class="bool" for="petFalse">No</label>
+=======
+             <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="Yes">
+             <label for="petTrue">Yes</label>
+           </li>
+           <li>
+             <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="No">
+             <label for="petFalse">No</label>
+>>>>>>> development
            </li>
          </ul>
          <div ng-messages="infoNew.newForm.pets.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.pets.$touched) && infoNew.newForm.pets.$invalid" class="error">
            <div ng-message="required">Please enter a value for this field.</div>
          </div>
-      </div>
-
-      <div class="question imageSelect">
-        <h4>Please add an image if useful.</h4>
-        <input base64 type="file" name="image" id="image" ng-model="infoNew.info.base64">
-        <label id="chooseFile" for="image">Choose file...</label>
-
       </div>
 
       <div class="question">

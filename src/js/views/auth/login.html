@@ -1,12 +1,20 @@
+<div ng-hide="(show)" class="overlay" ng-animate="animate">
+  <button class="closeBtn" type="button" name="button" ng-click="show = !show">Close</button>
 
-<!-- <div ng-controller="tuamadre" id="amadre">
-   <button  class="closeBtn btn" ng-click="clicked()" >About</button>
-   <div ng-class="{foo: bar}"  class="myDiv">
 
-     <h2>AccommoData</h2>
-     <p>The number of homless people has more than doubled over the last five years, and nearly trebled over the last ten years, with a 188% increase. There is no national figure for how many people are homeless across the UK so this app could provide a helpful overview of the prevelence of homelessness in London. The information we gather from you whenever you come across a homeless person could really help </p>
-   </div>
-</div> -->
+  <div class="logo">
+    <h2>AccommoData</h2>
+    <img class="logo" src="images/hrlogo.png" alt="">
+  </div>
+    <p>The number of homless people has more than doubled over the last five years, and nearly trebled over the last ten years, with a 188% increase. There is no national figure for how many people are homeless across the UK so this app could provide a helpful overview of the prevelence of homelessness in London. The information we gather from you whenever you come across a homeless person could really help </p>
+
+</div>
+
+
+
+  <div class="row form" >
+    <button id="open"  class="btn" ng-click="show=!show">About</button>
+  </div>
 
   <div class="row form" >
     <h2>Log in</h2>
@@ -21,7 +29,7 @@
       <div>
         <label for="password">Password</label>
         <input type="password" name="password" id="password" ng-model="login.credentials.password" required class="form-control">
-        <div class="messages" ng-messages="login.loginForm.password.$error" role="alert" ng-show="(login.loginForm.$submitted || login.loginForm.password.$touched) && login.loginForm.password.$invalid" class="error">
+        <div class="messages error" ng-messages="login.loginForm.password.$error" role="alert" ng-show="(login.loginForm.$submitted || login.loginForm.password.$touched) && login.loginForm.password.$invalid" class="error">
           <div class="message" ng-message="required">Please enter a value for this field.</div>
         </div>
       </div>

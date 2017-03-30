@@ -11,6 +11,8 @@ const errorHandler = require('./lib/errorHandler');
 
 const app = express();
 
+app.use(morgan('dev'));
+
 mongoose.connect(dbURI);
 
 if(env !== 'test') app.use(morgan('dev'));
