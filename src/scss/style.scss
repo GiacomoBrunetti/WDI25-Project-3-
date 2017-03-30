@@ -1,8 +1,6 @@
-
-
 body {
-  font-family: 'Montserrat', sans-serif;
 
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -13,7 +11,18 @@ body {
 
 //-----------------------------NAVBAR-----------------------------------
 
+
+
+main  {
+  margin-top: 133px;
+}
+
 nav {
+  position:fixed;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  z-index:999;
   top: 0;
   text-align: center;
   .gradient {
@@ -125,7 +134,12 @@ p {
         }
         textarea {
           height: 30vh;
+<<<<<<< HEAD
+          width: 80%;
+          margin-right: 9%;
+=======
           width: 80vh;
+>>>>>>> development
         }
         ul {
           list-style: none;
@@ -180,14 +194,15 @@ p {
         background-color: #F24E5D;
         color: white;
         border: 2px solid white;
-
       }
     }
-
   }
 }
 
+<<<<<<< HEAD
+=======
 //--------------------------LOGIN-REGISTER-FORM-------------------
+>>>>>>> development
 .form {
   form {
     div {
@@ -232,6 +247,8 @@ p {
   letter-spacing: 3px;
   padding: 15px;
 }
+<<<<<<< HEAD
+=======
 
 
 //--------------------------USER-PROFILE-----------------------------------
@@ -267,6 +284,7 @@ p {
 }
 
 
+>>>>>>> development
 .userInfo {
   margin: 0 auto;
   text-align: justify;
@@ -357,7 +375,6 @@ input[type=range]::-webkit-slider-thumb {
       border: 2px solid white;
       text-transform: uppercase;
       font-weight: 700;
-
       }
     }
     .secondLink {
@@ -373,7 +390,6 @@ input[type=range]::-webkit-slider-thumb {
       border: 2px solid white;
       text-transform: uppercase;
       font-weight: 700;
-
       }
     }
     .thirdLink {
@@ -402,7 +418,6 @@ h2 {
 label {
   color: #F24E5D;
 }
-
 .facebook {
   color: dodgerblue;
   background-color: white;
