@@ -7,11 +7,11 @@ const secret = require('../config/environment').secret;
 function facebook(req, res, next) {
   rp({
     method: 'GET',
-    url: 'https://graph.facebook.com/v2.8/oauth/access_token',
+    url: oauth.facebook.accessTokenURL,
     qs: {
       code: req.body.code,
-      client_id: process.env.FB_APP_ID,
-      client_secret: process.env.FB_APP_SECRET,
+      client_id: oauth.facebook.clientId,
+      client_secret: oauth.facebook.clientSecret,
       redirect_uri: req.body.redirectUri
     },
     json: true
