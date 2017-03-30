@@ -20,8 +20,8 @@ function InfoIndexCtrl(Info, Resource, filterFilter, $scope) {
 
   function filterInfo() {
     const params = {};
-    if(vm.categoryInfo === 'Children') params.children = true;
-    if(vm.categoryInfo === 'Pets') params.pets = true;
+    if(vm.categoryInfo === 'Children') params.children = 'Yes';
+    if(vm.categoryInfo === 'Pets') params.pets = 'Yes';
     vm.filteredInfo = filterFilter(vm.allInfo, params);
   }
 
