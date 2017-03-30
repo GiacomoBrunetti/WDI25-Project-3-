@@ -771,6 +771,36 @@ Resource
   //   website: 'http://www.emmaus.org.uk',
   //   telephone: '0208 316 5398',
   //   address: 'SE18 7NN'
+  //  }, {
+  //   name: 'Chelsea Methodist Church Pastoral Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.chelseamethodist.org.uk',
+  //   telephone: '020 7352 9305 ext 21',
+  //   address: 'SW3 5TX'
+  // }, {
+  //   name: 'Veterans Aid',
+  //   type: 'Day Centre',
+  //   website: 'http://www.veterans-aid.net',
+  //   telephone: '020 7828 2468',
+  //   address: 'SW1W 0RE'
+  // }, {
+  //   name: 'Montfort House',
+  //   type: 'Accommodation',
+  //   website: 'http://www.passage.org.uk',
+  //   telephone: '020 7592 1875',
+  //   address: 'SW1P 1NL'
+  // }, {
+  //   name: 'The Passage Day Centre',
+  //   type: 'Day Centre',
+  //   website: 'http://www.passage.org.uk',
+  //   telephone: '020 7592 1850',
+  //   address: 'SW3 5TX'
+  // }, {
+  //   name: 'Joint Homelessness Team (JHT) - Westminster',
+  //   type: 'Health Service',
+  //   website: 'http://www.cnwl.nhs.uk/service/joint-homelessness-team/',
+  //   telephone: '020 7854 4206',
+  //   address: 'SW1V 1DX'
   // }, {
   //   name: 'Thames Reach - Shroton Street Hostel',
   //   type: 'Accommodation',

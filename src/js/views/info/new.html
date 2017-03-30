@@ -1,12 +1,11 @@
 <div>
   <div id="pac-container">
-    <label >If the pin below indicates the wrong position, input here your location</label>
+    <label >If you have not allowed access to your location, or would like to change it, use the search bar below.</label>
     <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoNew.info.location" lat="infoNew.info.autocompleteLat" lng="infoNew.info.autocompleteLng" class="form-control">
   </div>
 </div>
 
-{{ infoNew.info }}
-<h2>Message: {{ infoNew.message }}</h2>
+<h2>{{ infoNew.message }}</h2>
 
 <user-map chosen-location="{ lat: infoNew.info.autocompleteLat, lng: infoNew.info.autocompleteLng }" info="infoNew.allInfo" ng-if="infoNew.allInfo.$resolved" data-method="infoNew.ctrlFn"></user-map>
 
@@ -19,7 +18,7 @@
           <h4>Number of people?</h4>
           <ul class="q1">
             <li>
-              <input type="radio" id="1" name="number" ng-model="infoNew.info.number" ng-value="1">
+              <input  type="radio" id="1" name="number" ng-model="infoNew.info.number" ng-value="1">
               <label class="num" for="1">1</label>
             </li>
             <li>
@@ -48,11 +47,11 @@
         <h4>Are there children?</h4>
         <ul class="q2">
           <li>
-            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" ng-value="true">
+            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" ng-value="Yes"  >
             <label for="childTrue">Yes</label>
           </li>
           <li>
-            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="false">
+            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="No" >
             <label for="childFalse">No</label>
           </li>
         </ul>
@@ -65,24 +64,18 @@
         <h4>Are there pets?</h4>
          <ul class="q2">
           <li>
-             <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="true">
+
+             <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" ng-value="Yes">
              <label for="petTrue">Yes</label>
            </li>
            <li>
-             <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="false">
+             <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" ng-value="No">
              <label for="petFalse">No</label>
            </li>
          </ul>
          <div ng-messages="infoNew.newForm.pets.$error" role="alert" ng-show="(infoNew.newForm.$submitted || infoNew.newForm.pets.$touched) && infoNew.newForm.pets.$invalid" class="error">
            <div ng-message="required">Please enter a value for this field.</div>
          </div>
-      </div>
-
-      <div class="question imageSelect">
-        <h4>Please add an image if useful.</h4>
-        <input base64 type="file" name="image" id="image" ng-model="infoNew.info.base64">
-        <label id="chooseFile" for="image">Choose file...</label>
-
       </div>
 
       <div class="question">

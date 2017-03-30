@@ -1,23 +1,22 @@
-<!-- <h3>{{ user.username }}</h3> -->
+
+<h3>{{ usersShow.user.username }}</h3>
+
 <div class="subNav">
-<a ui-sref="donate" class="subNavBtn">Donate</a>
-<button ng-click="usersShow.delete()" class="subNavBtn">Delete Account</button>
+<a ui-sref="donate" class="subNavBtn btn">Donate</a>
+<button ng-click="usersShow.delete()" class="subNavBtn btn">Delete Account</button>
 </div>
 
 <profile-map user-info="usersShow.userInfo" selected-info="usersShow.selectedInfo"></profile-map>
 
 <div class="row userInfo">
-  <div class="infoImg">
-    <img ng-src="{{ usersShow.selectedInfo.imageSRC }}">
-  </div>
   <div class="infoData">
-    <p><span>Number:</span> {{ usersShow.selectedInfo.number }}</p>
-    <p><span>Are there children:</span> {{ usersShow.selectedInfo.children }}</p>
-    <p><span>Are there pets:</span> {{ usersShow.selectedInfo.pets }}</p>
-    <p><span>Comment:</span> {{ usersShow.selectedInfo.otherInfo }}</p>
+    <p><span>Number of Homeless People: </span> {{ usersShow.selectedInfo.number }}</p>
+    <p><span>Are there children? </span> {{ usersShow.selectedInfo.children }}</p>
+    <p><span>Are there pets? </span> {{ usersShow.selectedInfo.pets }}</p>
+    <p><span>Any other info? </span> {{ usersShow.selectedInfo.otherInfo }}</p>
   </div>
   <div class="infoBtn">
-    <button ng-click="usersShow.deleteInfo(info)" class="btn">Delete</button>
-    <a ui-sref="infoEdit({ id: info.info.id })" class="btn">Edit</a>
+    <button ng-click="usersShow.deleteInfo()" class="btn">Delete</button>
+    <a ui-sref="infoEdit({ id: usersShow.selectedInfo.id })" class="btn">Edit</a>
   </div>
 </div>
