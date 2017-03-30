@@ -64,14 +64,6 @@ User
       lng: '-0.049094999999965694',
       createdBy: users[0]
     },{
-      number: 3,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.510772',
-      lng: '-0.07793400000002748',
-      createdBy: users[0]
-    },{
       number: 1,
       children: 'Yes',
       pets: 'No',
@@ -88,36 +80,12 @@ User
       lng: '-0.061110999999982596',
       createdBy: users[0]
     },{
-      number: 1,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: 'This woman seems to be in a bad way and carrying a cat',
-      lat: '51.513336',
-      lng: '-0.059052000000065163',
-      createdBy: users[0]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.518464',
-      lng: '-0.09784700000000157',
-      createdBy: users[1]
-    },{
-      number: 2,
+      number: 3,
       children: 'No',
       pets: 'Yes',
       otherInfo: '',
       lat: '51.517503',
       lng: '-0.09836199999995188',
-      createdBy: users[1]
-    },{
-      number: 3,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: '',
-      lat: '51.512909 ',
-      lng: '-0.12222299999996267',
       createdBy: users[1]
     },{
       number: 2,
@@ -136,79 +104,7 @@ User
       lng: '-0.13818700000001627',
       createdBy: users[1]
     },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.511413',
-      lng: '-0.10814700000003086',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: '',
-      lat: '51.517289',
-      lng: '-0.09681699999998727',
-      createdBy: users[2]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: 'Seen this person before but now they have a dog',
-      lat: '51.513069',
-      lng: '-0.06291399999997793',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.516915',
-      lng: '-0.06806400000004942',
-      createdBy: users[2]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.516648',
-      lng: '-0.06643299999996088',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.51387',
-      lng: '-0.07072400000004109',
-      createdBy: users[3]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.512482',
-      lng: '-0.07235500000001593',
-      createdBy: users[3]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.515313',
-      lng: '-0.07226900000000569',
-      createdBy: users[4]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.519532',
-      lng: '-0.05973800000003848',
-      createdBy: users[4]
-    },{
-      number: 2,
+      number: 4,
       children: 'No',
       pets: 'No',
       otherInfo: '',
@@ -232,77 +128,13 @@ User
       lng: '-0.05939499999999498',
       createdBy: users[5]
     },{
-      number: 4,
-      children: 'No',
-      pets: 'No',
-      otherInfo: 'Group fo people in very bad conditions',
-      lat: '51.521882',
-      lng: '-0.07154000000002725',
-      createdBy: users[5]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: '',
-      lat: '51.519505 ',
-      lng: '-0.07561699999996563',
-      createdBy: users[5]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.517422',
-      lng: '-0.08299799999997504',
-      createdBy: users[5]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: 'probably a couple in very bad conditions',
-      lat: '51.520707',
-      lng: '-0.07934999999997672',
-      createdBy: users[6]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.511494',
-      lng: '-0.07827799999995477',
-      createdBy: users[6]
-    },{
-      number: 1,
+      number: 3,
       children: 'No',
       pets: 'No',
       otherInfo: '',
       lat: '51.50957',
       lng: '-0.08244000000001961',
       createdBy: users[6]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.514271',
-      lng: '-0.08583099999998467',
-      createdBy: users[6]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: '',
-      lat: '51.510051',
-      lng: '-0.07651799999996456',
-      createdBy: users[6]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.515446',
-      lng: '-0.07154000000002725',
-      createdBy: users[7]
     },{
       number: 2,
       children: 'No',
@@ -320,44 +152,12 @@ User
       lng: '-0.08325600000000577',
       createdBy: users[7]
     },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.521321',
-      lng: '-0.08668899999997848',
-      createdBy: users[7]
-    },{
-      number: 2,
+      number: 3,
       children: 'No',
       pets: 'No',
       otherInfo: '',
       lat: '51.522683',
       lng: '-0.07999399999994239',
-      createdBy: users[8]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.523484',
-      lng: '-0.08535900000003949',
-      createdBy: users[8]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.524445',
-      lng: '-0.07917900000006739',
-      createdBy: users[8]
-    },{
-      number: 1,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.525887',
-      lng: '-0.07492999999999483',
       createdBy: users[8]
     },{
       number: 2,
@@ -376,28 +176,12 @@ User
       lng: '-0.07990799999993214',
       createdBy: users[8]
     },{
-      number: 1,
+      number: 5,
       children: 'No',
       pets: 'No',
       otherInfo: '',
       lat: '51.529732',
       lng: '-0.06900799999993978',
-      createdBy: users[8]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'Yes',
-      otherInfo: '',
-      lat: '51.531467',
-      lng: '-0.0796940000000177',
-      createdBy: users[8]
-    },{
-      number: 2,
-      children: 'No',
-      pets: 'No',
-      otherInfo: '',
-      lat: '51.531067',
-      lng: '-0.08703200000002198',
       createdBy: users[8]
     },{
       number: 2,

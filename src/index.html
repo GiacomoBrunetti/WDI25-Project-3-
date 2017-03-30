@@ -3,7 +3,7 @@
 <head>
   <base href="/">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMBRc7S-fUkCbXazZbh-E06kbFfZFk-MQ&libraries=places,geometry"></script>
-  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Montserrat:400,700,900" rel="stylesheet">
   <title>Project 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <script src="js/lib/angular-animate.js" charset="utf-8"></script> -->
@@ -16,12 +16,13 @@
 </head>
 <body ng-controller="MainCtrl as main">
   <nav>
+    <div class="gradient">
     <div class="pageName">
-      <h1><span>A</span>ccomo<span>D</span>ata</h1>
+      <h1>Accomo<span id="data">Data</span></h1>
     </div>
     <div class="links">
       <ul>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="infoNew" ui-sref-active="active">Home</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="infoNew" ui-sref-active="active">Form</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="infoIndex" ui-sref-active="active">Info</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="userShow({ id: main.currentUserId })" ui-sref-active="active">Profile</a></li>
         <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
@@ -30,8 +31,8 @@
 
       </ul>
     </div>
+  </div>
   </nav>
-
   <main ui-view class="container"></main>
 </body>
 </html>

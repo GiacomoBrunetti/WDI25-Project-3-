@@ -28,7 +28,8 @@ function profileMap($window) {
       function getLocation() {
         const locationMarker = new $window.google.maps.Marker({
           map: map,
-          animation: google.maps.Animation.DROP
+          animation: google.maps.Animation.DROP,
+          icon: '/images/me.png'
         });
 
         if (navigator.geolocation) {
@@ -73,11 +74,10 @@ function profileMap($window) {
             position: { lat: parseFloat(info.lat), lng: parseFloat(info.lng) },
             map: map,
             animation: google.maps.Animation.DROP,
-            icon: '/images/1.png'
+            icon: '/images/i.png'
           });
 
           infoMarkers.push(marker);
-          console.log($scope.profile);
 
           google.maps.event.addListener(marker, 'click', function () {
             $scope.selectedInfo = info;
@@ -90,7 +90,6 @@ function profileMap($window) {
         'userInfo.$resolved',
         'userInfo.length'
       ], () => {
-        console.log($scope.userInfo);
         if($scope.userInfo && $scope.userInfo.$resolved) addInfoMarkers();
       });
 

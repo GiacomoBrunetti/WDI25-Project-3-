@@ -25,7 +25,7 @@ function infoMap($window) {
       const slider = document.getElementById('slider');
 
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 12,
+        zoom: 14,
         center: {lat: 51.515559, lng: -0.071746},
         scrollwheel: false
       });
@@ -33,7 +33,8 @@ function infoMap($window) {
       function getLocation() {
         const locationMarker = new $window.google.maps.Marker({
           map: map,
-          animation: google.maps.Animation.DROP
+          animation: google.maps.Animation.DROP,
+          icon: '/images/me.png'
         });
 
         if (navigator.geolocation) {
@@ -92,9 +93,9 @@ function infoMap($window) {
           const marker = new $window.google.maps.Marker({
             position: { lat: parseFloat(resource.location.lat), lng: parseFloat(resource.location.lng) },
             map: map,
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP,
+            icon: '/images/r.png'
           });
-          console.log($scope.resources);
           resourceMarkers.push(marker);
 
           google.maps.event.addListener(marker, 'click', function () {
@@ -117,9 +118,6 @@ function infoMap($window) {
 
           sortedInfos.forEach((infoArray) => {
 
-            console.log(info.lat, infoArray[0].lat);
-            console.log(info.lng, infoArray[0].lng);
-
             var lat = infoArray[0].lat;
             var lng = infoArray[0].lng;
 
@@ -133,29 +131,30 @@ function infoMap($window) {
           if (!pushed) sortedInfos.push([info]);
 
         });
-        console.log(sortedInfos);
-
 
         infoMarkers = removeMarkers(infoMarkers);
         sortedInfos.forEach((infoArray) => {
-
-          const marker = new $window.google.maps.Marker({
-            position: { lat: parseFloat(infoArray[0].lat), lng: parseFloat(infoArray[0].lng) },
-            map: map,
-            animation: google.maps.Animation.DROP,
-            icon: '/images/1.png'
-          });
-
-          infoMarkers.push(marker);
 
           const averageNumber = infoArray.reduce((acc,info) => {
             return acc + info.number;
           }, 0);
 
+          const avg = Math.ceil(averageNumber/infoArray.length);
+          const iconImage = avg > 10 ? '10-plus.png' : `${avg}.png`;
+
+          const marker = new $window.google.maps.Marker({
+            position: { lat: parseFloat(infoArray[0].lat), lng: parseFloat(infoArray[0].lng) },
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: `/images/${iconImage}`
+          });
+
+          infoMarkers.push(marker);
+
           google.maps.event.addListener(marker, 'click', function () {
             if(infoWindow) infoWindow.close();
             var infoWindowOptions = {
-              content: `<div class="info-window"><p>${Math.ceil(averageNumber/infoArray.length)}<br>${infoArray[infoArray.length - 1].children}</p><p>Based on ${infoArray.length} submissions</p></div>`
+              content: `<div class="info-window"><p>Number of Homeless People: ${avg}<br>Are there children? ${infoArray[infoArray.length - 1].children}<br>Are there pets? ${infoArray[infoArray.length - 1].pets}<br>Any other info? ${infoArray[infoArray.length - 1].comment || 'N/A'}</p>Based on an average of ${infoArray.length} submission(s)</p></div>`
             };
             infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             infoWindow.open(map, marker);

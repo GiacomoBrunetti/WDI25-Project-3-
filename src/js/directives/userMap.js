@@ -31,7 +31,6 @@ function userMap($window) {
 
       function findDistance(p1, p2){
 
-        console.log(google.maps.geometry.spherical.computeDistanceBetween(p1, p2));
         //calculates distance between two points in km's
         return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2)).toFixed(2);
       }
@@ -39,7 +38,8 @@ function userMap($window) {
       function getLocation() {
         currentLocationMarker = new $window.google.maps.Marker({
           map: map,
-          animation: google.maps.Animation.DROP
+          animation: google.maps.Animation.DROP,
+          icon: '/images/me.png'
         });
 
         if (navigator.geolocation) {
@@ -68,7 +68,6 @@ function userMap($window) {
             infoMarkers.forEach((marker) => {
               const distanceFromPin = findDistance(new google.maps.LatLng(pos), new google.maps.LatLng(marker.position.toJSON()));
               if (distanceFromPin < 100) nearbyMarker = true;
-              console.log(nearbyMarker);
             });
 
             $scope.updateLatLng(pos, nearbyMarker);
@@ -97,7 +96,6 @@ function userMap($window) {
           infoMarkers.forEach((marker) => {
             const distanceFromPin = findDistance(new google.maps.LatLng($scope.chosenLocation), new google.maps.LatLng(marker.position.toJSON()));
             if (distanceFromPin < 100) nearbyMarker = true;
-            console.log(nearbyMarker);
           });
 
           $scope.updateLatLng($scope.chosenLocation, nearbyMarker);
@@ -120,11 +118,10 @@ function userMap($window) {
           const marker = new $window.google.maps.Marker({
             position: { lat: parseFloat(info.lat), lng: parseFloat(info.lng) },
             map: map,
-            icon: '/images/1.png'
+            icon: '/images/i.png'
           });
 
           google.maps.event.addListener(marker, 'click', function () {
-            console.log(marker.position.lat(), marker.position.lng());
 
             const latLng = { lat: marker.position.lat(), lng: marker.position.lng() };
             $scope.updateLatLng(latLng);
