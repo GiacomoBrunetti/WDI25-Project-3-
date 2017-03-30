@@ -1,6 +1,8 @@
 angular
   .module('hrApp', ['ui.router', 'ngResource', 'satellizer', 'ngMessages', 'ngAnimate']);
 
+
+
 // document.addEventListener('DOMContentLoaded', () => {
 //
 //   const closeBtn = document.getElementById('closeBtn');

@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
   <title>Project 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script src="js/lib/angular-animate.js" charset="utf-8"></script> -->
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -26,11 +27,12 @@
         <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
         <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
         <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
+
       </ul>
     </div>
   </nav>
 
-  
+
 
   <div id="line"></div>
   <div class="message" ng-if="main.message">

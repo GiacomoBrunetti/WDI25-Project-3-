@@ -3,6 +3,8 @@ angular
   .controller('RegisterCtrl', RegisterCtrl)
   .controller('LoginCtrl', LoginCtrl);
 
+
+
 RegisterCtrl.$inject = ['$auth', '$state'];
 function RegisterCtrl($auth, $state) {
   const vm = this;
@@ -18,14 +20,17 @@ function RegisterCtrl($auth, $state) {
   vm.submit = submit;
 }
 
-LoginCtrl.$inject = ['$auth', '$state'];
-function LoginCtrl($auth, $state) {
+LoginCtrl.$inject = ['$auth', '$state', '$rootScope'];
+function LoginCtrl($auth, $state, $rootScope) {
   const vm = this;
   vm.credentials = {};
 
   function authenticate(service) {
     $auth.authenticate(service)
-    .then(() => $state.go('infoNew'));
+      .then(() => {
+        const currentUserId = $auth.getPayload().userId;
+        $state.go('userShow', { id: currentUserId });
+      });
   }
 
   vm.authenticate = authenticate;
@@ -33,23 +38,18 @@ function LoginCtrl($auth, $state) {
   function submit() {
     if (vm.loginForm.$valid) {
       $auth.login(vm.credentials)
-        .then(() => $state.go('infoNew'));
+        .then((res) => {
+          // console.log('response', res);
+          const currentUserId = $auth.getPayload().userId;
+          // console.log('userId', currentUserId);
+          $rootScope.$broadcast('loggedIn', res.data.user);
+          // console.log('user', res.data.user);
+          $state.go('userShow', { id: currentUserId });
+        });
     }
   }
 
   vm.submit = submit;
+  vm.show = false;
 
-  // vm.show = false;
-  //
-  // function hide() {
-  //   if(!vm.show) {
-  //     vm.show = false;
-  //   } else {
-  //     vm.show = true;
-  //   }
-  //
-  //   console.log(vm.show);
-  //
-  // }
-  // vm.hide = hide;
 }

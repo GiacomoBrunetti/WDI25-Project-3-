@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  username: { type: String, required: true },
-  password: { type: String, required: true },
-  facebookId: { type: String },
-  profileImage: { type: String }
+  username: { type: String },
+  password: { type: String },
+  facebookId: { type: String }
+
 });
 
 
@@ -16,7 +16,7 @@ userSchema
   });
 
 userSchema.pre('validate', function checkPassword(next) {
-  if(!this.password && !this.githubId && !this.facebookId) {
+  if(!this.password && !this.facebookId) {
     this.invalidate('password', 'required');
   }
   if(this.isModified('password') && this._passwordConfirmation !== this.password){

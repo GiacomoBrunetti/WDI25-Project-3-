@@ -2,6 +2,8 @@ angular
   .module('hrApp')
   .controller('MainCtrl', MainCtrl);
 
+
+
 MainCtrl.$inject = ['$rootScope', '$state', '$auth'];
 function MainCtrl($rootScope, $state, $auth) {
   const vm = this;
@@ -28,6 +30,7 @@ function MainCtrl($rootScope, $state, $auth) {
   }
 
   vm.logout = logout;
+
 
   const protectedStates = ['infoNew'];
 
