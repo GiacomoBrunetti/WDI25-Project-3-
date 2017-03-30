@@ -13,7 +13,18 @@ body {
 
 //-----------------------------NAVBAR-----------------------------------
 
+
+
+main  {
+  margin-top: 133px;
+}
+
 nav {
+  position:fixed;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  z-index:999;
   top: 0;
   text-align: center;
   .gradient {
@@ -25,15 +36,6 @@ nav {
         color: white;
         font-weight: 100;
         margin-top: 0;
-        &:after {
-          content: '';
-          background-color: white;
-          height: 5px;
-          width: 50%;
-          position: absolute;
-          bottom: -3px;
-          left: 25%;
-        }
         #data {
           font-family: 'Bungee Outline', cursive;
           text-transform: lowercase;
