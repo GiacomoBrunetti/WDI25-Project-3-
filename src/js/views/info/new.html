@@ -9,6 +9,8 @@
 
 <user-map chosen-location="{ lat: infoNew.info.autocompleteLat, lng: infoNew.info.autocompleteLng }" info="infoNew.allInfo" ng-if="infoNew.allInfo.$resolved" data-method="infoNew.ctrlFn"></user-map>
 
+<h2>{{ infoNew.info }}</h2>
+
 <div class="row form">
   <div class="formContainer">
 
@@ -47,11 +49,11 @@
         <h4>Are there children?</h4>
         <ul class="q2">
           <li>
-            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" ng-value="Yes">
+            <input type="radio" id="childTrue" name="children" ng-model="infoNew.info.children" value="Yes">
             <label for="childTrue" ng-click="infoNew.scroll()">Yes</label>
           </li>
           <li>
-            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" ng-value="No">
+            <input type="radio" id="childFalse" name="children" ng-model="infoNew.info.children" value="No">
             <label for="childFalse" ng-click="infoNew.scroll()">No</label>
 
           </li>
@@ -65,11 +67,11 @@
         <h4>Are there pets?</h4>
          <ul class="q3">
           <li>
-             <input type="radio" name="pets" ng-model="infoNew.info.pets" ng-value="Yes">
+             <input type="radio" id="petTrue" name="pets" ng-model="infoNew.info.pets" value="Yes">
              <label for="petTrue" ng-click="infoNew.scroll()">Yes</label>
            </li>
            <li>
-             <input type="radio" name="pets" ng-model="infoNew.info.pets" ng-value="No" style="border: none">
+             <input type="radio" id="petFalse" name="pets" ng-model="infoNew.info.pets" value="No">
              <label for="petFalse" ng-click="infoNew.scroll()">No</label>
            </li>
          </ul>
