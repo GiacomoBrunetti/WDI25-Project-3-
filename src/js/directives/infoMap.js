@@ -25,7 +25,7 @@ function infoMap($window) {
       const slider = document.getElementById('slider');
 
       const map = new $window.google.maps.Map(element[0], {
-        zoom: 14,
+        zoom: 13,
         center: {lat: 51.515559, lng: -0.071746},
         scrollwheel: false
       });

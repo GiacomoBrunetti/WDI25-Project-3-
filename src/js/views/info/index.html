@@ -11,7 +11,7 @@
   </div>
 </form>
 
-<p>Filter by Resourse Type: </p>
+<p>Filter by Resource Type: </p>
 
 <form class="search-form">
   <div class="form-group">
@@ -26,6 +26,6 @@
 </form>
 
 <p>Distance From You: {{infoIndex.distance/1000 | number: 2}}KM</p>
-<input type="range" min="1000" max="10000" name="slider" id="slider" ng-model="infoIndex.distance" value="5000">
+<input type="range" min="1000" max="5000" name="slider" id="slider" ng-model="infoIndex.distance" value="2500">
 
 <info-map resources="infoIndex.filteredResources" info="infoIndex.filteredInfo"></info-map>

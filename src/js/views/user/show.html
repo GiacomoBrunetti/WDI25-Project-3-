@@ -1,6 +1,3 @@
-
-<h3>{{ usersShow.user.username }}</h3>
-
 <div class="subNav">
 <a ui-sref="donate" class="subNavBtn btn">Donate</a>
 <button ng-click="usersShow.delete()" class="subNavBtn btn">Delete Account</button>
@@ -16,7 +13,7 @@
     <p><span>Any other info? </span> {{ usersShow.selectedInfo.otherInfo }}</p>
   </div>
   <div class="infoBtn">
-    <button ng-click="usersShow.deleteInfo()" class="btn">Delete</button>
-    <a ui-sref="infoEdit({ id: usersShow.selectedInfo.id })" class="btn">Edit</a>
+    <button ng-click="usersShow.deleteInfo()" class="subNavBtn btn">Delete</button>
+    <a ui-sref="infoEdit({ id: usersShow.selectedInfo.id })" class="subNavBtn btn">Edit</a>
   </div>
 </div>
