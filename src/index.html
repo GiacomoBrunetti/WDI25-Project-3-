@@ -4,7 +4,7 @@
   <base href="/">
   <script src="/bower_components/angular-animate/angular-animate.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMBRc7S-fUkCbXazZbh-E06kbFfZFk-MQ&libraries=places,geometry"></script>
-  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Montserrat:400,700,900" rel="stylesheet">
   <title>Project 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- inject:js -->
@@ -16,8 +16,9 @@
 </head>
 <body ng-controller="MainCtrl as main">
   <nav>
+    <div class="gradient">
     <div class="pageName">
-      <h1><span>A</span>ccomo<span>D</span>ata</h1>
+      <h1>Accomo<span id="data">Data</span></h1>
     </div>
     <div class="links">
       <ul>
@@ -29,6 +30,7 @@
         <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
       </ul>
     </div>
+  </div>
   </nav>
   <span id="line"></span>
   <main ui-view class="container"></main>
