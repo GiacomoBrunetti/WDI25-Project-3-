@@ -101,7 +101,7 @@ function infoMap($window) {
           google.maps.event.addListener(marker, 'click', function () {
             if(infoWindow) infoWindow.close();
             var infoWindowOptions = {
-              content: `<div class="info-window"><p>${resource.name}<br>${resource.type}<br>${resource.telephone}<br><a href="${resource.website}" target="_blank">Website</a><br>${resource.address}</p></div>`
+              content: `<div class="info-window"><p>${resource.name}<br>${resource.type}<br><a href="tel:${resource.telephone}">${resource.telephone}</a><br><a href="${resource.website}" target="_blank">Website</a><br>${resource.address}</p></div>`
             };
             infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             infoWindow.open(map, marker);
@@ -154,7 +154,7 @@ function infoMap($window) {
           google.maps.event.addListener(marker, 'click', function () {
             if(infoWindow) infoWindow.close();
             var infoWindowOptions = {
-              content: `<div class="info-window"><p>Number of Homeless People: ${avg}<br>Are there children? ${infoArray[infoArray.length - 1].children}<br>Are there pets? ${infoArray[infoArray.length - 1].pets}<br>Any other info? ${infoArray[infoArray.length - 1].comment || 'N/A'}</p>Based on an average of ${infoArray.length} submission(s)</p></div>`
+              content: `<div class="info-window"><p>Number of Homeless People: ${avg}<br>Are there children? ${infoArray[infoArray.length - 1].children}<br>Are there pets? ${infoArray[infoArray.length - 1].pets}<br>Any other info? ${infoArray[infoArray.length - 1].comment || 'N/A'}<br>Based on an average of ${infoArray.length} submission(s)</p></div>`
             };
             infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             infoWindow.open(map, marker);

@@ -11,8 +11,6 @@ body {
 
 //-----------------------------NAVBAR-----------------------------------
 
-
-
 main  {
   margin-top: 133px;
 }
@@ -97,7 +95,6 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-
 .googlePlaces {
   margin-top: 15px;
   color: #77252c;
@@ -107,6 +104,12 @@ nav {
 p {
   color: #F24E5D;
   margin: 2vh auto;
+}
+
+.info-window {
+  p {
+    font-size: 20px;
+  }
 }
 
 
@@ -134,12 +137,8 @@ p {
         }
         textarea {
           height: 30vh;
-<<<<<<< HEAD
           width: 80%;
-          margin-right: 9%;
-=======
-          width: 80vh;
->>>>>>> development
+          margin-right: 10%;
         }
         ul {
           list-style: none;
@@ -199,10 +198,8 @@ p {
   }
 }
 
-<<<<<<< HEAD
-=======
 //--------------------------LOGIN-REGISTER-FORM-------------------
->>>>>>> development
+
 .form {
   form {
     div {
@@ -247,8 +244,6 @@ p {
   letter-spacing: 3px;
   padding: 15px;
 }
-<<<<<<< HEAD
-=======
 
 
 //--------------------------USER-PROFILE-----------------------------------
@@ -283,8 +278,6 @@ p {
   }
 }
 
-
->>>>>>> development
 .userInfo {
   margin: 0 auto;
   text-align: justify;
