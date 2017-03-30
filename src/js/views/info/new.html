@@ -1,11 +1,12 @@
 <div>
   <div id="pac-container">
-    <label >If the pin below indicates the wrong position, input here your location</label>
+    <label >If you have not allowed access to your location, or would like to change it, use the search bar below.</label>
     <input id="pac-input" type="text" placeholder="Search Location" autocomplete ng-model="infoNew.info.location" lat="infoNew.info.autocompleteLat" lng="infoNew.info.autocompleteLng" class="form-control">
   </div>
 </div>
 
 {{ infoNew.info }}
+
 <h2>Message: {{ infoNew.message }}</h2>
 
 <user-map chosen-location="{ lat: infoNew.info.autocompleteLat, lng: infoNew.info.autocompleteLng }" info="infoNew.allInfo" ng-if="infoNew.allInfo.$resolved" data-method="infoNew.ctrlFn"></user-map>

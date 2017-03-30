@@ -2,7 +2,6 @@
 <html ng-app="hrApp">
 <head>
   <base href="/">
-  <script src="/bower_components/angular-animate/angular-animate.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMBRc7S-fUkCbXazZbh-E06kbFfZFk-MQ&libraries=places,geometry"></script>
   <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
   <title>Project 3</title>
@@ -21,7 +20,7 @@
     </div>
     <div class="links">
       <ul>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="infoNew" ui-sref-active="active">Home</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="infoNew" ui-sref-active="active">Form</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="infoIndex" ui-sref-active="active">Info</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="userShow({ id: main.currentUserId })" ui-sref-active="active">Profile</a></li>
         <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>

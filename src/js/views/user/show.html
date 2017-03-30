@@ -8,13 +8,13 @@
 
 <div class="row userInfo">
   <div class="infoData">
-    <p><span>Number:</span> {{ usersShow.selectedInfo.number }}</p>
-    <p><span>Are there children:</span> {{ usersShow.selectedInfo.children }}</p>
-    <p><span>Are there pets:</span> {{ usersShow.selectedInfo.pets }}</p>
-    <p><span>Comment:</span> {{ usersShow.selectedInfo.otherInfo }}</p>
+    <p><span>Number of Homeless People: </span> {{ usersShow.selectedInfo.number }}</p>
+    <p><span>Are there children? </span> {{ usersShow.selectedInfo.children }}</p>
+    <p><span>Are there pets? </span> {{ usersShow.selectedInfo.pets }}</p>
+    <p><span>Any other info? </span> {{ usersShow.selectedInfo.otherInfo }}</p>
   </div>
   <div class="infoBtn">
-    <button ng-click="usersShow.deleteInfo(info)" class="btn">Delete</button>
-    <a ui-sref="infoEdit({ id: info.info.id })" class="btn">Edit</a>
+    <button ng-click="usersShow.deleteInfo()" class="btn">Delete</button>
+    <a ui-sref="infoEdit({ id: usersShow.selectedInfo.id })" class="btn">Edit</a>
   </div>
 </div>
