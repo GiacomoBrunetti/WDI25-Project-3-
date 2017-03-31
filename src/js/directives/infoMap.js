@@ -154,7 +154,7 @@ function infoMap($window) {
           google.maps.event.addListener(marker, 'click', function () {
             if(infoWindow) infoWindow.close();
             var infoWindowOptions = {
-              content: `<div class="info-window"><p>Number of Homeless People: ${avg}<br>Are there children? ${infoArray[infoArray.length - 1].children}<br>Are there pets? ${infoArray[infoArray.length - 1].pets}<br>Any other info? ${infoArray[infoArray.length - 1].comment || 'N/A'}<br>Based on an average of ${infoArray.length} submission(s)</p></div>`
+              content: `<div class="info-window"><p>Number of Homeless People: ${avg}<br>Are there children? ${infoArray[infoArray.length - 1].children}<br>Are there pets? ${infoArray[infoArray.length - 1].pets}<br>Any other info? ${infoArray[infoArray.length - 1].otherInfo || 'N/A'}<br>Based on an average of ${infoArray.length} submission(s)</p></div>`
             };
             infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             infoWindow.open(map, marker);
