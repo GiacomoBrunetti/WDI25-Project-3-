@@ -112,10 +112,16 @@ p {
 
 .info-window {
   p {
-    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    font-size: 1.2em;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
-
 
 
 //-----------------------------NEW-EDIT-FORM-------------------------------
