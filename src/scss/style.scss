@@ -132,17 +132,22 @@ p {
         height: 60vh;
         width: 100%;
         text-align: center;
+        position: relative;
         h4 {
           color: #F24E5D;
           letter-spacing: 2px;
-          margin: 13vh 0;
+          margin: 13vh 1vh;
           font-size: 2.5em;
-          font-weight: 900;
+          font-weight: 500;
         }
         textarea {
           height: 30vh;
           width: 80%;
-          margin-right: 10%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-color: #F24E5D;
         }
         ul {
           list-style: none;
@@ -175,21 +180,6 @@ p {
                 // padding:  0 1.5vh;
               }
             }
-          }
-        }
-      }
-      .imageSelect {
-        label {
-          color: white;
-          background-color: #F24E5D;
-          border: 2px solid white;
-          padding: 20px;
-          border-radius: 30px;
-        }
-        input[type="file"] {
-          display: none;
-          &:checked ~ label {
-            border: 1px solid green;
           }
         }
       }
@@ -298,7 +288,7 @@ p {
     color: #F24E5D;
     p {
       color: #F24E5D;
-      font-size: 2em;
+      font-size: 1.5em;
       span {
         font-weight: bold;
       }
@@ -307,6 +297,7 @@ p {
   .infoBtn {
     float: right;
     display: inline;
+    margin-left: 20%;
     .btn {
       height: 8vh;
       background-color: #F24E5D;
