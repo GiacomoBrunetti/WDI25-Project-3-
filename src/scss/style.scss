@@ -236,12 +236,12 @@ p {
     background-color: #F24E5D;
     color: white;
     border: 2px solid white;
-    margin-top: 10vh;
+    margin-top: 7vh;
     text-transform: uppercase;
     font-size: 0.8em;
     &:hover {
-      background-color: white;
-      color: #F24E5D;
+      background-color: #F24E5D;
+      color: white;
       border-color:  #F24E5D;
     }
   }
@@ -264,7 +264,11 @@ p {
   color: white;
   background-color: #3b5998;
   margin: 2vh 0;
+  &:hover {
+    border: 2px solid #3b5998;    
+  }
 }
+
 
 //--------------------------USER-PROFILE-----------------------------------
 .subNav {
@@ -442,19 +446,11 @@ h2 {
 
 h2 {
   color: #F24E5D;
+  text-transform: capitalize;
+  font-size: 1.8em;
+  font-weight: 500;
 }
 
 label {
   color: #F24E5D;
-}
-.facebook {
-  color: dodgerblue;
-  background-color: white;
-  width: 200px;
-  margin: 12px;
-  border: 1px solid black;
-  border-radius: 30px;
-  letter-spacing: 3px;
-  padding: 15px;
-  font-size: 20px;
 }
