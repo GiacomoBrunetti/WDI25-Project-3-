@@ -10,23 +10,23 @@
           <ul class="q1">
             <li>
               <input type="radio" id ="1" name="number" ng-model="infoEdit.info.number" ng-value="1">
-              <label class="num" for="1">1</label>
+              <label class="num" for="1" ng-click="infoEdit.scroll()">1</label>
             </li>
             <li>
               <input type="radio" id ="2" name="number" ng-model="infoEdit.info.number" ng-value="2">
-              <label class="num" for="2">2</label>
+              <label class="num" for="2" ng-click="infoEdit.scroll()">2</label>
             </li>
             <li>
               <input type="radio" id ="3" name="number" ng-model="infoEdit.info.number" ng-value="3">
-              <label class="num" for="3">3</label>
+              <label class="num" for="3" ng-click="infoEdit.scroll()">3</label>
             </li>
             <li>
               <input type="radio" id ="4" name="number" ng-model="infoEdit.info.number" ng-value="4">
-              <label class="num" for="4">4</label>
+              <label class="num" for="4" ng-click="infoEdit.scroll()">4</label>
             </li>
             <li>
               <input type="radio" id ="5" name="number" ng-model="infoEdit.info.number" ng-value="5">
-              <label class="num" for="5">5</label>
+              <label class="num" for="5" ng-click="infoEdit.scroll()">5</label>
             </li>
           </ul>
           <div ng-messages="infoEdit.editForm.number.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.number.$touched) && infoEdit.editForm.number.$invalid" class="error">
@@ -39,11 +39,11 @@
         <ul class="q2">
           <li>
             <input type="radio" id="childTrue" name="children" ng-model="infoEdit.info.children" value="Yes">
-            <label for="childTrue">Yes</label>
+            <label for="childTrue" ng-click="infoEdit.scroll()">Yes</label>
           </li>
           <li>
             <input type="radio" id="childFalse" name="children" ng-model="infoEdit.info.children" value="No">
-            <label for="childFalse">No</label>
+            <label for="childFalse" ng-click="infoEdit.scroll()">No</label>
           </li>
         </ul>
         <div ng-messages="infoEdit.editForm.children.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.children.$touched) && infoEdit.editForm.children.$invalid" class="error">
@@ -56,11 +56,11 @@
          <ul class="q2">
           <li>
              <input type="radio" id="petsTrue" name="petsTrue" ng-model="infoEdit.info.pets" value="Yes">
-             <label for="petsTrue">Yes</label>
+             <label for="petsTrue" ng-click="infoEdit.scroll()">Yes</label>
            </li>
            <li>
              <input type="radio" id="petsFalse" name="petsTrue" ng-model="infoEdit.info.pets" value="No">
-             <label for="petsFalse">No</label>
+             <label for="petsFalse" ng-click="infoEdit.scroll()">No</label>
            </li>
          </ul>
          <div ng-messages="infoEdit.editForm.pets.$error" role="alert" ng-show="(infoEdit.editForm.$submitted || infoEdit.editForm.pets.$touched) && infoEdit.editForm.pets.$invalid" class="error">
