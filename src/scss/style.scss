@@ -274,11 +274,12 @@ p {
   .subNavBtn {
     height: 8vh;
     background-color: #F24E5D;
+    vertical-align: middle;
     margin: 0 auto;
     color: white;
     text-transform: uppercase;
-    font-size: 1em;
-    border: 2px solid white ;
+    font-size: 0.8em;
+    border: 2px solid white;
     &:hover {
       text-decoration: none;
       border-color: #F24E5D;

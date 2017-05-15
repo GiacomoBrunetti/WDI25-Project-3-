@@ -51,9 +51,6 @@ function LoginCtrl($auth, $state, $rootScope) {
 
   vm.submit = submit;
 
-  vm.bar = false;
-  vm.clicked = function(){
-    vm.bar = !(vm.bar);
-  };
+
 
 }
